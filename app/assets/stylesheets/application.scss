@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+#game-world {
+  background: blue;
+  width: 800px;
+  height: 800px;
+  background-image: image("robo.png");  }
+#north {
+  margin-left: 100px;
+}
+#south {
+  margin-left: 100px;
+}

@@ -1,0 +1,13 @@
+<h1>Tears of Iron</h1>
+<h6>the prototype</h6>
+<p>The goal of this current prototype is to develop the method of navigation for Tears of Iron.</p>
+<hr>
+<%= link_to "start", room_path(@start) %>
+<div #id="game-world">
+    <%= link_to "Go North", rooms_path, :id => "north" %>
+    <br>
+  <%= link_to "Go West" %>  |<%= image_tag "robo.png" %>|  <%= link_to "Go East",rooms_path() %>
+  <br>
+  <%= link_to "Go South", rooms_path , :id => "south"%>
+</div>
+<hr>
