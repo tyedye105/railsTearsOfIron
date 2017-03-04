@@ -1,22 +1,26 @@
 <h1>You are currently in room no. <%= @room.id %>.</h1>
 <h2> THE ROOM OF <%= @room.name %> </h2>
 <hr>
-<div #id="game-world">
-  <% if @room.door_ways.include?("n") %>
-  <%= link_to "Go North", room_path(@room.id - 3), :id => "north" %>
-  <% end %>
+<div id="world" style="background-image:'5.png';">
+  <div id="profile-photo" style="background-image: url('/assets/images/<%= @room.id %>.png')"></div>
+  <div #id="game-control">
+    <% if @room.door_ways.include?("n") %>
+    <%= link_to "Go North", room_path(@room.id - 3), :id => "north" %>
+    <% end %>
+    <br>
+    <% if @room.door_ways.include?("w") %>
+    <%= link_to "Go West", room_path(@room.id - 1), :id => "west" %>
+    <% end %><%= image_tag "robo.png", :class =>"robo" %>|
+    <% if @room.door_ways.include?("e") %>
+    <%= link_to "Go East", room_path(@room.id + 1), :id => "west" %>
+    <% end %>
   <br>
-  <% if @room.door_ways.include?("w") %>
-  <%= link_to "Go West", room_path(@room.id - 1), :id => "west" %>
+  <% if @room.door_ways.include?("s") %>
+  <%= link_to "Go South", room_path(@room.id + 3), :id => "south" %>
   <% end %>
-  |<%= image_tag "robo.png" %>|
-  <% if @room.door_ways.include?("e") %>
-  <%= link_to "Go East", room_path(@room.id + 1), :id => "west" %>
-  <% end %>
-<br>
-<% if @room.door_ways.include?("s") %>
-<%= link_to "Go South", room_path(@room.id + 3), :id => "south" %>
-<% end %>
-
+  </div>
+  <div><%= image_tag "#{@room.id}.png" %></div>
 </div>
+
+
 <hr>
