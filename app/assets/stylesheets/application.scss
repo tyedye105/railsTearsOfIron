@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+ #game-controller {
+   background: blue;
+   height: 150px;
+   width: 150px;
+   position: relative;
+ }
+
+body {
+  background: grey;
+}
+
+.north{
+  margin-top: 5px;
+  position: absolute; right: 20px;
+}
+.west{
+  margin-top: 20px;
+  position: absolute;
+}
+.east{
+  margin-top: 20px;
+  position: absolute; left: 50px;
+}
+
+.south {
+    margin-top: 50px;
+    position: absolute; right: 20px;
+}
