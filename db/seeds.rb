@@ -4,7 +4,7 @@ room_list = [
   ["Room 3", "w,s", "grey" ],
   ["Room 4", "e,n,s", "grey" ],
   ["Room 5", "w,e,n,s", "grey" ],
-  ["Room 6", "e,n,s", "grey" ],
+  ["Room 6", "w,n,s", "grey" ],
   ["Room 7", "n,e", "grey" ],
   ["Room 8", "w,e,n", "grey" ],
   ["Room 9", "w,n", "grey" ]

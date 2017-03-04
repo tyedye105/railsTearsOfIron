@@ -14,13 +14,21 @@
  *= require_self
  */
 
+ .world {
+   position: relative;
+   z-index: 0;
+ }
+
  #game-controller {
    background: blue;
    height: 150px;
    width: 150px;
    position: relative;
  }
-
+ .robo {
+  position: relative;; bottom: 350px; right:900px;
+  z-index: 1;
+ }
 body {
   background: grey;
 }

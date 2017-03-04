@@ -3,10 +3,3 @@
 <p>The goal of this current prototype is to develop the method of navigation for Tears of Iron.</p>
 <hr>
 <%= link_to "start", room_path(@start) %>
-<div #id="game-control">
-    <%= link_to "Go North", rooms_path, :id => "north" %>
-    <br>
-  <%= link_to "Go West" %>  |<div id="robo"><%= image_tag "robo.png", :class =>"robo" %></div>|  <%= link_to "Go East",rooms_path() %>
-  <br>
-  <%= link_to "Go South", rooms_path , :id => "south"%>
-</div>
