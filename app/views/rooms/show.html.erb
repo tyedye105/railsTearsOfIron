@@ -2,24 +2,21 @@
 <h2> THE ROOM OF <%= @room.name %> </h2>
 <hr>
 <div id="world" style="background-image:'5.png';">
-  <div id="profile-photo" style="background-image: url('/assets/images/<%= @room.id %>.png')"></div>
-  <div #id="game-control">
+  <div #id="game-controler">
     <% if @room.door_ways.include?("n") %>
-    <%= link_to "Go North", room_path(@room.id - 3), :id => "north" %>
+    <%= button_to "Go North", room_path(@room.id - 3),method: :get, :id => "north" %>
     <% end %>
-    <br>
     <% if @room.door_ways.include?("w") %>
-    <%= link_to "Go West", room_path(@room.id - 1), :id => "west" %>
-    <% end %><%= image_tag "robo.png", :class =>"robo" %>|
-    <% if @room.door_ways.include?("e") %>
-    <%= link_to "Go East", room_path(@room.id + 1), :id => "west" %>
+    <%= button_to "Go West", room_path(@room.id - 1),method: :get, :id => "west" %>
     <% end %>
-  <br>
+    <% if @room.door_ways.include?("e") %>
+    <%= button_to "Go East", room_path(@room.id + 1),method: :get, :id => "west" %>
+    <% end %>
   <% if @room.door_ways.include?("s") %>
-  <%= link_to "Go South", room_path(@room.id + 3), :id => "south" %>
+  <%= button_to "Go South", room_path(@room.id + 3),method: :get, :id => "south" %>
   <% end %>
   </div>
-  <div><%= image_tag "#{@room.id}.png" %></div>
+  <div><%= image_tag "#{@room.id}.png" %><%= image_tag "robo.png", :class =>"robo" %></div>
 </div>
 
 

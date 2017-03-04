@@ -13,23 +13,3 @@
  *= require_tree .
  *= require_self
  */
-#game-control {
-  background: blue;
-  width: 800px;
-  height: 800px;
-  z-index: 0;
-  position:absolute;
-  margin-top: 300px;
-  margin-left: 650px;}
-
-.robo {
-  padding: 15 px;
-}
-
-#world {
-  height: 800px;
-  width: 1600px;
-  text-align: center;
-  z-index: -1;
-  position: absolute;
-}
