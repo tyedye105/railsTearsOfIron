@@ -1,6 +1,5 @@
 class RoomsController < ApplicationController
   def index
-    @rooms = Room.all
     @start = Room.find(5)
   end
   def show
