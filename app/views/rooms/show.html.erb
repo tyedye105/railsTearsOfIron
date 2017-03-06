@@ -1,9 +1,10 @@
 <h1>You are currently in room no. <%= @room.id %>.</h1>
 <h2> THE ROOM OF <%= @room.name %> </h2>
 <%= render "/layouts/game_controller" %>
+
 <hr>
 <div id="world" style="background-image:'5.png';">
-  <div><%= image_tag "#{@room.id}.png", :class =>"world" %><%= image_tag "robo.png", :class =>"robo" %></div>
+  <div><%= image_tag "#{@room.id}.png", :class =>"world" %><%= image_tag "robo128.png", :class =>"robo" %></div>
 </div>
 
 
