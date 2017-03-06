@@ -72,6 +72,26 @@
         1,
         1,
         null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/Guest/Desktop/railsTearsOfIron/spec/rails_helper.rb": [
@@ -381,7 +401,7 @@
         0,
         null,
         1,
-        8,
+        12,
         null,
         null
       ],
@@ -404,11 +424,11 @@
         1,
         null,
         1,
-        9,
-        9,
+        12,
+        12,
         null,
-        9,
-        9,
+        12,
+        12,
         0,
         null,
         0,
@@ -419,8 +439,8 @@
         1,
         1,
         1,
-        191,
-        11,
+        486,
+        14,
         null,
         null,
         null,
@@ -474,6 +494,6 @@
         null
       ]
     },
-    "timestamp": 1488826972
+    "timestamp": 1488828207
   }
 }

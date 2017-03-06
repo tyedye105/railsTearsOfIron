@@ -68,4 +68,24 @@ describe "Player can move to the east." do
     click_on "Go East"
     expect(page).to have_content "Center Right"
   end
+  describe "entering a room for the first time" do
+    it "will have special text that will appear during the first time the player enters the room." do
+      noorester= FactoryGirl.create(:room, :name => "Top Left", :door_ways =>"e,s", :first_time => true, :first_description => "I've not been here to Noorester", :normal_description => "Ohh not the Noorester room again.")
+      centester= FactoryGirl.create(:room, :name => "Top Center", :door_ways =>"w,e,s", :first_time => true, :first_description => "I've not been here to room Centester", :normal_description => "Ohh not the Centester room again.")
+        visit room_path(noorester)
+        expect(page).to have_content "Noorester"
+    end
+  end
+
+  describe "entering a room after the first time." do
+    it "will have differnt text if the user has been to the room before" do
+      noorester= FactoryGirl.create(:room, :name => "Top Left", :door_ways =>"e,s", :first_time => true, :first_description => "I've not been here to Noorester", :normal_description => "Ohh not the Noorester room again.")
+      centester= FactoryGirl.create(:room, :name => "Top Center", :door_ways =>"w,e,s", :first_time => true, :first_description => "I've not been here to room Centester", :normal_description => "Ohh not the Centester room again.")
+        visit room_path(centester)
+        click_button "Go West"
+        click_button "Go East"
+        expect(page).to have_content "Ohh not the Centester room again."
+    end
+  end
+
 end
