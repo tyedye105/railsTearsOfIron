@@ -404,11 +404,11 @@
         1,
         null,
         1,
-        0,
-        0,
+        1,
+        1,
         null,
-        0,
-        0,
+        1,
+        1,
         0,
         null,
         0,
@@ -438,8 +438,23 @@
         1,
         1,
         null
+      ],
+      "/Users/Guest/Desktop/railsTearsOfIron/spec/models/room_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1488825252
+    "timestamp": 1488825685
   }
 }
