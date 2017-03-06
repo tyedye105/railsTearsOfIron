@@ -12,4 +12,14 @@ class Room <ActiveRecord::Base
           self.update({:first_time => first_time})
         end
     end
+
+    def self.reset
+      array_to_reset = Room.all
+      array_to_reset.each do |room|
+        if room.first_time === false
+          room.update({:first_time => true})
+        end
+      end
+    end
+
 end
