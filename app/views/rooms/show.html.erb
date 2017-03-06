@@ -5,6 +5,11 @@
 <hr>
 <div id="world">
   <div><%= image_tag "#{@room.id}.png", :class =>"world" %><%= image_tag "robo64.png", :class =>"robo" %></div>
+  <% if @items.any? %>
+  <%= link_to '/' do %>
+  <%= image_tag "#{@items.first.title}.png"  %>
+  <% end %>
+  <% end %>
 </div>
 
 

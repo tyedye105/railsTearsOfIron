@@ -18,5 +18,3 @@ describe ".reset " do
   expect(top_left_room.first_time && top_center_room.first_time).to eq false
   end
 end
-
-end

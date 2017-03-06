@@ -1,4 +1,4 @@
-<div id="game-controller">
+  <div id="game-controller">
   <div class="north">
     <% if @room.door_ways.include?("n") %>
     <%= button_to "Go North", room_path(@room.id - 3),method: :get, :class => "north" %>
