@@ -19,6 +19,13 @@
    z-index: 0;
  }
 
+#text-display {
+  background: darken(grey, 25%);
+  height: 200px;
+  width: 450px;
+  position: relative;
+}
+
  #game-controller {
    background: blue;
    height: 150px;

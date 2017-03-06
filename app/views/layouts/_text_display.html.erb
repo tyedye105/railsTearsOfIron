@@ -1,0 +1,9 @@
+<div id="text-display" class="well">
+  <% if @room.first_time === true %>
+  <p> <%= @room.first_description %> </p>
+    <% @room.been_there? %>
+    <% else %>
+  <p> <%= @room.normal_description %></p>
+  <% end %>
+  <h1><%= @room.first_time %><h1>
+</div>
