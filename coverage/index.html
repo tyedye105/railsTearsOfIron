@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-03-06T12:20:40-08:00">2017-03-06T12:20:40-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-03-06T15:22:22-08:00">2017-03-06T15:22:22-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">97.85%</span></span>
+    (<span class="covered_percent"><span class="green">97.18%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.58
+         2.58
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>30</b> files in total.
-    <b>186</b> relevant lines. 
-    <span class="green"><b>182</b> lines covered</span> and
-    <span class="red"><b>4</b> lines missed </span>
+    <b>31</b> files in total.
+    <b>213</b> relevant lines. 
+    <span class="green"><b>207</b> lines covered</span> and
+    <span class="red"><b>6</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -82,12 +82,12 @@
       
       <tr>
         <td class="strong"><a href="#f2bbe822742dd2f5b3e42531e8fb3fa5a95fadc7" class="src_link" title="app/controllers/rooms_controller.rb">app/controllers/rooms_controller.rb</a></td>
-        <td class="red strong">80.0 %</td>
-        <td>8</td>
+        <td class="red strong">71.43 %</td>
+        <td>10</td>
+        <td>7</td>
         <td>5</td>
-        <td>4</td>
-        <td>1</td>
-        <td>3.0</td>
+        <td>2</td>
+        <td>3.9</td>
       </tr>
       
       <tr>
@@ -132,22 +132,22 @@
       
       <tr>
         <td class="strong"><a href="#d0fb8f320492ee9a2be9acf65260606004c92ba6" class="src_link" title="app/models/item.rb">app/models/item.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
+        <td class="yellow strong">90.0 %</td>
+        <td>15</td>
+        <td>10</td>
+        <td>9</td>
         <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td>0.9</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#7a405045a78cb9809cfebe8e00d160da287aa6c8" class="src_link" title="app/models/room.rb">app/models/room.rb</a></td>
-        <td class="red strong">78.57 %</td>
-        <td>25</td>
-        <td>14</td>
-        <td>11</td>
+        <td class="red strong">80.0 %</td>
+        <td>26</td>
+        <td>15</td>
+        <td>12</td>
         <td>3</td>
-        <td>7.9</td>
+        <td>22.1</td>
       </tr>
       
       <tr>
@@ -303,9 +303,9 @@
       <tr>
         <td class="strong"><a href="#a53d0acf1ce5416e377961cc7eec3b57d63df3e1" class="src_link" title="spec/factories.rb">spec/factories.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>9</td>
-        <td>7</td>
-        <td>7</td>
+        <td>17</td>
+        <td>14</td>
+        <td>14</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -321,9 +321,19 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#ccc5cd76b1ef96020b57b60f9f16302588396e80" class="src_link" title="spec/models/item_spec.rb">spec/models/item_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>13</td>
+        <td>8</td>
+        <td>8</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#e9c2809c7c583b477c9d583d4ec00a391d585222" class="src_link" title="spec/models/room_spec.rb">spec/models/room_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>22</td>
+        <td>21</td>
         <td>13</td>
         <td>13</td>
         <td>0</td>
@@ -489,11 +499,11 @@
         <div class="source_table" id="f2bbe822742dd2f5b3e42531e8fb3fa5a95fadc7">
   <div class="header">
     <h3>app/controllers/rooms_controller.rb</h3>
-    <h4><span class="red">80.0 %</span> covered</h4>
+    <h4><span class="red">71.43 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
-      <span class="green"><b>4</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <b>7</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
   
@@ -518,31 +528,43 @@
           <code class="ruby">    @start = Room.find(5)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="missed" data-hits="0" data-linenumber="4">
+          
+          
+          <code class="ruby">    @item_start = Room.find(13)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="6">
+        <li class="covered" data-hits="12" data-linenumber="7">
           <span class="hits">12</span>
           
           <code class="ruby">    @room = Room.find(params[:id ])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="covered" data-hits="12" data-linenumber="8">
+          <span class="hits">12</span>
+          
+          <code class="ruby">    @items = @room.items.all</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">end</code>
@@ -693,11 +715,11 @@
         <div class="source_table" id="d0fb8f320492ee9a2be9acf65260606004c92ba6">
   <div class="header">
     <h3>app/models/item.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="yellow">90.0 %</span> covered</h4>
     <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>10</b> relevant lines. 
+      <span class="green"><b>9</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -710,7 +732,85 @@
           <code class="ruby">class Item &lt; ActiveRecord::Base</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="2">
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  belongs_to :room</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def spawn_item</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    is_active = self.active</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    is_key = self.key_item</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    is_rare = self.rarity</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    if is_key === true</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      is_active = true</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      self.update({active: is_active})</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">      else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="12">
+          
+          
+          <code class="ruby">      &quot;Item is already spawned.&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">end</code>
@@ -723,10 +823,10 @@
         <div class="source_table" id="7a405045a78cb9809cfebe8e00d160da287aa6c8">
   <div class="header">
     <h3>app/models/room.rb</h3>
-    <h4><span class="red">78.57 %</span> covered</h4>
+    <h4><span class="red">80.0 %</span> covered</h4>
     <div>
-      <b>14</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
+      <b>15</b> relevant lines. 
+      <span class="green"><b>12</b> lines covered</span> and
       <span class="red"><b>3</b> lines missed.</span>
     </div>
   </div>
@@ -740,145 +840,151 @@
           <code class="ruby">class Room &lt;ActiveRecord::Base</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="2">
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  has_many :items</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
           <code class="ruby">    def been_there?</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="4">
+        <li class="covered" data-hits="12" data-linenumber="5">
           <span class="hits">12</span>
           
           <code class="ruby">    first_time =  self.first_time</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="5">
+        <li class="covered" data-hits="12" data-linenumber="6">
           <span class="hits">12</span>
           
           <code class="ruby">        if first_time === true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">            &quot;no&quot;</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="7">
+        <li class="covered" data-hits="12" data-linenumber="8">
           <span class="hits">12</span>
           
           <code class="ruby">            first_time = false</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="8">
+        <li class="covered" data-hits="12" data-linenumber="9">
           <span class="hits">12</span>
           
           <code class="ruby">            self.update({:first_time =&gt; first_time})</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="9">
+        <li class="missed" data-hits="0" data-linenumber="10">
           
           
           <code class="ruby">        elsif first_time === false</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">          &quot;yes&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
+        <li class="missed" data-hits="0" data-linenumber="12">
           
           
           <code class="ruby">          first_time = true</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="12">
+        <li class="missed" data-hits="0" data-linenumber="13">
           
           
           <code class="ruby">          self.update({:first_time =&gt; first_time})</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">        end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="16">
           
-          <code class="ruby">    def self.reset</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
-          <code class="ruby">      array_to_reset = Room.all</code>
+          <code class="ruby">    def self.reset</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
+          <code class="ruby">      array_to_reset = Room.all</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
           <code class="ruby">      array_to_reset.each do |room|</code>
         </li>
       
-        <li class="covered" data-hits="43" data-linenumber="19">
-          <span class="hits">43</span>
+        <li class="covered" data-hits="264" data-linenumber="20">
+          <span class="hits">264</span>
           
           <code class="ruby">        if room.first_time === false</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="20">
+        <li class="covered" data-hits="14" data-linenumber="21">
           <span class="hits">14</span>
           
           <code class="ruby">          room.update({:first_time =&gt; true})</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">        end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">end</code>
@@ -2201,8 +2307,8 @@
     <h3>spec/factories.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>7</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>14</b> relevant lines. 
+      <span class="green"><b>14</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2258,7 +2364,55 @@
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  factory :item do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    title &quot;Room 1&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    description &quot;e,s&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    obtainable true</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    active false</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    key_item true</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    rarity &quot;low&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">end</code>
@@ -2832,6 +2986,102 @@
   </pre>
 </div>
       
+        <div class="source_table" id="ccc5cd76b1ef96020b57b60f9f16302588396e80">
+  <div class="header">
+    <h3>spec/models/item_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe Item do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;#spawn_item method&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;will spawn_item 100% of the time if it is a key_item&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        top_left_room= FactoryGirl.create(:room)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        test_item = FactoryGirl.create(:item, :room_id =&gt; top_left_room.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        test_item.spawn_item</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(test_item.active).to eq(true)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
         <div class="source_table" id="e9c2809c7c583b477c9d583d4ec00a391d585222">
   <div class="header">
     <h3>spec/models/room_spec.rb</h3>
@@ -2873,43 +3123,43 @@
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">describe &quot;#been_there? method&quot; do</code>
+          <code class="ruby">  describe &quot;#been_there? method&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &quot;will check if the room has been entered the first time, and then change the first_time attribute to false.&quot; do</code>
+          <code class="ruby">    it &quot;will check if the room has been entered the first time, and then change the first_time attribute to false.&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">    top_left_room= FactoryGirl.create(:room, :name =&gt; &quot;Top Left&quot;, :door_ways =&gt;&quot;e,s&quot;)</code>
+          <code class="ruby">      top_left_room= FactoryGirl.create(:room, :name =&gt; &quot;Top Left&quot;, :door_ways =&gt;&quot;e,s&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">    top_left_room.been_there?</code>
+          <code class="ruby">      top_left_room.been_there?</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(top_left_room.first_time).to eq false</code>
+          <code class="ruby">      expect(top_left_room.first_time).to eq false</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
@@ -2921,58 +3171,52 @@
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
-          <code class="ruby">describe &quot;.reset &quot; do</code>
+          <code class="ruby">  describe &quot;.reset &quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &quot;When called it will find all rooms that have first_time set to false, and set the to true&quot; do</code>
+          <code class="ruby">    it &quot;When called it will find all rooms that have first_time set to false, and set the to true&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">  top_left_room= FactoryGirl.create(:room, :name =&gt; &quot;Top Left&quot;, :door_ways =&gt;&quot;e,s&quot;, :first_time =&gt; false)</code>
+          <code class="ruby">    top_left_room= FactoryGirl.create(:room, :name =&gt; &quot;Top Left&quot;, :door_ways =&gt;&quot;e,s&quot;, :first_time =&gt; false)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">  top_center_room= FactoryGirl.create(:room, :name =&gt; &quot;Top Center&quot;, :door_ways =&gt;&quot;w,e,s&quot;, :first_time =&gt; false)</code>
+          <code class="ruby">    top_center_room= FactoryGirl.create(:room, :name =&gt; &quot;Top Center&quot;, :door_ways =&gt;&quot;w,e,s&quot;, :first_time =&gt; false)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
-          <code class="ruby">  Room.reset</code>
+          <code class="ruby">    Room.reset</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">  expect(top_left_room.first_time &amp;&amp; top_center_room.first_time).to eq false</code>
+          <code class="ruby">    expect(top_left_room.first_time &amp;&amp; top_center_room.first_time).to eq false</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">end</code>
