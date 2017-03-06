@@ -1,4 +1,5 @@
 class Room <ActiveRecord::Base
+  has_many :items
 
     def been_there?
     first_time =  self.first_time

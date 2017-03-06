@@ -420,6 +420,10 @@
         1,
         null
       ],
+      "/Users/Guest/Desktop/railsTearsOfIron/app/models/item.rb": [
+        1,
+        null
+      ],
       "/Users/Guest/Desktop/railsTearsOfIron/app/models/room.rb": [
         1,
         null,
@@ -439,7 +443,7 @@
         1,
         1,
         1,
-        486,
+        43,
         14,
         null,
         null,
@@ -494,6 +498,6 @@
         null
       ]
     },
-    "timestamp": 1488828207
+    "timestamp": 1488831640
   }
 }
