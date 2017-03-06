@@ -24,9 +24,9 @@ room_list.each do | name, doors, first_time, first_description, normal_descripti
 end
 
 item_list = [
-  ["Sword","A mighty sword, for a mighty robo.",true,true,17],
-  ["A key","Using its powers you can tumble the locks to open a door!",true,true,11]
+  ["Sword","A mighty sword, for a mighty robo.", true, true, false, "high", 17],
+  ["A key","Using its powers you can tumble the locks to open a door!",true,true,true, "low", 11]
 ]
-item_list.each do | title, description, obtainable, active, room_id|
-  Item.create( title: title, description: description, obtainable: obtainable, active: active, room_id: room_id)
+item_list.each do | title, description, obtainable, active, key_item, rarity, room_id|
+  Item.create( title: title, description: description, obtainable: obtainable, active: active, key_item, rarity , room_id: room_id)
 end
