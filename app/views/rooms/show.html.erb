@@ -16,16 +16,18 @@
   <div><%= image_tag "#{@room.id}.png", :class =>"world" %><%= image_tag "robo64.png", :class =>"robo" %></div>
   <% if @items.any? %>
     <% @items.each do |item| %>
-        <%if item.title === "A key" %>
+      <%if item.title === "A key" %>
           <%= link_to '/' do %>
-          <%= image_tag "#{item.title}.png"  %>
+            <%= image_tag "#{item.title}.png"  %>
             <% end %>
+          <% else %>
+          <%= link_to edit_character_item_path(@player, item) do %>
+            <%= image_tag "#{item.title}.png"  %>
           <% end %>
-    <%= link_to edit_character_item_path(@player, item) do %>
-    <%= image_tag "#{item.title}.png"  %>
+        <% end %>
       <% end %>
     <% end %>
-  <% end%>
+
 </div>
 
 
