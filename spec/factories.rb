@@ -1,4 +1,7 @@
 FactoryGirl.define do
+  factory :player do
+    
+  end
   factory :room do
     name "Room 1"
     door_ways "e,s"
