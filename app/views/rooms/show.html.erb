@@ -1,15 +1,26 @@
 <h1>You are currently in room no. <%= @room.id %>.</h1>
 <h2> THE ROOM OF <%= @room.name %> </h2>
-<%= render "/layouts/game_controller" %><%= render "layouts/text_display" %>
-
+<div class="row">
+  <div class="col-md-1">
+    <%= render "/layouts/game_controller" %>
+  </div>
+  <div class="col-md-5">
+    <%= render "layouts/text_display" %>
+  </div>
+  <div class="col-md-5">
+    <%= render "/layouts/character_display" %>
+  </div>
+</div>
 <hr>
 <div id="world">
   <div><%= image_tag "#{@room.id}.png", :class =>"world" %><%= image_tag "robo64.png", :class =>"robo" %></div>
   <% if @items.any? %>
+  <% @items.each do |item| %>
   <%= link_to '/' do %>
-  <%= image_tag "#{@items.first.title}.png"  %>
+  <%= image_tag "#{item.title}.png"  %>
   <% end %>
   <% end %>
+  <% end%>
 </div>
 
 

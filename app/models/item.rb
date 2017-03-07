@@ -1,5 +1,6 @@
 class Item < ActiveRecord::Base
   belongs_to :room
+  belongs_to :characters, :optional => true
 
   def spawn_item
     is_active = self.active

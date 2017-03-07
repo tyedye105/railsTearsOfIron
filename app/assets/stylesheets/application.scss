@@ -15,14 +15,14 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
- 
+
  .world {
    position: relative;
    z-index: 0;
  }
 
 #text-display {
-  background: darken(grey, 25%);
+  background: lighten(grey, 25%);
   height: 200px;
   width: 450px;
   position: relative;

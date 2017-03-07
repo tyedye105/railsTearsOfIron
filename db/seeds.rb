@@ -16,6 +16,7 @@ room_list = [
   ["Item Test 15", "w,e", true, "Hooray I did it!!! Wait.... THERE ARE NO EXITS!", "I hate this room." ],
   ["Item dummy 16", "w,n", true, "This is the first time I have been to room 9", "Room 9, again..." ],##dummy's used in intial creation to make the navigation sustem work.
   ["Item test 17", "n", true, "nothing but garbage, but perhaps there is something useful.", "maybe..." ],
+  ["Character Test 18", "", true, "LOOOK AT ALL OF THESE ITEMS!!!", "How the hell did I phase through the walls?" ],
 
 ]
 
@@ -27,7 +28,11 @@ item_list = [
   ["Sword","A mighty sword, for a mighty robo.", true, false, false, "high", 17],
   ["Sword","A sword, for a mighty robo.", true, false, false, "medium", 11],
   ["Sword","A crappy sword, for a mighty robo.", true, false, false, "low", 11],
-  ["A key","Using its powers you can tumble the locks to open a door!",true,false,true, "low", 11]
+  ["A key","Using its powers you can tumble the locks to open a door!",true,false,true, "low", 11],
+  ["Sword","A mighty sword, for a mighty robo.", true, false, false, "high", 18],
+  ["Sword","A sword, for a mighty robo.", true, false, false, "medium", 18],
+  ["Sword","A crappy sword, for a mighty robo.", true, false, false, "low", 18],
+  ["A key","Using its powers you can tumble the locks to open a door!",true,false,true, "low", 18]
 ]
 item_list.each do | title, description, obtainable, active, key_item, rarity, room_id|
   Item.create( title: title, description: description, obtainable: obtainable, active: active, key_item: key_item, rarity: rarity , room_id: room_id)
