@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170307055854) do
+ActiveRecord::Schema.define(version: 20170307165203) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "characters", force: :cascade do |t|
     t.string  "name"
-    t.integer "hit_points"
-    t.integer "battery_level"
+    t.integer "hit_points",    default: 100
+    t.integer "battery_level", default: 100
     t.integer "player_id"
-    t.boolean "is_alive"
+    t.boolean "is_alive",      default: true
   end
 
   create_table "items", force: :cascade do |t|
