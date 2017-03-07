@@ -2,6 +2,12 @@ class Item < ActiveRecord::Base
   belongs_to :room
   belongs_to :characters, :optional => true
 
+    def pick_it_up
+      picked_up = self.obtainable
+      picked_up = false
+      self.update({obtainable: picked_up})
+    end
+
   def spawn_item
     is_active = self.active
     is_key = self.key_item
