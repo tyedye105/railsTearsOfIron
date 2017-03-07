@@ -1,7 +1,6 @@
 class CharactersController < ApplicationController
+  before_action :authenticate_player!, :except => [:index]
   def index
-  end
-  def show
   end
   def new
     @player = current_player

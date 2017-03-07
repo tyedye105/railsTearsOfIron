@@ -1,7 +1,4 @@
 FactoryGirl.define do
-  factory :player do
-    
-  end
   factory :room do
     name "Room 1"
     door_ways "e,s"
@@ -16,5 +13,17 @@ FactoryGirl.define do
     active false
     key_item true
     rarity "low"
+  end
+  factory :player do
+    name "Morty"
+    username "Robotow"
+    email "user223@gmail.com"
+    password "asdffa"
+  end
+  factory :character do
+    name "Robo"
+    hit_points 100
+    battery_level 100
+    is_alive true
   end
 end

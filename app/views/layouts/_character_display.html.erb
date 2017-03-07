@@ -1,6 +1,18 @@
 <div class="well">
-  <h2> <%= @character.name  %> </h2>
-  <h2> <%= @character.hit_points  %> </h2>
-  <h2> <%= @character.battery_level  %> </h2>
-  <h2> <%= @character.is_alive  %> </h2>
+  <div class="row">
+    <div class="col-md-3">
+      <h2> <%= @character.name  %> </h2>
+      <h2> <%= @character.hit_points  %> </h2>
+      <h2> <%= @character.battery_level  %> </h2>
+      <h2> <%= @character.is_alive  %>
+    </div>
+    <div class="col-md-3">
+      <h1>Inventory</h1>
+        <% if @character.items.any? %>
+          <% @character.items.each do |item| %>
+            <%= image_tag "#{item.title}.png"  %>
+            <% end %>
+        <% end %>
+  </div>
+</div>
 </div>
