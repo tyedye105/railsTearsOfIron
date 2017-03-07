@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :characters do
     resources :items
     end
+    resources :search, controller: 'rooms', :only=>'show'
 end

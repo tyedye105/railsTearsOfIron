@@ -5,5 +5,12 @@
     <% else %>
   <p> <%= @room.normal_description %></p>
   <% end %>
-  <h1><%= @room.first_time %><h1>
+
+
+  <% if current_page?("/search/#{params[:id]}") %>
+  
+  <h1>You Searched the room!</h1>
+  <% end %>
+
+
 </div>

@@ -13,11 +13,12 @@
   <div class="east">
   <% if @room.door_ways.include?("e") %>
   <%= button_to "Go East", room_path(@room.id + 1),method: :get, :class => "east" %>
-  <% end %> 
+  <% end %>
   </div>
   <div class="south">
     <% if @room.door_ways.include?("s") %>
     <%= button_to "Go South", room_path(@room.id + 3),method: :get, :class => "south" %>
     <% end %>
   </div>
+  <%= button_to "search", search_path(@room.id),method: :get, :class => "north" %>
 </div>

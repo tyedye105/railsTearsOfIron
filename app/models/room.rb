@@ -14,6 +14,21 @@ class Room <ActiveRecord::Base
         end
     end
 
+    def empty?
+      item_count = self.items.length
+      items_found = []
+        self.items.each do |item|
+          if item.obtainable === false
+            items_found.push(item)
+          end
+        end
+        if item_count === items_found.length
+          true
+        else
+          false
+        end
+    end
+
     def self.reset
       array_to_reset = Room.all
       array_to_reset.each do |room|
