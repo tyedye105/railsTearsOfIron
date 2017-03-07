@@ -25,8 +25,8 @@ end
 
 item_list = [
   ["Sword","A mighty sword, for a mighty robo.", true, false, false, "high", 17],
-  ["Sword","A sword, for a mighty robo.", true, false, false, "medium", 17],
-  ["Sword","A crappy sword, for a mighty robo.", true, false, false, "low", 17],
+  ["Sword","A sword, for a mighty robo.", true, false, false, "medium", 11],
+  ["Sword","A crappy sword, for a mighty robo.", true, false, false, "low", 11],
   ["A key","Using its powers you can tumble the locks to open a door!",true,false,true, "low", 11]
 ]
 item_list.each do | title, description, obtainable, active, key_item, rarity, room_id|
