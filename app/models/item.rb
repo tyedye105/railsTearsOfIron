@@ -30,9 +30,9 @@ class Item < ActiveRecord::Base
               end
             end
           end
-          is_active
+        else
+          "all items have been spawned"
         end
-      else
-        "all items have been spawned"
+
     end
 end

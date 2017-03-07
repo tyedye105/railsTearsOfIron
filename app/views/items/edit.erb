@@ -2,6 +2,7 @@
 <h2> You have found <%= @item.title %></h2>
 <%= form_for [@character, @item] do |f| %>
 <%= f.hidden_field :character_id, value: @character.id %>
+<%= f.hidden_field :obtainable, value: false %>
 <%= f.submit "Pick it up." %>
 <% end %>
 <%= button_to "Leave it", room_path(@item.room_id ),method: :get%>

@@ -11,6 +11,6 @@ class RoomsController < ApplicationController
     @player = current_player
     @character = @player.characters.first
     @room = Room.find(params[:id ])
-    @items = @room.items.all
+      @items = @room.items.all
   end
 end
