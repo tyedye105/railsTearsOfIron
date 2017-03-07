@@ -1,4 +1,5 @@
 class RoomsController < ApplicationController
+  before_action :authenticate_player!
   def index
     @player = current_player
     @character = @player.characters.first

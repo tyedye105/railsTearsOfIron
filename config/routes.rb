@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   devise_for :players
   resources :rooms
-  root "rooms#index"
+  root "characters#index"
   resources :characters
+  resources :characters do
+    resources :items
+    end
 end

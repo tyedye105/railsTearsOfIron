@@ -11,5 +11,8 @@
 <br>
 
 <p> Once...</p>
-
+<% if player_signed_in? %>
 <%= link_to "The journey continues on.", new_character_path() %>
+<% else %>
+<h1>Log in to begin!</h1>
+<% end %>
