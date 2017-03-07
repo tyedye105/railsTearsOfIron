@@ -13,7 +13,9 @@
  *= require_tree .
  *= require_self
  */
-
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ 
  .world {
    position: relative;
    z-index: 0;
