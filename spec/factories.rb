@@ -7,8 +7,8 @@ FactoryGirl.define do
     normal_description "Not again..."
   end
   factory :item do
-    title "Room 1"
-    description "e,s"
+    title "Sword"
+    description "A sword"
     obtainable true
     active false
     key_item true

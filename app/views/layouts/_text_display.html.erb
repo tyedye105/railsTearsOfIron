@@ -5,5 +5,15 @@
     <% else %>
   <p> <%= @room.normal_description %></p>
   <% end %>
-  <h1><%= @room.first_time %><h1>
+
+
+  <% if current_page?("/search/#{params[:id]}") %>
+    <% if @room.empty? === false %>
+  <h1> Your scanners have detect useful items in the vicinity!</h1>
+    <% else %>
+    <h1>Your scanners do not detect anything useful in this room.</h1>
+    <% end %>
+  <% end %>
+
+
 </div>

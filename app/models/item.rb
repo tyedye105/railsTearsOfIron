@@ -8,6 +8,19 @@ class Item < ActiveRecord::Base
       self.update({obtainable: picked_up})
     end
 
+    def item_reset
+      obtainable = self.obtainable
+      active = self.active
+        if obtainable === false
+          obtainable = true
+          self.update({obtainable: obtainable})
+        end
+        if active === true
+          active = false
+          self.update({active: active})
+        end
+    end
+
   def spawn_item
     is_active = self.active
     is_key = self.key_item
