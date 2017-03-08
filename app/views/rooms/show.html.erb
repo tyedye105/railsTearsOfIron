@@ -16,11 +16,17 @@
   <div><%= image_tag "#{@room.id}.png", :class =>"world" %><%= image_tag "robo64.png", :class =>"robo" %>
     <% if @room.doors.any? %>
       <% @room.doors.each do |door| %>
-      <%= link_to edit_door_path( door) do %>
-        <%= image_tag "door.png"  %>
+        <% if @character.do_you_have?("A key") === true %>
+          <%= link_to edit_door_path( door) do %>
+            <%= image_tag "door.png"  %>
+          <% end %>
+        <% else %>
+          <%= link_to door_path( door) do %>
+            <%= image_tag "door.png"  %>
+          <% end %>
+        <% end %>
       <% end %>
-      <% end %>
-      <% end %>
+    <% end %>
   </div>
   <% if @items.any? %>
       <% @items.each do |item| %>
@@ -40,6 +46,6 @@
     <% end %>
 
 </div>
-
+  <%= image_tag "door.png"  %>
 
 <hr>

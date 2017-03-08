@@ -1,24 +1,13 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<% if @room.doors.any? %>
+  <% @room.doors.each do |door| %>
+    <% if @character.do_you_have?("A key") === true %>
+      <%= link_to edit_door_path(door) do %>
+        <%= image_tag "door.png"  %>
+      <% end %>
+    <% else %>
+      <%= link_to, door_path( door) do %>
+        <%= image_tag "door.png"  %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

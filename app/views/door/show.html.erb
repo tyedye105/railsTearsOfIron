@@ -7,5 +7,6 @@
 </div>
 <hr>
 <div class="well">
-  <%= %>
+  <p> <%= @door.description %></p>
+  <%= link_to "I better go find that damn key", room_path(@door.room_id) %>
 </div>

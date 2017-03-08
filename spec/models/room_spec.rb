@@ -2,6 +2,15 @@ require 'rails_helper'
 
 describe Room do
 
+  describe "direction_blocked" do
+    it "check if there are doors blocking any of the possible room directions." do
+      test_room = FactoryGirl.create(:room)
+      test_door = FactoryGirl.create(:door, :room_id => test_room.id)
+      expect(test_room.direction_blocked?).to eq true
+
+    end
+  end
+
   describe "#empty? method" do
     it "will return true if the room is empty" do
         top_left_room= FactoryGirl.create(:room, :name => "Top Left", :door_ways =>"e,s")

@@ -2,6 +2,25 @@ class Room <ActiveRecord::Base
   has_many :items
   has_many :doors
 
+    def direction_blocked?
+      possible_directions = self.door_ways.split(",")
+      possible_doors = self.doors
+      blocked_paths = []
+      possible_directions.each do |direction|
+        possible_doors.each do |door|
+          if direction === door.door_location
+            blocked_paths.push(door.door_location)
+          end
+        end
+      end
+       if blocked_paths.length > 0
+         true
+       else
+         false
+       end
+    end
+
+
     def been_there?
     first_time =  self.first_time
         if first_time === true
