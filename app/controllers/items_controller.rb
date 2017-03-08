@@ -9,6 +9,8 @@ class ItemsController < ApplicationController
     @character = current_player.characters.first
     @item = @character.items.new(item_params)
       if @character.save
+        room = Room.find(@item.room_id)
+        room.locate(@item.origin_id).pick_it_up
         flash[:notice] = "You have picked up #{@item.title}"
         redirect_to room_path(@item.room_id)
         @item.update({:room_id => nil})
