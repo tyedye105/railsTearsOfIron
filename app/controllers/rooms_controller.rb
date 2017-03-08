@@ -11,6 +11,15 @@ class RoomsController < ApplicationController
     @player = current_player
     @character = @player.characters.first
     @room = Room.find(params[:id ])
-      @items = @room.items.all
+    @items = @room.items.all
+    @east = nil
+    if@room.doors.any?
+      @room.doors.each do |door|
+        if @room.directions_blocked.include?("e")
+          @east = door
+        end
+      end
+    end
+
   end
 end

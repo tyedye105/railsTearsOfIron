@@ -1,0 +1,22 @@
+<h1>This is going to be hacky</h1>
+<h2> You have found <%= @item.title %></h2>
+<%= form_for [@character, @item_to_pick_up] do |f| %>
+<%= f.label :title%>
+<%= f.text_field :title, :value => @item.title %>
+<%= f.label :description%>
+<%= f.text_field :description, :value => @item.description %>
+<%= f.label :obtainable%>
+<%= f.text_field :obtainable, :value => false %>
+<%= f.label :active%>
+<%= f.text_field :active, :value => true %>
+<%= f.label :key_item%>
+<%= f.text_field :key_item, :value => @item.key_item %>
+<%= f.label :rarity%>
+<%= f.text_field :rarity, :value => @item.rarity %>
+<%= f.label :room_id%>
+<%= f.text_field :room_id, :value => @item.room_id %>
+<%= f.label :character_id%>
+<%= f.text_field :character_id, :value => @character.id %>
+<%= f.submit "Pick it up." %>
+<% end %>
+<%= render "/layouts/character_display"  %>

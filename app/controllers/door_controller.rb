@@ -1,6 +1,6 @@
 class DoorController < ApplicationController
   def show
-    @character = current_player.character.first
+    @character = current_player.characters.first
     @door = Door.find(params[:id])
   end
   def edit

@@ -39,7 +39,7 @@ item_list.each do | title, description, obtainable, active, key_item, rarity, ro
 end
 
 doors_list = [
-  ["Door East", "It's a door... Going to need a key for that.", 'e', 14]
+  ["Door East",'e', "It's a door... Going to need a key for that.", 14]
   ]
   doors_list.each do | name, door_location, description, room_id|
     Door.create( name: name, door_location: door_location, description: description, room_id: room_id )
