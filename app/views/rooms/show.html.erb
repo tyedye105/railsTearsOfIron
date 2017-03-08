@@ -16,13 +16,15 @@
   <div><%= image_tag "#{@room.id}.png", :class =>"world" %><%= image_tag "robo64.png", :class =>"robo" %>
     <% if @room.doors.any? %>
       <% @room.doors.each do |door| %>
-        <% if @character.do_you_have?("A key") === true %>
-          <%= link_to edit_door_path( door) do %>
-            <%= image_tag "door.png"  %>
-          <% end %>
-        <% else %>
-          <%= link_to door_path( door) do %>
-            <%= image_tag "door.png"  %>
+        <% if door.active === true %>
+          <% if @character.do_you_have?("A key") === true %>
+            <%= link_to edit_door_path( door) do %>
+              <%= image_tag "door.png"  %>
+            <% end %>
+          <% elsif %>
+            <%= link_to door_path( door) do %>
+              <%= image_tag "door.png"  %>
+            <% end %>
           <% end %>
         <% end %>
       <% end %>

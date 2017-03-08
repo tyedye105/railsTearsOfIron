@@ -15,14 +15,18 @@
   </div>
   <div class="east">
     <% if @room.door_ways.include?("e") %>
-        <% if @east.is_locked === true %>
-        <h1>Locked</h1>
-        <% elsif @east.is_locked === true && @character.do_you_have?('A key') === true %>
-        <h1>I have a Key </h1>
+      <% if @east != nil %>
+        <% if @east.is_locked === true && @character.do_you_have?('A key') === false%>
+          <%= button_to "Go East", door_path(@east),method: :get, :class => "east" %>
+          <% elsif @east.is_locked === true && @character.do_you_have?('A key') === true %>
+        <%= button_to "Go East", edit_door_path(@east),method: :get, :class => "east" %>
+          <% elsif @east.is_locked === false %>
+        <%= button_to "Go East", room_path(@room.id + 1),method: :get, :class => "east" %>
         <%end %>
         <% else %>
-        <h1>Head East</h1>
+        <%= button_to "Go East", room_path(@room.id + 1),method: :get, :class => "east" %>
       <% end %>
+    <% end %>
   </div>
   <div class="south">
     <% if @room.door_ways.include?("s") %>

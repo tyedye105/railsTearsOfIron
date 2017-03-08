@@ -1,0 +1,12 @@
+<% if @character.do_you_have?('A key') %>
+<%= form_for @door do |f| %>
+<%= f.label :is_locked %>
+<%= f.text_field :is_locked, :value => false %>
+<%= f.label :active %>
+<%= f.text_field :active, :value => false %>
+<%= f.submit "Open the door!" %>
+<% end %>
+<%= button_to "Naw", room_path(@door.room_id),method: :get %>
+<% else %>
+<h1>DONT CHEAT</h1>
+<% end %>
