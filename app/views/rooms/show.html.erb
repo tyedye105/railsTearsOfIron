@@ -19,7 +19,7 @@
        <% item.spawn_item %>
         <% if item.active === true && item.obtainable === true %>
           <%if item.title === "A key" %>
-              <%= link_to '/' do %>
+              <%= link_to edit_character_item_path(@player, item) do %>
                 <%= image_tag "#{item.title}.png"  %>
                 <% end %>
               <% else %>

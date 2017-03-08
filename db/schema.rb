@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170307192419) do
+ActiveRecord::Schema.define(version: 20170307233459) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20170307192419) do
     t.string  "title"
     t.string  "description"
     t.boolean "obtainable",   default: true
-    t.boolean "active"
+    t.boolean "active",       default: false
     t.integer "room_id"
     t.boolean "key_item"
     t.string  "rarity"
