@@ -20,6 +20,7 @@ class Item < ActiveRecord::Base
           self.update({active: active})
         end
     end
+    
 
   def spawn_item
     is_active = self.active

@@ -7,4 +7,5 @@ Rails.application.routes.draw do
     resources :items
     end
     resources :search, controller: 'rooms', :only=>'show'
+      resources :door, except: [:index, :destroy, :new, :create]
 end

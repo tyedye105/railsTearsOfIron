@@ -32,7 +32,7 @@ describe Room do
     #   top_left_room.items.push(test_item1)
     #   Room.reset
     #   expect(top_left_room.items.first.obtainable).to eq true
-    end
+    # end
     # it "reset all of the items in each room." do
     #   top_left_room= FactoryGirl.create(:room, :name => "Top Left", :door_ways =>"e,s", :first_time => false)
     #   test_item1 = FactoryGirl.create(:item, :obtainable => false, :active =>true, :room_id => top_left_room.id)

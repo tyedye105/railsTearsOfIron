@@ -13,7 +13,15 @@
 </div>
 <hr>
 <div id="world">
-  <div><%= image_tag "#{@room.id}.png", :class =>"world" %><%= image_tag "robo64.png", :class =>"robo" %></div>
+  <div><%= image_tag "#{@room.id}.png", :class =>"world" %><%= image_tag "robo64.png", :class =>"robo" %>
+    <% if @room.doors.any? %>
+      <% @room.doors.each do |door| %>
+      <%= link_to edit_door_path( door) do %>
+        <%= image_tag "door.png"  %>
+      <% end %>
+      <% end %>
+      <% end %>
+  </div>
   <% if @items.any? %>
       <% @items.each do |item| %>
        <% item.spawn_item %>
