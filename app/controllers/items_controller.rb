@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
     @item_to_pick_up = @character.items.new()
   end
   def create
+
     @character = current_player.characters.first
     @item = @character.items.new(item_params)
       if @character.save
@@ -28,6 +29,6 @@ class ItemsController < ApplicationController
   end
   private
   def item_params
-    params.require(:item).permit(:title, :description, :obtainable, :active, :room_id, :key_item, :rarity, :character_id)
+    params.require(:item).permit(:title, :description, :obtainable, :active, :room_id, :key_item, :rarity, :character_id, :origin_id)
 end
 end

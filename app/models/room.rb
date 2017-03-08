@@ -2,7 +2,10 @@ class Room <ActiveRecord::Base
   has_many :items
   has_many :doors
 
-
+    def locate(origin_id)
+      found_item = self.items.find(origin_id)
+      found_item
+    end
 
     def directions_blocked
       possible_directions = self.door_ways.split(",")

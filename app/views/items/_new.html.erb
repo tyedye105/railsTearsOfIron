@@ -17,6 +17,8 @@
 <%= f.text_field :room_id, :value => @item.room_id %>
 <%= f.label :character_id%>
 <%= f.text_field :character_id, :value => @character.id %>
+<%= f.label :origin_id%>
+<%= f.text_field :origin_id, :value => @item.id %>
 <%= f.submit "Pick it up." %>
 <% end %>
 <%= render "/layouts/character_display"  %>

@@ -2,6 +2,15 @@ require 'rails_helper'
 
 describe Room do
 
+  describe "locate(origin_id)" do
+    it "will find the original item in the room used to make new instances for the player inventory" do
+        top_left_room= FactoryGirl.create(:room, :name => "Top Left", :door_ways =>"e,s", :first_time => false)
+        original = FactoryGirl.create(:item, :obtainable => false, :active =>true, :room_id => top_left_room.id)
+        character_copy = FactoryGirl.create(:item, :obtainable => false, :active =>true, :room_id => top_left_room.id, :origin_id => original.id)
+        expect(top_left_room.locate(character_copy.origin_id)).to eq original
+    end
+  end
+
   describe "directions_blocked" do
     it "check if there are doors blocking any of the possible room directions." do
       test_room = FactoryGirl.create(:room)
@@ -33,7 +42,6 @@ describe Room do
     top_center_room= FactoryGirl.create(:room, :name => "Top Center", :door_ways =>"w,e,s", :first_time => false)
     Room.reset
     expect(top_left_room.first_time && top_center_room.first_time).to eq false
-    end
     #The following specs do not pass, yet the methods work on the when naive tested.
     # it "reset all of the items in each room." do
     #   top_left_room= FactoryGirl.create(:room, :name => "Top Left", :door_ways =>"e,s", :first_time => false)
@@ -50,5 +58,6 @@ describe Room do
     #   Room.reset
     #   expect(test_item2.obtainable).to eq true
     # end
+    end
   end
 end
