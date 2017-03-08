@@ -2,11 +2,11 @@ require 'rails_helper'
 
 describe Room do
 
-  describe "direction_blocked" do
+  describe "directions_blocked" do
     it "check if there are doors blocking any of the possible room directions." do
       test_room = FactoryGirl.create(:room)
       test_door = FactoryGirl.create(:door, :room_id => test_room.id)
-      expect(test_room.direction_blocked?).to eq true
+      expect(test_room.directions_blocked).to eq ["e"]
 
     end
   end

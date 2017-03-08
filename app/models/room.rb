@@ -2,7 +2,9 @@ class Room <ActiveRecord::Base
   has_many :items
   has_many :doors
 
-    def direction_blocked?
+
+
+    def directions_blocked
       possible_directions = self.door_ways.split(",")
       possible_doors = self.doors
       blocked_paths = []
@@ -13,11 +15,7 @@ class Room <ActiveRecord::Base
           end
         end
       end
-       if blocked_paths.length > 0
-         true
-       else
-         false
-       end
+      blocked_paths
     end
 
 

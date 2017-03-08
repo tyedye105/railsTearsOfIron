@@ -1,21 +1,28 @@
   <div id="game-controller">
   <div class="north">
+    <% if @room.directions_blocked.include?("n") %>
+    <%= button_to "LOCKED"  %>
+    <% else %>
     <% if @room.door_ways.include?("n") %>
     <%= button_to "Go North", room_path(@room.id - 3),method: :get, :class => "north" %>
+    <% end %>
     <% end %>
   </div>
   <br>
   <div class="west">
+    <% if @room.directions_blocked.include?("") %>
     <% if @room.door_ways.include?("w") %>
     <%= button_to "Go West", room_path(@room.id - 1),method: :get, :class => "west" %>
     <% end %>
   </div>
   <div class="east">
+  <% if @room.directions_blocked.include?("") %>
   <% if @room.door_ways.include?("e") %>
   <%= button_to "Go East", room_path(@room.id + 1),method: :get, :class => "east" %>
   <% end %>
   </div>
   <div class="south">
+    <% if @room.directions_blocked.include?("") %>
     <% if @room.door_ways.include?("s") %>
     <%= button_to "Go South", room_path(@room.id + 3),method: :get, :class => "south" %>
     <% end %>
