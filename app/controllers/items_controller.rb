@@ -1,12 +1,12 @@
 class ItemsController < ApplicationController
   before_action :authenticate_player!
   def new
-    @character = current_player.characters.first
+    @character = current_player.characters.last
     @item_to_pick_up = @character.items.new()
   end
   def create
 
-    @character = current_player.characters.first
+    @character = current_player.characters.last
     @item = @character.items.new(item_params)
       if @character.save
         room = Room.find(@item.room_id)
@@ -17,12 +17,12 @@ class ItemsController < ApplicationController
       end
   end
   def edit
-    @character = current_player.characters.first
+    @character = current_player.characters.last
     @item_to_pick_up = @character.items.new()
     @item = Item.find(params[:id])
   end
   def update
-    @character = current_player.characters.first
+    @character = current_player.characters.last
     @item = Item.find(params[:id])
       if @item.update(item_params)
           @item.pick_it_up

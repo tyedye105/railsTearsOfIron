@@ -2,6 +2,10 @@ class Character < ActiveRecord::Base
   belongs_to :player
   has_many :items
 
+  def game_start
+    self.update({:is_new =>false})
+  end
+
   def do_you_have?(item)
     item
     has_item = nil

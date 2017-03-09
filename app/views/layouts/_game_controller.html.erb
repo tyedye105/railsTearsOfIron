@@ -29,7 +29,6 @@
               <%= button_to "Go East", room_path(@room.id + 1), method: :get, class: "east" %>
           <% end %>
         <% end %>
-
   </div>
   <div class="south">
     <% if @room.door_ways.include?("s") %>
