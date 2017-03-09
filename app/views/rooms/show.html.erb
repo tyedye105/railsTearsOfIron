@@ -13,7 +13,7 @@
 </div>
 <%= render "/layouts/game_over"  %>
 <div id="world">
-  <div><%= image_tag "#{@room.id}.png", :class =>"world" %><%= image_tag "robo64.png", :class =>"robo" %>
+  <div><%= image_tag "#{@room.id}.png", :class =>"world" %><%= image_tag "robo128.png", :class =>"robo" %>
     <% if @room.doors.any? %>
       <% @room.doors.each do |door| %>
         <% if door.active === true %>

@@ -16,8 +16,9 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
- .world {
-   position: relative;
+ #world {
+   position: absolute;
+   margin-left: 350px;
    z-index: 0;
  }
 
@@ -36,7 +37,9 @@
    position: relative;
  }
  .robo {
-  position: relative;; bottom: 350px; right:900px;
+  position: absolute;
+  right: 775px;
+  top: 300px; 
   z-index: 1;
  }
 body {
