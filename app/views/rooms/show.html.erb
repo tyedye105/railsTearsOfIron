@@ -13,10 +13,25 @@
 </div>
 <hr>
 <div id="world">
-  <div><%= image_tag "#{@room.id}.png", :class =>"world" %><%= image_tag "robo64.png", :class =>"robo" %></div>
+  <div><%= image_tag "#{@room.id}.png", :class =>"world" %><%= image_tag "robo64.png", :class =>"robo" %>
+    <% if @room.doors.any? %>
+      <% @room.doors.each do |door| %>
+        <% if door.active === true %>
+          <% if @character.do_you_have?("A key") === true %>
+            <%= link_to edit_door_path( door) do %>
+              <%= image_tag "door.png"  %>
+            <% end %>
+          <% elsif %>
+            <%= link_to door_path( door) do %>
+              <%= image_tag "door.png"  %>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
   <% if @items.any? %>
       <% @items.each do |item| %>
-       <% item.spawn_item %>
         <% if item.active === true && item.obtainable === true %>
           <%if item.title === "A key" %>
               <%= link_to edit_character_item_path(@player, item) do %>
@@ -27,11 +42,11 @@
                 <%= image_tag "#{item.title}.png"  %>
               <% end %>
             <% end %>
+            <% else %>
+               <% item.spawn_item %>
           <% end %>
         <% end %>
     <% end %>
 
 </div>
-
-
 <hr>

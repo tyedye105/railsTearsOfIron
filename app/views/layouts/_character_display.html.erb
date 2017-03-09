@@ -10,7 +10,7 @@
       <h1>Inventory</h1>
         <% if @character.items.any? %>
           <% @character.items.each do |item| %>
-            <%= image_tag "#{item.title}.png"  %>
+            <%= image_tag "#{item.title}.png" %>
             <% end %>
         <% end %>
   </div>

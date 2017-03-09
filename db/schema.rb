@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170307233459) do
+ActiveRecord::Schema.define(version: 20170309030139) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(version: 20170307233459) do
     t.integer "battery_level", default: 100
     t.integer "player_id"
     t.boolean "is_alive",      default: true
+    t.boolean "is_new",        default: true
+  end
+
+  create_table "doors", force: :cascade do |t|
+    t.string  "name"
+    t.string  "door_location"
+    t.boolean "is_locked",     default: true
+    t.boolean "active",        default: true
+    t.integer "room_id"
+    t.string  "description"
+    t.string  "req_item"
   end
 
   create_table "items", force: :cascade do |t|
@@ -32,6 +43,7 @@ ActiveRecord::Schema.define(version: 20170307233459) do
     t.boolean "key_item"
     t.string  "rarity"
     t.integer "character_id"
+    t.integer "origin_id"
   end
 
   create_table "players", force: :cascade do |t|

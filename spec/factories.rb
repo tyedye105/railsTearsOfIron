@@ -26,4 +26,9 @@ FactoryGirl.define do
     battery_level 100
     is_alive true
   end
+  factory :door do
+    name "Door East"
+    door_location 'e'
+    description "It's a door...Going to need  key for that."
+  end
 end

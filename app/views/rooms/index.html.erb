@@ -7,3 +7,10 @@
 <%= link_to "Navigation Prototype", room_path(@start) %>
 <%= link_to "Item Prototype", room_path(@item_start) %>
 <%= link_to "Character Item Interaction", room_path(@character_test)%>
+<% if @character.is_new === true %>
+  <%  Room.reset
+      @doors.each do |door|
+        door.shut_the
+      end
+    end
+  %>

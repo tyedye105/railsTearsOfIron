@@ -1,11 +1,17 @@
 class Item < ActiveRecord::Base
-  belongs_to :room
+  belongs_to :room, :optional => true
   belongs_to :characters, :optional => true
+
+    def consume_item
+      self.destroy
+    end
 
     def pick_it_up
       picked_up = self.obtainable
       picked_up = false
-      self.update({obtainable: picked_up})
+      off_the_ground = self.active
+      off_the_ground = false
+      self.update({obtainable: picked_up, active: off_the_ground})
     end
 
     def item_reset
@@ -20,6 +26,7 @@ class Item < ActiveRecord::Base
           self.update({active: active})
         end
     end
+
 
   def spawn_item
     is_active = self.active

@@ -1,0 +1,14 @@
+<h1>This is going to be hacky</h1>
+<h2> You have found <%= @item.title %></h2>
+<%= form_for [@character, @item_to_pick_up] do |f| %>
+<%= f.hidden_field :title, :value => @item.title %>
+<%= f.hidden_field :description, :value => @item.description %>
+<%= f.hidden_field :obtainable, :value => false %>
+<%= f.hidden_field :active, :value => true %>
+<%= f.hidden_field :key_item, :value => @item.key_item %>
+<%= f.hidden_field :rarity, :value => @item.rarity %>
+<%= f.hidden_field :room_id, :value => @item.room_id %>
+<%= f.hidden_field :character_id, :value => @character.id %>
+<%= f.hidden_field :origin_id, :value => @item.id %>
+<%= f.submit "Pick it up." %>
+<% end %>
