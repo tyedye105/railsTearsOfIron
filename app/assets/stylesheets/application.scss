@@ -36,12 +36,12 @@
   left:420px;
 }
 
- #game_controller {
-   background: blue;
-   height: 150px;
-   width: 150px;
-   position: relative;
-   left:400px;
+ #d_pad {
+    background: blue;
+    height: 150px;
+    width: 150px;
+
+
  }
  .robo {
   position: absolute;
@@ -55,7 +55,9 @@ body {
 
 .north{
   margin-top: 5px;
-  position: absolute; right: 20px;
+  margin-left: 20px;
+  position: absolute;
+
 }
 .west{
   margin-top: 20px;
@@ -68,5 +70,15 @@ body {
 
 .south {
     margin-top: 50px;
-    position: absolute; right: 20px;
+    position: absolute;
+    margin-left: 20px;
+
+}
+
+.east-door {
+  position: relative;
+  right:100px;
+  z-index: 2
+
+
 }

@@ -1,12 +1,13 @@
 <h1>Tears of Iron</h1>
 <h6>the prototype</h6>
-<p>The goal of this current prototype is to develop the method of navigation for Tears of Iron.</p>
+<2>The goal of this current prototype is to develop the method of navigation for Tears of Iron.</p>
 <hr>
 <%= render "/layouts/character_display" %>
 <h1></h1>
-<%= link_to "Navigation Prototype", room_path(@start) %>
-<%= link_to "Item Prototype", room_path(@item_start) %>
-<%= link_to "Character Item Interaction", room_path(@character_test)%>
+<h1><%= link_to "Navigation Prototype", room_path(@start) %></h1>
+<h1><%= link_to "Character Item Interaction", room_path(@character_test)%></h1>
+<h1><%= link_to "Combined Prototype", room_path(@item_start) %></h1>
+
 <% if @character.is_new === true %>
   <%  Room.reset
       @doors.each do |door|

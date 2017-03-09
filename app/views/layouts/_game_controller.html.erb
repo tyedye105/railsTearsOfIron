@@ -1,8 +1,8 @@
-  <div id="game_controller">
+  <div id="d_pad">
   <div class="north">
     <% if @room.door_ways.include?("n") %>
       <% if @room.directions_blocked.include?("n") %>
-      <%= button_to "Go North", door_path(@door),method: :get, :class => "north" %>
+      <%= button_to "Go North", door_path(@door),method: :get, :class => "north " %>
       <% end %>
     <%= button_to "Go North", room_path(@room.id - 3),method: :get, :class => "north" %>
     <% end %>
@@ -35,11 +35,6 @@
     <%= button_to "Go South", room_path(@room.id + 3),method: :get, :class => "south" %>
     <% end %>
   </div>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><br>
-  <%= button_to "search", search_path(@room.id),method: :get %>
+  <br><br><br><br><br><br><br><br>
+  <%= button_to "search", search_path(@room.id),method: :get, clase: "search" %>
 </div>
