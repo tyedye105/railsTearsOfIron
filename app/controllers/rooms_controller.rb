@@ -15,6 +15,7 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id ])
     @items = @room.items.all
     @east = nil
+    @enemy_robo_alive = true
     if@room.doors.any?
       @room.doors.each do |door|
         if @room.directions_blocked.include?("e")

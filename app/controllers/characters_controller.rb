@@ -12,7 +12,7 @@ class CharactersController < ApplicationController
       if @player.save
         redirect_to rooms_path
       else
-        rende :new
+        render :new
       end
   end
   def edit
@@ -20,6 +20,9 @@ class CharactersController < ApplicationController
   def update
   end
   def destroy
+    @character = current_player.characters.last
+      @character.destroy
+      redirect_to new_character_path
   end
   private
 

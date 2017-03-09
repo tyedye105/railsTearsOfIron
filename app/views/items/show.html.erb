@@ -1,0 +1,11 @@
+<div class="well">
+  <h1>You found a <%= @item.title %></h1>
+
+  <h2> <%= @item.description %>
+    <hr>
+    <%= image_tag("#{@item.title}.png") %>
+
+  <%= render('new')%>
+
+</div>
+<% @character.scan %>

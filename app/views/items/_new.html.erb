@@ -1,5 +1,4 @@
-<h1>This is going to be hacky</h1>
-<h2> You have found <%= @item.title %></h2>
+  
 <%= form_for [@character, @item_to_pick_up] do |f| %>
 <%= f.hidden_field :title, :value => @item.title %>
 <%= f.hidden_field :description, :value => @item.description %>
@@ -12,3 +11,4 @@
 <%= f.hidden_field :origin_id, :value => @item.id %>
 <%= f.submit "Pick it up." %>
 <% end %>
+<%= button_to "Leave it", room_path(@item.room_id ),method: :get%>

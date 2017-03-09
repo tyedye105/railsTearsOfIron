@@ -28,10 +28,6 @@ class Room <ActiveRecord::Base
             "no"
             first_time = false
             self.update({:first_time => first_time})
-        elsif first_time === false
-          "yes"
-          first_time = true
-          self.update({:first_time => first_time})
         end
     end
 

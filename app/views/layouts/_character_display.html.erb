@@ -10,9 +10,14 @@
       <h1>Inventory</h1>
         <% if @character.items.any? %>
           <% @character.items.each do |item| %>
+            <% if item.title === nil %>
+              <% else %>
             <%= image_tag "#{item.title}.png" %>
+              <% end %>
             <% end %>
+          <% else %>
         <% end %>
   </div>
 </div>
 </div>
+<%  %>

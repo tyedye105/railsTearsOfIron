@@ -24,8 +24,9 @@
 #text-display {
   background: lighten(grey, 25%);
   height: 200px;
-  width: 450px;
+  width: 650px;
   position: relative;
+  overflow: auto;
 }
 
  #game-controller {

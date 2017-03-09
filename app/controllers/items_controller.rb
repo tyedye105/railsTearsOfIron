@@ -1,5 +1,10 @@
 class ItemsController < ApplicationController
   before_action :authenticate_player!
+  def show
+    @character = current_player.characters.last
+    @item_to_pick_up = @character.items.new()
+    @item = Item.find(params[:id])
+  end
   def new
     @character = current_player.characters.last
     @item_to_pick_up = @character.items.new()

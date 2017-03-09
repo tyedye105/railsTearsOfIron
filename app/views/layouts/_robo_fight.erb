@@ -1,0 +1,14 @@
+<% if @room.id === 17 %>
+  <h1>Enemy Combanant?</h1>
+  <% if @enemy_robo_alive === true %>
+  <% if @character.do_you_have?('Sword') %>
+      <h1>Enemy Robo is scrap</h1>
+      <% @enemy_robo_alive= false %>
+      <% elsif @enemy_robo_alive === false & @character.do_you_have?('Sword')%>
+        <h1>Dead Robo</h1>
+      <% else %>
+      <h1>Enemy robo spites you.</h1>
+      <% @character.hurt %>
+      <% end %>
+  <% end %>
+<% end %>
