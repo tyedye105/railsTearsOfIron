@@ -1,12 +1,11 @@
-<div class="well">
+<div  id="character_display" class="well">
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-5">
       <h2> <%= @character.name  %> </h2>
-      <h2> <%= @character.hit_points  %> </h2>
-      <h2> <%= @character.battery_level  %> </h2>
-      <h2> <%= @character.is_alive  %>
+      <h2>Hit Points <%= @character.hit_points  %> </h2>
+      <h2>Battery Points <%= @character.battery_level  %> </h2>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-6">
       <h1>Inventory</h1>
         <% if @character.items.any? %>
           <% @character.items.each do |item| %>
@@ -20,4 +19,3 @@
   </div>
 </div>
 </div>
-<%  %>
