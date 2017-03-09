@@ -10,13 +10,15 @@ class DoorController < ApplicationController
   def update
     @character = current_player.characters.first
     @door = Door.find(params[:id])
+    @consumable = @character.items.find_by(:title => @door.req_item)
       if @door.update(door_params)
+          @consumable.consume_item
     redirect_to room_path(@door.room_id)
     end
   end
 
   private
     def door_params
-      params.require(:door).permit(:is_locked, :active)
+      params.require(:door).permit(:is_locked, :active, :req_)
     end
 end

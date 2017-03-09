@@ -2,6 +2,10 @@ class Item < ActiveRecord::Base
   belongs_to :room, :optional => true
   belongs_to :characters, :optional => true
 
+    def consume_item
+      self.destroy
+    end
+
     def pick_it_up
       picked_up = self.obtainable
       picked_up = false

@@ -1,7 +1,7 @@
 <%= form_for @character do |f| %>
 <div class="form-group">
   <%= f.label :name, "Please enter a name" %>
-  <%= f.text_field :name, placeholder: "R-0B" %>
+  <%= f.text_field :name, value: "R-0B" %>
   <% f.hidden_field :player_id, value: @player.id %>
   <%= f.submit %>
 </div>
