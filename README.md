@@ -1,15 +1,30 @@
-<% enemy_robo = true %>
-<% if enemy_robo === true %>
-    <% if @character.do_you_have?('Sword') %>
-      <h1> The enemy rust buckets pattern was predictable, with a swod in hand you sliced the thing in half!~</h1>
-      <% enemy_robo = false %>
-    <% end %>
-  <% if @room.id === 17 && @room.first_time === true %>
-    <h1> Out from the piles of junk, rusty robot with a giant hammer. Taken by surpise you walk out with several dents you didn't have before. </h1>
-  <% @character.hurt %>
-  <% elsif @room.id === 17   %>
-  <h1>The menacing robo charges, further damaging your chasis. Only if you had a weapon.</h1>
-  <% @character.hurt %>
-    <% else %>
-  <% end %>
-<% end %>
+# _Tears Of Iron: Prototypes_
+
+#### By *Marty Kovach* 03/09/2017
+
+
+## Description
+ There are a lot of libraries, and frameworks that lend themselves much better to the task of creating games than Rails. While this is created to take on the appearance of a an rpg in the player travels from room to room. The first prototype is designed to highlight the player navigating through the game world.
+
+  The next is demonstrating the ability for items to be generated, and picked up. Finally the last prototype is the combination of the previous two prototype to make a functional prototype.  
+
+  There is much more to be done, but this is how it all begins.
+## Setup/Installation Requirements
+
+* Clone this repo: railsCacklingKraken
+* Start Postgres
+* In The terminal: $rails db:setup
+* In The terminal: $rails s
+* Go to localhost:3000, and check out the app!
+
+###Known bugs
+Sometime the key does not open the door.
+## Technologies Used
+
+_hmtl, css, Ruby, Rails, Paperclip, Devise
+
+### License
+
+*MIT License*
+
+Copyright (c) 2017 **_Marty Kovach_**

@@ -3,7 +3,7 @@
   <h1>You were un-able to get the powercells you needed, and quickly shutdown after the last bit of power has been spent.</h1>
   <%=button_to "Start Over", character_path(@character), method: :delete, data: {confirm: "Are You Sure?"}%>
   <% elsif @character.hit_points <= 0 %>
-  <h1>That last hit was one to many, and into the scrap heap you go.</h1>
+  <h1>That last hit was one too many, and into the scrap heap you go.</h1>
   <%=button_to "Start Over", character_path(@character), method: :delete, data: {confirm: "Are You Sure?"}%>
   <% end %>
 </div>

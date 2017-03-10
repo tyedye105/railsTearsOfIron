@@ -3,13 +3,13 @@ class Character < ActiveRecord::Base
   has_many :items
 
   def four_way_move
-    self.update({:battery_level => self.battery_level - 4})
+    self.update({:battery_level => self.battery_level - 6})
     if self.battery_level <= 0
       self.update({:is_alive => false})
     end
   end
   def scan ##It shouldn't cost energy. Hack
-    self.update({:battery_level => self.battery_level + 4})
+    self.update({:battery_level => self.battery_level + 6})
   end
 
   def hurt

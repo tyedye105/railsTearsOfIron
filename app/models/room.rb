@@ -6,6 +6,10 @@ class Room <ActiveRecord::Base
       found_item = self.items.find(origin_id)
       found_item
     end
+    def get_deast(east)
+      direction = east
+      self.doors.find_by(door_location: east)
+    end
 
     def directions_blocked
       possible_directions = self.door_ways.split(",")

@@ -12,7 +12,7 @@ room_list = [
   ["Item Test 11 ", "s", true, "Look at all the piles of junk, maybe there will be something useful here,", "How many times must I search this room?" ], ###Item test
   ["Item dummy 12", "w,n", true, "This is the first time I have been to room 9", "Room 9, again..." ],##dummy's used in intial creation to make the navigation sustem work.
   ["Item Test 13", "e", true, "Great, Another empty room. At least there is a way foward", "why did I come back here." ],
-  ["Item Test 14", "w,e,n,s", true, "Okay three potential exits, yet the one to the east locked... maybe I can find a key somwhere", "can't unlock that door with out the key" ],
+  ["Item Test 14", "w,e,n,s", true, "Okay three potential exits, yet the one to the east locked... maybe I can find a key somwhere", "....." ],
   ["Item Test 15", "w,e", true, "Hooray I did it!!! Wait.... THERE ARE NO EXITS!", "I hate this room." ],
   ["Item dummy 16", "w,n", true, "This is the first time I have been to room 9", "Room 9, again..." ],##dummy's used in intial creation to make the navigation sustem work.
   ["Item test 17", "n", true, "nothing but garbage, but perhaps there is something useful.", "maybe..." ],

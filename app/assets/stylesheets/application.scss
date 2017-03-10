@@ -16,10 +16,16 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
- .world {
-   position: relative;
+ #world {
+   position: absolute;
+   margin-left: 350px;
    z-index: 0;
  }
+#character_display.well {
+  position: relative;
+  width: 600px;
+  left:120px;
+}
 
 #text-display {
   background: lighten(grey, 25%);
@@ -27,16 +33,20 @@
   width: 650px;
   position: relative;
   overflow: auto;
+  left:420px;
 }
 
- #game-controller {
-   background: blue;
-   height: 150px;
-   width: 150px;
-   position: relative;
+ #d_pad {
+    background: blue;
+    height: 150px;
+    width: 150px;
+
+
  }
  .robo {
-  position: relative;; bottom: 350px; right:900px;
+  position: absolute;
+  right: 775px;
+  top: 300px  ;
   z-index: 1;
  }
 body {
@@ -45,7 +55,9 @@ body {
 
 .north{
   margin-top: 5px;
-  position: absolute; right: 20px;
+  margin-left: 20px;
+  position: absolute;
+
 }
 .west{
   margin-top: 20px;
@@ -58,5 +70,15 @@ body {
 
 .south {
     margin-top: 50px;
-    position: absolute; right: 20px;
+    position: absolute;
+    margin-left: 20px;
+
+}
+
+.east-door {
+  position: relative;
+  right:100px;
+  z-index: 2
+
+
 }
