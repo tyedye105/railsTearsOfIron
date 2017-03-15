@@ -28,6 +28,7 @@
   <h1> <%= room.name %> </h1>
   <%= link_to "Jump to", room_path(room) %>
   <%= link_to "Edit Details of ", edit_room_path(room) %>
+  <%= link_to "Delte this room", room_path(room), :data => {:confirm => "Are you sure? If you mess up you WILL NEED TO MUCH WITH THE DATABASE", :method => "delete"} %>
   <hr>
 <% end %>
 <% else %>
