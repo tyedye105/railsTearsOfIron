@@ -12,10 +12,26 @@
 <h1><%= link_to "Combined Prototype", room_path(@item_start) %></h1>
 
 <% if @character.is_new === true %>
-  <%  Room.reset
-      @doors.each do |door|
-        door.shut_the
-      end
-    end
+  <%  Room.reset %>
+    <%  @doors.each do |door| %>
+      <%  door.shut_the %>
+    <%  end %>
+  <%  end %>
 
-  %>
+  <% if @player.is_admin === true %>
+<h1>************************************</h1>
+<h3>Admin Menu</h3>
+<h3>List of Rooms</h3>
+<% if @rooms.any? %>
+<hr>
+  <% @rooms.each do |room| %>
+  <h1> <%= room.name %> </h1>
+  <%= link_to "Jump to", room_path(room) %>
+  <%= link_to "Edit Details of ", edit_room_path(room) %>
+  <%= link_to "Delte this room", room_path(room), :data => {:confirm => "Are you sure? If you mess up you WILL NEED TO MUCH WITH THE DATABASE", :method => "delete"} %>
+  <hr>
+<% end %>
+<% else %>
+<h1>There are no rooms to display.</h1>
+<% end %>
+<% end %>
