@@ -38,20 +38,12 @@
   </div>
   <% if @items.any? %>
       <% @items.each do |item| %>
+           <% item.spawn_item %>
         <% if item.active === true && item.obtainable === true %>
-          <%if item.title === "A key" %>
-              <%= link_to character_item_path(@player, item) do %>
-                <%= image_tag "#{item.title}.png"  %>
-                <% end %>
-              <% else %>
               <%= link_to character_item_path(@player, item) do %>
                 <%= image_tag "#{item.title}.png"  %>
               <% end %>
             <% end %>
-            <% else %>
-               <% item.spawn_item %>
-          <% end %>
         <% end %>
     <% end %>
-
 </div>

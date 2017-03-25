@@ -28,8 +28,9 @@ class Character < ActiveRecord::Base
     item
     has_item = false
     character_inventory = self.items.all
-    until has_item = true do
+
       character_inventory.each do |comparison_item|
+        until has_item = true do
         if item === comparison_item.title
           has_item = true
         end
