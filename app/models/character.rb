@@ -26,13 +26,13 @@ class Character < ActiveRecord::Base
 
   def do_you_have?(item)
     item
-    has_item = nil
+    has_item = false
     character_inventory = self.items.all
-    character_inventory.each do |comparison_item|
-      if item === comparison_item.title
-        has_item = true
-      else
-        has_item = false
+    until has_item = true do
+      character_inventory.each do |comparison_item|
+        if item === comparison_item.title
+          has_item = true
+        end
       end
     end
     has_item
