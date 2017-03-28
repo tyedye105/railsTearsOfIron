@@ -1,6 +1,7 @@
 class Room <ActiveRecord::Base
   has_many :items
   has_many :doors
+  has_many :sentries
 
     def locate(origin_id)
       found_item = self.items.find(origin_id)

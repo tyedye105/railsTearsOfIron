@@ -17,7 +17,6 @@ describe "#do_you_have?(item) method" do
     test_room = FactoryGirl.create(:room)
     test_item = FactoryGirl.create(:item, :obtainable => true, :active => true, :room_id => test_room.id, :character_id => test_character.id)
     test_item2 = FactoryGirl.create(:item, :title => "A key", :obtainable => true, :active => true, :room_id => test_room.id, :character_id => test_character.id)
-    binding.pry
     expect(test_character.do_you_have?("A Key")).to eq true
   end
 end

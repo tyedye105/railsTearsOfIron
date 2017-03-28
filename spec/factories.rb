@@ -31,4 +31,10 @@ FactoryGirl.define do
     door_location 'e'
     description "It's a door...Going to need  key for that."
   end
+  factory :sentry do
+    name "Sentry A"
+    ptrl_range 3
+    ptrl_direction "a,b"
+    room_id 
+  end
 end
