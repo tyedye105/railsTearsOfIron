@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170314015929) do
+ActiveRecord::Schema.define(version: 20170325234436) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,6 +72,17 @@ ActiveRecord::Schema.define(version: 20170314015929) do
     t.boolean "first_time",         default: true
     t.string  "first_description"
     t.string  "normal_description"
+  end
+
+  create_table "sentries", force: :cascade do |t|
+    t.string  "name"
+    t.boolean "active_patrol",     default: true
+    t.integer "ptrl_range"
+    t.integer "distance_traveled", default: 1
+    t.string  "ptrl_direction"
+    t.boolean "active",            default: true
+    t.integer "room_id"
+    t.string  "ptrl_route"
   end
 
 end
