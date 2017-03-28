@@ -14,6 +14,9 @@
   </div>
 </div>
 <% end %>
+<div class="well">
+  <h1> <%= @character.do_you_have?("A key") %> </h1>
+</div>
 <%= render "/layouts/game_over"  %>
 <div id="world">
   <div><%= image_tag "#{@room.id}.png", :class =>"world" %><%= image_tag "robo128.png", :class =>"robo" %>
@@ -35,20 +38,12 @@
   </div>
   <% if @items.any? %>
       <% @items.each do |item| %>
+           <% item.spawn_item %>
         <% if item.active === true && item.obtainable === true %>
-          <%if item.title === "A key" %>
-              <%= link_to character_item_path(@player, item) do %>
-                <%= image_tag "#{item.title}.png"  %>
-                <% end %>
-              <% else %>
               <%= link_to character_item_path(@player, item) do %>
                 <%= image_tag "#{item.title}.png"  %>
               <% end %>
             <% end %>
-            <% else %>
-               <% item.spawn_item %>
-          <% end %>
         <% end %>
     <% end %>
-
 </div>

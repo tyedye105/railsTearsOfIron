@@ -1,13 +1,23 @@
 <% if @room.id === 17 %>
+
   <% if @enemy_robo_alive === true %>
-  <% if @character.do_you_have?('Sword') %>
-      <h1>Enemy Robo is scrap</h1>
-      <% @enemy_robo_alive= false %>
-      <% elsif @enemy_robo_alive === false & @character.do_you_have?('Sword')%>
+
+    <% if @enemy_robo_alive === false && @character.do_you_have?('Sword') === true%>
         <h1>Dead Robo</h1>
+      <% elsif @character.do_you_have?('Sword') === true %>
+
+          <h1>Armed with your weapon, you react to the surprise attack coming from the rusted junk bot.</h1>
+          <% @enemy_robo_alive= false %>
+
       <% else %>
+
       <h1> From the pile of grabage a rusted Robo, with a large hammer abmushes and dissapears back into the grabbage.  </h1>
       <% @character.hurt %>
+
       <% end %>
+
   <% end %>
+
+
+
 <% end %>
