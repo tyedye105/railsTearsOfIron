@@ -11,4 +11,8 @@ belongs_to :room
     self.active_patrol
   end
 
+  def switch_direction 
+    self.ptrl_direction.reverse
+  end
+
 end
