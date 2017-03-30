@@ -1,0 +1,15 @@
+<h1>Sentry Tracker</h1>
+<% if @sentries.any? %>
+  <% @sentries.each do |sentry| %>
+  <% sentry.sentry_move %>
+  <div class="well">
+  <h2> Name:  <%= sentry.name %> </h2>
+  <h2>Sentry Active? <%= sentry.active_patrol %></h2>
+  <h2>Patrol Range <%= sentry.ptrl_range %></h2>
+  <h2>Distance Traveled<%= sentry.distance_traveled %></h2>
+  <h2>Ptrl direction<%= sentry.ptrl_direction %></h2>
+  <h2> Current location <%= sentry.room_id %></h2>
+  </div>
+  <% end %>
+  <% else %></h2>
+<% end %>
