@@ -63,8 +63,8 @@ describe "#toggle_patrol" do
       expect(@test_sentry.distance_traveled).to eq 1
     end
 
-    it "will have the sentry go switch directions when ptrl_range and distance_traveled are equal " do
-      @test_sentry.distance_traveled = 3
+    it "will upon becoming active. " do
+      @test_sentry.active_patrol = false
       @test_sentry.sentry_move
       expect(@test_sentry.ptrl_direction).to eq "s,n"
     end

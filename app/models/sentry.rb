@@ -33,7 +33,6 @@ belongs_to :room
   def sentry_move
     has_traveled = self.distance_traveled
     if has_traveled === self.ptrl_range
-        self.switch_direction
         self.toggle_patrol
         self.update({:distance_traveled => 1})
     elsif has_traveled < self.ptrl_range && self.active_patrol === true
@@ -41,6 +40,7 @@ belongs_to :room
       self.update({:distance_traveled => has_traveled + 1})
     elsif self.active_patrol === false
       self.toggle_patrol
+      self.switch_direction
     end
   end
 
