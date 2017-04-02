@@ -10,6 +10,8 @@
 <h1><%= link_to "Navigation Prototype", room_path(@start) %></h1>
 <h1><%= link_to "Character Item Interaction", room_path(@character_test)%></h1>
 <h1><%= link_to "Combined Prototype", room_path(@item_start) %></h1>
+<h1> <%= link_to "Sentry_Patrol prototype", room_path(35)%> </h1>
+<h1> <%= link_to "Tile prototype", room_path(42)%> </h1>
 
 <% if @character.is_new === true %>
   <%  Room.reset %>
