@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170328030232) do
+ActiveRecord::Schema.define(version: 20170402235055) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20170328030232) do
     t.integer "player_id"
     t.boolean "is_alive",      default: true
     t.boolean "is_new",        default: true
+    t.integer "tile_id"
   end
 
   create_table "doors", force: :cascade do |t|
@@ -44,6 +45,7 @@ ActiveRecord::Schema.define(version: 20170328030232) do
     t.string  "rarity"
     t.integer "character_id"
     t.integer "origin_id"
+    t.integer "tile_id"
   end
 
   create_table "players", force: :cascade do |t|
@@ -72,6 +74,7 @@ ActiveRecord::Schema.define(version: 20170328030232) do
     t.boolean "first_time",         default: true
     t.string  "first_description"
     t.string  "normal_description"
+    t.integer "tile_id"
   end
 
   create_table "sentries", force: :cascade do |t|
@@ -82,6 +85,15 @@ ActiveRecord::Schema.define(version: 20170328030232) do
     t.string  "ptrl_direction"
     t.boolean "active",            default: true
     t.integer "room_id"
+    t.integer "tile_id"
+  end
+
+  create_table "tiles", force: :cascade do |t|
+    t.integer "tile_no"
+    t.integer "room_id"
+    t.integer "character_id"
+    t.integer "item_id"
+    t.integer "sentry_id"
   end
 
 end
