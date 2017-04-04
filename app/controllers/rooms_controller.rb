@@ -14,6 +14,7 @@ class RoomsController < ApplicationController
     @character = @player.characters.last
     @room = Room.find(params[:id ])
     @items = @room.items.all
+    @tiles = @room.tiles.all
     @east = nil
     @enemy_robo_alive = true
     @sentries= Sentry.all

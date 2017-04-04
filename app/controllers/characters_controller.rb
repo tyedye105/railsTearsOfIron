@@ -16,8 +16,16 @@ class CharactersController < ApplicationController
       end
   end
   def edit
+    @player = current_player
+    @character = @player.characters.last
   end
   def update
+    @player = current_player
+    @character = @player.characters.last
+    @current_room = Room.find(@character.room_id)
+      if @character.update(character_params)
+        redirect_to room_path(@current_room)
+      end
   end
   def destroy
     @character = current_player.characters.last
@@ -27,6 +35,6 @@ class CharactersController < ApplicationController
   private
 
   def character_params
-    params.require(:character).permit(:name)
+    params.require(:character).permit(:name, :tile_id, :room_id)
   end
 end
