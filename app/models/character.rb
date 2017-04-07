@@ -3,7 +3,7 @@ class Character < ActiveRecord::Base
   has_many :items
 
   def four_way_move
-    self.update({:battery_level => self.battery_level - 6})
+    self.update({:battery_level => self.battery_level - 0})
     if self.battery_level <= 0
       self.update({:is_alive => false})
     end

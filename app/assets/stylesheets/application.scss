@@ -16,6 +16,18 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+ .container {
+   display: grid;
+   grid-template-columns: 64px 64px;
+
+ }
+
+ .item {
+   border-radius: 5px;
+
+
+ }
+
  #world {
    position: absolute;
    margin-left: 350px;

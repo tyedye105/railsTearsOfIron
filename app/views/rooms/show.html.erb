@@ -15,8 +15,9 @@
 </div>
 <% end %>
 <div class="well">
-  <h1> <%= @character.do_you_have?("A key") %> </h1>
 </div>
+<%= render "/characters/edit" %>
+<%= render "/layouts/tile_display" %>
 <%= render "/layouts/game_over"  %>
 <div id="world">
   <div><%= image_tag "#{@room.id}.png", :class =>"world" %><%= image_tag "robo128.png", :class =>"robo" %>
@@ -46,4 +47,5 @@
             <% end %>
         <% end %>
     <% end %>
+    <%= render "/sentries/index" %>
 </div>

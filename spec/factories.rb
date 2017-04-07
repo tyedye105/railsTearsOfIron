@@ -34,7 +34,6 @@ FactoryGirl.define do
   factory :sentry do
     name "Sentry A"
     ptrl_range 3
-    ptrl_direction "a,b"
-    room_id 
+    ptrl_direction "n,s"
   end
 end
