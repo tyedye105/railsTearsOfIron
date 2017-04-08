@@ -36,4 +36,7 @@ FactoryGirl.define do
     ptrl_range 3
     ptrl_direction "n,s"
   end
+  factory :tile do
+    tile_no 1
+  end
 end
