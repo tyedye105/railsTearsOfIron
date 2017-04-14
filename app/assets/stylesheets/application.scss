@@ -16,17 +16,23 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
- .container {
+
+ .wrapper {
+   width: 195px;
+   height: 195px;
    display: grid;
-   grid-template-columns: 64px 64px;
-
+   grid-template-columns: 64px 64px 64px;
+   grid-gap: 10px;
+   background-color: #fff;
+   color: #444;
  }
 
- .item {
-   border-radius: 5px;
-
-
+ .tile {
+   width: 64px;
+   height: 64px;
+   background-image: url("tile_1");
  }
+
 
  #world {
    position: absolute;
@@ -54,12 +60,6 @@
     width: 150px;
 
 
- }
- .robo {
-  position: absolute;
-  right: 775px;
-  top: 300px  ;
-  z-index: 1;
  }
 
  textarea {

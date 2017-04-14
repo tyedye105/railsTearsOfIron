@@ -1,15 +1,5 @@
 <%= render "/layouts/cmvmnt" %>
 <div class="well center ">
   <h1>Game world</h1>
-  <% if @tiles.any? %>
-    <% @tiles.each do |tile| %>
-    <%= image_tag "tile_#{tile.tile_no}" %>
-      <% if @character.tile_id === tile.id %>
-      <%= image_tag "robo64" %>
-        <% end %>
-      <% end %>
-    <% else %>
-    <br><br><br>
-    <h1>No tiles to display</h1>
-    <% end %>
+  <%= render "/layouts/tile_display" %>
 </div>
