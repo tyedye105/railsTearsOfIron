@@ -15,22 +15,36 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "gamegrid";
 
 
- .wrapper {
-   width: 195px;
-   height: 195px;
+ .room1 {
    display: grid;
-   grid-template-columns: 64px 64px 64px;
-   grid-gap: 10px;
-   background-color: #fff;
+   grid-template-columns: 64px 64px 64px 64px 64px;
+   grid-gap: 0 0px;
+   background-color: rgba(0, 0, 255, 0);;
    color: #444;
  }
 
- .tile {
+ .tmp_floor {
    width: 64px;
    height: 64px;
-   background-image: url("tile_1");
+   background-image: url("tmp_floor");
+ }
+ .tmp_corner {
+   width: 64px;
+   height: 64px;
+   background-image: url("tmp_corner");
+ }
+ .tmp_door {
+   width: 64px;
+   height: 64px;
+   background-image: url("tmp_door");
+ }
+ .tmp_wall {
+   width: 64px;
+   height: 64px;
+   background-image: url("tmp_wall");
  }
 
 
@@ -104,4 +118,8 @@ body {
 
 .center {
   text-align: center;
+}
+
+.black {
+  background-color: black;
 }

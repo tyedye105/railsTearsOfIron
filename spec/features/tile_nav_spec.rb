@@ -12,7 +12,7 @@ describe "hoopla" do
     end
 
   it "hoopla" do
-binding.pry
+
 p "hello world"
 expect(Tile.all).to eq 9
     end

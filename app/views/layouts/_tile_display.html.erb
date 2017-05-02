@@ -1,7 +1,7 @@
 <% if @tiles.any? %>
-<div class="wrapper">
+<div class="room<%=@room.id %>">
   <% @tiles.each do |tile| %>
-    <div class="tile">
+    <div class="<%=tile.tile_name %> tile_no<%= tile.id %>">
       <% if @character.tile_id === tile.id %>
       <%= image_tag "robo64", class: "robo" %>
       <% end %>

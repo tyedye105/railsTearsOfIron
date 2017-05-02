@@ -57,7 +57,7 @@ class Room <ActiveRecord::Base
       array_to_reset.each do |room|
         room.items.each do |item|
           item.item_reset
-          # binding.pry
+          # 
         end
         if room.first_time === false
           room.update({:first_time => true})
