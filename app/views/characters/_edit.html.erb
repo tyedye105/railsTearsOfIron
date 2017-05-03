@@ -1,6 +1,6 @@
 
 <%= form_for character, remote: true do |f| %>
-<%= f.hidden_field :tile_id, :value => character.tile_id - 5 %>
+<%= f.hidden_field :tile_id, :value => character.tile_id - row_max%>
 <%= f.submit "North" %>
 <% end %>
 
@@ -15,7 +15,7 @@
 <% end %>
 
 <%= form_for character,remote: true  do |f| %>
-<%= f.hidden_field :tile_id, :value => character.tile_id + 5 %>
+<%= f.hidden_field :tile_id, :value => character.tile_id + row_max%>
 <%= f.submit "South" do %>
 <%= image_tag "tile_1" %>
 <% end %>

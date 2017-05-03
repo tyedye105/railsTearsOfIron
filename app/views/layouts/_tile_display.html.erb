@@ -1,5 +1,4 @@
 <% if @tiles.any? %>
-
   <% @tiles.each do |tile| %>
     <div class="<%=tile.tile_name %>", id="tile<%= tile.id %>">
       <% if @character.tile_id === tile.id %>
