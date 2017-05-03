@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170502191022) do
+ActiveRecord::Schema.define(version: 20170502212805) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,7 +75,7 @@ ActiveRecord::Schema.define(version: 20170502191022) do
     t.boolean "first_time",         default: true
     t.string  "first_description"
     t.string  "normal_description"
-    t.integer "tile_id"
+    t.integer "row_max"
   end
 
   create_table "sentries", force: :cascade do |t|

@@ -1,3 +1,9 @@
+
+<%= form_for character, remote: true do |f| %>
+<%= f.hidden_field :tile_id, :value => character.tile_id - 5 %>
+<%= f.submit "North" %>
+<% end %>
+
 <%= form_for character do |f| %>
 <%= f.hidden_field :tile_id, :value => character.tile_id + 1 %>
 <%= f.submit "East" %>
@@ -6,11 +12,6 @@
 <%= form_for character do |f| %>
 <%= f.hidden_field :tile_id, :value => character.tile_id - 1 %>
 <%= f.submit "West" %>
-<% end %>
-
-<%= form_for character do |f| %>
-<%= f.hidden_field :tile_id, :value => character.tile_id - 5 %>
-<%= f.submit "North" %>
 <% end %>
 
 <%= form_for character do |f| %>

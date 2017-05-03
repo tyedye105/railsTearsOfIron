@@ -1,5 +1,10 @@
+<div class="game-controller" id="game_controller">
 <%= render "/layouts/controls" %>
-<div class="well center black">
+</div>
+
+<div class="well center black" >
   <h1>Game world</h1>
+  <div class="room<%=@room.id %>" id="active_room">
   <%= render "/layouts/tile_display" %>
+  </div>
 </div>

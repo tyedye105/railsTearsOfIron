@@ -23,8 +23,12 @@ class CharactersController < ApplicationController
     @player = current_player
     @character = @player.characters.last
     @current_room = Room.find(@character.room_id)
+    @tiles = @current_room.tiles
       if @character.update(character_params)
-        redirect_to room_path(@current_room)
+        respond_to do |format|
+          format.html {redirect_to room_path(@current_room) }
+          format.js
+        end
       end
   end
   def destroy
