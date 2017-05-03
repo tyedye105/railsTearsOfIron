@@ -4,17 +4,17 @@
 <%= f.submit "North" %>
 <% end %>
 
-<%= form_for character do |f| %>
+<%= form_for character, remote: true  do |f| %>
 <%= f.hidden_field :tile_id, :value => character.tile_id + 1 %>
 <%= f.submit "East" %>
 <% end %>
 
-<%= form_for character do |f| %>
+<%= form_for character,remote: true  do |f| %>
 <%= f.hidden_field :tile_id, :value => character.tile_id - 1 %>
 <%= f.submit "West" %>
 <% end %>
 
-<%= form_for character do |f| %>
+<%= form_for character,remote: true  do |f| %>
 <%= f.hidden_field :tile_id, :value => character.tile_id + 5 %>
 <%= f.submit "South" do %>
 <%= image_tag "tile_1" %>
