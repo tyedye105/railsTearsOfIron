@@ -1,20 +1,27 @@
-
-<%= form_for character, remote: true do |f| %>
-<%= f.hidden_field :tile_id, :value => character.tile_id - row_max%>
-<%= f.submit "North" %>
+<% if character.tile.get_moves[0] == false %>
+  <%= form_for character, remote: true do |f| %>
+  <%= f.hidden_field :tile_id, :value => character.tile_id - row_max%>
+  <%= f.submit "North" %>
+  <% end %>
 <% end %>
 
-<%= form_for character, remote: true  do |f| %>
-<%= f.hidden_field :tile_id, :value => character.tile_id + 1 %>
-<%= f.submit "East" %>
+<% if character.tile.get_moves[2] == false %>
+  <%= form_for character, remote: true  do |f| %>
+  <%= f.hidden_field :tile_id, :value => character.tile_id + 1 %>
+  <%= f.submit "East" %>
+  <% end %>
 <% end %>
 
-<%= form_for character,remote: true  do |f| %>
-<%= f.hidden_field :tile_id, :value => character.tile_id - 1 %>
-<%= f.submit "West" %>
+<% if character.tile.get_moves[3] == false %>
+  <%= form_for character,remote: true  do |f| %>
+  <%= f.hidden_field :tile_id, :value => character.tile_id - 1 %>
+  <%= f.submit "West" %>
+  <% end %>
 <% end %>
 
-<%= form_for character,remote: true  do |f| %>
-<%= f.hidden_field :tile_id, :value => character.tile_id + row_max%>
-<%= f.submit "South" %>
+<% if character.tile.get_moves[1] == false %>
+  <%= form_for character,remote: true  do |f| %>
+  <%= f.hidden_field :tile_id, :value => character.tile_id + row_max%>
+  <%= f.submit "South" %>
+  <% end %>
 <% end %>

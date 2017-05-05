@@ -24,11 +24,13 @@ class CharactersController < ApplicationController
     @character = @player.characters.last
     @current_room = Room.find(@character.room_id)
     @tiles = @current_room.tiles
-      if @character.update(character_params)
+      if @character.update(move_params)
         respond_to do |format|
           format.html {redirect_to room_path(@current_room) }
           format.js
         end
+      elsif @character.update(move_room_params)
+        redirect_to rooms_path
       end
   end
   def destroy
@@ -38,7 +40,11 @@ class CharactersController < ApplicationController
   end
   private
 
-  def character_params
-    params.require(:character).permit(:name, :tile_id, :room_id)
+  def move_room_params
+    params.require(:character).permit(:room_id)
+  end
+
+  def move_params
+    params.require(:character).permit(:tile_id)
   end
 end
