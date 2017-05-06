@@ -1,25 +1,54 @@
-<% if character.tile.get_moves[0] == false %>
+
+<% if character.tile.get_moves[0].is_solid === false %>
   <%= form_for character, remote: true do |f| %>
   <%= f.hidden_field :tile_id, :value => character.tile_id - row_max%>
   <%= f.submit "North" %>
   <% end %>
 <% end %>
 
-<% if character.tile.get_moves[2] == false %>
+
+<% if character.tile.get_moves[2].is_solid === false %>
   <%= form_for character, remote: true  do |f| %>
   <%= f.hidden_field :tile_id, :value => character.tile_id + 1 %>
   <%= f.submit "East" %>
   <% end %>
 <% end %>
 
-<% if character.tile.get_moves[3] == false %>
+
+<% if character.tile.transition_tile === 2 %>
+  <%= form_for character do |f| %>
+  <%= f.hidden_field :room_id, :value => character.room_id + 1 %>
+  <%= f.hidden_field :tile_id, :value => Tile.find_by( room_id: (character.room_id + 1), transition_tile: 3).id %>
+  <%= f.submit "East" %>
+  <% end %>
+<% end %>
+
+
+<% if character.tile.transition_tile === 3 %>
+  <%= form_for character do |f| %>
+  <%= f.hidden_field :room_id, :value => character.room_id - 1 %>
+  <%= f.hidden_field :tile_id, :value => Tile.find_by( room_id: (character.room_id - 1), transition_tile: 2).id %>
+  <%= f.submit "West" %>
+  <% end %>
+<% end %>
+
+
+
+
+<% if character.tile.get_moves[3].is_solid === false %>
   <%= form_for character,remote: true  do |f| %>
   <%= f.hidden_field :tile_id, :value => character.tile_id - 1 %>
   <%= f.submit "West" %>
   <% end %>
 <% end %>
 
-<% if character.tile.get_moves[1] == false %>
+
+<% if character.tile.transition_tile === 1 %>
+
+<% end %>
+
+
+<% if character.tile.get_moves[1].is_solid === false %>
   <%= form_for character,remote: true  do |f| %>
   <%= f.hidden_field :tile_id, :value => character.tile_id + row_max%>
   <%= f.submit "South" %>

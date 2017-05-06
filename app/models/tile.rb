@@ -1,6 +1,7 @@
 class Tile < ActiveRecord::Base
   belongs_to :room
   has_one :character
+  has_one :door
 
   def get_moves
     start = self.id
@@ -9,9 +10,8 @@ class Tile < ActiveRecord::Base
     moves = []
     directions.each do |direction|
       move = Tile.find(start + direction)
-        moves.push(move.is_solid)
+        moves.push(move)
       end
     moves
   end
-
 end
