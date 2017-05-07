@@ -33,6 +33,14 @@
    background-color: rgba(0, 0, 255, 0);;
    color: #444;
  }
+ .room3 {
+   display: grid;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px;
+   grid-gap: 0 0px;
+   background-color: rgba(0, 0, 255, 0);;
+   color: #444;
+ }
+
 
 
  .tmp_floor {

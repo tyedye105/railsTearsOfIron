@@ -2,6 +2,9 @@ class Tile < ActiveRecord::Base
   belongs_to :room
   has_one :character
   has_one :door
+  has_one :item
+  has_one :sentry
+
 
   def get_moves
     start = self.id

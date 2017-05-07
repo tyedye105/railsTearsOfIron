@@ -13,6 +13,11 @@
 <%= f.submit "Tile navaigation" %>
 <% end %>
 <h1><%= link_to "Tile stress test", room_path(2)%></h1>
+<%= form_for @character do |f| %>
+<%= f.hidden_field :room_id, :value => 3 %>
+<%= f.hidden_field :tile_id, :value => Room.find(3).tiles[51].id %>
+<%= f.submit "MVP Room" %>
+<% end %>
 <h1><%= link_to "Combined Prototype" %></h1>
 <h1> <%= link_to "Sentry_Patrol prototype"%> </h1>
 <h1> <%= link_to "Tile prototype"%> </h1>
