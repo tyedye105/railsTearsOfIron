@@ -1,7 +1,7 @@
 <div class="<%=tile.tile_name %>", id="tile<%= tile.id %>">
   <% if tile.character != nil %>
   <%= image_tag "robo64", class: "robo" %>
+  <% else %>
+  <%= render "/layouts/tile_navigation", tile: tile, character: @character%>
   <% end %>
-  <%  %>
-
 </div>

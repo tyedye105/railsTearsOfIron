@@ -1,0 +1,10 @@
+<% if (tile.id - 1) === character.tile_id %>
+  <% if character.tile.get_moves[2].is_solid === false %>
+    <%= form_for character, remote: true  do |f| %>
+    <%= f.hidden_field :tile_id, :value => character.tile_id + 1 %>
+    <%= button_tag type: 'submit', class: "btn-invis" do%>
+        <%= image_tag "#{tile.tile_name}" %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

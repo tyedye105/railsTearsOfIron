@@ -40,6 +40,13 @@
    background-color: rgba(0, 0, 255, 0);;
    color: #444;
  }
+ .room4 {
+   display: grid;
+   grid-template-columns: 64px 64px 64px 64px;
+   grid-gap: 0 0px;
+   background-color: rgba(0, 0, 255, 0);;
+   color: #444;
+ }
 
 
 
@@ -139,4 +146,11 @@ body {
 
 .black {
   background-color: black;
+}
+
+.btn-invis, .btn-invis:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0px;
+  padding: 0px;
 }
