@@ -9,7 +9,7 @@
 <h1></h1>
 <%= form_for @character do |f| %>
 <%= f.hidden_field :room_id, :value => 1 %>
-<%= f.hidden_field :tile_id, :value => Room.find(1).tiles[12].id %>
+<%= f.hidden_field :tile_id, :value => Room.find(1).tiles[13].id %>
 <%= f.submit "Tile navaigation" %>
 <% end %>
 <h1><%= link_to "Tile stress test", room_path(2)%></h1>

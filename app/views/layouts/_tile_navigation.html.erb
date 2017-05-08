@@ -1,10 +1,71 @@
-<% if (tile.id - 1) === character.tile_id %>
-  <% if character.tile.get_moves[2].is_solid === false %>
+<% if character.tile.transition_tile === 0 && (tile.id + tile.row_max) === character.tile_id %>
+  <%= form_for character do |f| %>
+  <%= f.hidden_field :room_id, :value => character.room_id - 3 %>
+  <%= f.hidden_field :tile_id, :value => Tile.find_by( room_id: (character.room_id - 3), transition_tile: 0).id %>
+  <%= button_tag type: 'submit', class: "btn-invis" do%>
+      <%= image_tag "arrow_up" %>
+    <% end %>
+  <% end %>
+  <% elsif character.tile.get_moves[0].is_solid === false && (tile.id  + tile.row_max) === character.tile_id %>
+    <%= form_for character, remote: true  do |f| %>
+    <%= f.hidden_field :tile_id, :value => character.tile_id - tile.row_max %>
+    <%= button_tag type: 'submit', class: "btn-invis" do%>
+        <%= image_tag "#{tile.tile_name}" %>
+      <% end %>
+    <% end %>
+    <% else %>
+  <% end %>
+
+<% if character.tile.transition_tile === 2 && (tile.id - 1) === character.tile_id %>
+  <%= form_for character do |f| %>
+  <%= f.hidden_field :room_id, :value => character.room_id + 1 %>
+  <%= f.hidden_field :tile_id, :value => Tile.find_by( room_id: (character.room_id + 1), transition_tile: 3).id %>
+  <%= button_tag type: 'submit', class: "btn-invis" do%>
+      <%= image_tag "arrow_right" %>
+    <% end %>
+  <% end %>
+  <% elsif character.tile.get_moves[2].is_solid === false && (tile.id - 1) === character.tile_id %>
     <%= form_for character, remote: true  do |f| %>
     <%= f.hidden_field :tile_id, :value => character.tile_id + 1 %>
     <%= button_tag type: 'submit', class: "btn-invis" do%>
         <%= image_tag "#{tile.tile_name}" %>
       <% end %>
     <% end %>
+    <% else %>
   <% end %>
-<% end %>
+
+<% if character.tile.transition_tile === 3 && (tile.id + 1) === character.tile_id %>
+  <%= form_for character do |f| %>
+  <%= f.hidden_field :room_id, :value => character.room_id - 1 %>
+  <%= f.hidden_field :tile_id, :value => Tile.find_by( room_id: (character.room_id - 1), transition_tile: 2).id %>
+  <%= button_tag type: 'submit', class: "btn-invis" do%>
+      <%= image_tag "arrow_left" %>
+    <% end %>
+  <% end %>
+  <% elsif character.tile.get_moves[3].is_solid === false && (tile.id + 1) === character.tile_id %>
+    <%= form_for character, remote: true  do |f| %>
+    <%= f.hidden_field :tile_id, :value => character.tile_id - 1 %>
+    <%= button_tag type: 'submit', class: "btn-invis" do%>
+        <%= image_tag "#{tile.tile_name}" %>
+      <% end %>
+    <% end %>
+    <% else %>
+  <% end %>
+
+<% if character.tile.transition_tile === 1 && (tile.id - tile.row_max) === character.tile_id %>
+  <%= form_for character do |f| %>
+  <%= f.hidden_field :room_id, :value => character.room_id + 3 %>
+  <%= f.hidden_field :tile_id, :value => Tile.find_by( room_id: (character.room_id - 1), transition_tile: 1).id %>
+  <%= button_tag type: 'submit', class: "btn-invis" do%>
+      <%= image_tag "arrow_up" %>
+    <% end %>
+  <% end %>
+  <% elsif character.tile.get_moves[1].is_solid === false && (tile.id - tile.row_max) === character.tile_id %>
+    <%= form_for character, remote: true  do |f| %>
+    <%= f.hidden_field :tile_id, :value => character.tile_id + tile.row_max %>
+    <%= button_tag type: 'submit', class: "btn-invis" do%>
+        <%= image_tag "#{tile.tile_name}" %>
+      <% end %>
+    <% end %>
+    <% else %>
+  <% end %>

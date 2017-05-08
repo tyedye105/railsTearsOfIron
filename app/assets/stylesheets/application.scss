@@ -20,15 +20,14 @@
 
  .room1 {
    display: grid;
-   grid-template-columns: 64px 64px 64px 64px 64px;
+   grid-template-columns: 64px 64px 64px 64px  64px 64px;
    grid-gap: 0 0px;
-   background-color: rgba(0, 0, 255, 0);;
-   color: #444;
+   background-color: rgba(0, 0, 255, 0);
  }
 
  .room2 {
    display: grid;
-   grid-template-columns: 64px 64px 64px 64px 64px;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px;
    grid-gap: 0 0px;
    background-color: rgba(0, 0, 255, 0);;
    color: #444;
@@ -69,6 +68,10 @@
    width: 64px;
    height: 64px;
    background-image: url("tmp_wall");
+ }
+ .empty {
+   width: 64px;
+   height: 64px;
  }
 
 
@@ -153,4 +156,5 @@ body {
   box-shadow: none;
   border: 0px;
   padding: 0px;
+  background: rgba(0,0,0,0);
 }
