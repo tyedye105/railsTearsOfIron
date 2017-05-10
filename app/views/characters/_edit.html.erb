@@ -1,0 +1,46 @@
+
+<%= form_for character, remote: true do |f| %>
+  <% if character.tile.get_moves[0].is_solid === false %>
+    <%= f.hidden_field :tile_id, :value => character.tile_id - row_max %>
+    <%= f.submit "North" %>
+  <% elsif character.tile.transition_tile === 2 %>
+    <%= f.hidden_field :room_id, :value => character.room_id  - 1 %>
+    <%= f.hidden_field :tile_id, :value => Tile.find_by( room_id: (character.room_id - 1), transition_tile: 1).id %>
+    <%= f.submit "North" %>
+  <% end %>
+<% end %>
+
+
+
+  <%= form_for character, remote: true do |f| %>
+    <% if character.tile.get_moves[2].is_solid === false %>
+      <%= f.hidden_field :tile_id, :value => character.tile_id + 1 %>
+      <%= f.submit "East" %>
+    <% elsif character.tile.transition_tile === 2 %>
+      <%= f.hidden_field :room_id, :value => character.room_id + 1 %>
+      <%= f.hidden_field :tile_id, :value => Tile.find_by( room_id: (character.room_id + 1), transition_tile: 3).id %>
+      <%= f.submit "East" %>
+    <% end %>
+  <% end %>
+
+  <%= form_for character, remote: true do |f| %>
+    <% if character.tile.get_moves[3].is_solid === false %>
+      <%= f.hidden_field :tile_id, :value => character.tile_id - 1 %>
+      <%= f.submit "West" %>
+    <% elsif character.tile.transition_tile === 2 %>
+      <%= f.hidden_field :room_id, :value => character.room_id - 1 %>
+      <%= f.hidden_field :tile_id, :value => Tile.find_by( room_id: (character.room_id - 1), transition_tile: 2).id %>
+      <%= f.submit "West" %>
+    <% end %>
+  <% end %>
+
+  <%= form_for character, remote: true do |f| %>
+    <% if character.tile.get_moves[1].is_solid === false %>
+      <%= f.hidden_field :tile_id, :value => character.tile_id + row_max %>
+      <%= f.submit "South" %>
+    <% elsif character.tile.transition_tile === 2 %>
+      <%= f.hidden_field :room_id, :value => character.room_id + 1 %>
+      <%= f.hidden_field :tile_id, :value => Tile.find_by( room_id: (character.room_id + 1), transition_tile: 0).id %>
+      <%= f.submit "South" %>
+    <% end %>
+  <% end %>

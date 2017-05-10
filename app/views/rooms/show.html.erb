@@ -2,7 +2,7 @@
 <%= render "/layouts/controls" %>
 </div>
 
-<div class="well center black" >
+<div class="well center black" id="keyboard" tabindex="0" >
   <h1>Game world</h1>
   <div class="room<%=@room.id %>" id="active_room">
   <%= render "/layouts/map_display" %>
