@@ -6,13 +6,19 @@
 <h3>Combine the previous two prototypes, in a functional prototype will literiall open doors for more features!</h3>
 <hr>
 <%= render "/layouts/character_display" %>
-<h1></h1>
+
 <%= form_for @character do |f| %>
 <%= f.hidden_field :room_id, :value => 1 %>
 <%= f.hidden_field :tile_id, :value => Room.find(1).tiles[14].id %>
 <%= f.submit "Tile navaigation" %>
 <% end %>
-<h1><%= link_to "Tile stress test", room_path(2)%></h1>
+
+<%= form_for @character do |f| %>
+<%= f.hidden_field :room_id, :value => 5 %>
+<%= f.hidden_field :tile_id, :value => Room.find(5).tiles[40].id %>
+<%= f.submit "Tile STREESS" %>
+<% end %>
+
 <%= form_for @character do |f| %>
 <%= f.hidden_field :room_id, :value => 3 %>
 <%= f.hidden_field :tile_id, :value => Room.find(3).tiles[51].id %>

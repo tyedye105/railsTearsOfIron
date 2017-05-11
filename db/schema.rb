@@ -10,20 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170507232641) do
+ActiveRecord::Schema.define(version: 20170511212640) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "characters", force: :cascade do |t|
     t.string  "name"
-    t.integer "hit_points",    default: 100
-    t.integer "battery_level", default: 100
+    t.integer "hit_points",       default: 100
+    t.integer "battery_level",    default: 100
     t.integer "player_id"
-    t.boolean "is_alive",      default: true
-    t.boolean "is_new",        default: true
+    t.boolean "is_alive",         default: true
+    t.boolean "is_new",           default: true
     t.integer "tile_id"
     t.integer "room_id"
+    t.integer "previous_tile"
+    t.integer "facing_direction"
   end
 
   create_table "doors", force: :cascade do |t|
@@ -47,6 +49,7 @@ ActiveRecord::Schema.define(version: 20170507232641) do
     t.integer "origin_id"
     t.integer "tile_id"
     t.string  "name"
+    t.string  "img"
   end
 
   create_table "players", force: :cascade do |t|
