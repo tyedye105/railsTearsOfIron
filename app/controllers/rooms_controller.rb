@@ -12,7 +12,7 @@ class RoomsController < ApplicationController
   def show
     @player = current_player
     @character = @player.characters.last
-    @room = Room.find(params[:id ])
+    @room = Room.find(@character.room_id)
     @tiles = @room.tiles.all
   end
 

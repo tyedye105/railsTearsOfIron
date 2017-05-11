@@ -1,11 +1,11 @@
 <div id="north">
   <%= form_for character, html: { id:"north"}, remote: true do |f| %>
-    <% if character.tile.get_moves[0].is_solid === false %>
+  <% if character.tile.transition_tile === 0 %>
+    <%= f.hidden_field :room_id, :value => character.room_id  - 1 %>
+    <%= f.hidden_field :tile_id, :value => Tile.find_by( room_id: (character.room_id - 1), transition_tile: 1).id %>
+    <%= f.submit "North" %>
+    <% elsif character.tile.get_moves[0].is_solid === false %>
       <%= f.hidden_field :tile_id, :value => character.tile_id - row_max %>
-      <%= f.submit "North" %>
-    <% elsif character.tile.transition_tile === 0 %>
-      <%= f.hidden_field :room_id, :value => character.room_id  - 1 %>
-      <%= f.hidden_field :tile_id, :value => Tile.find_by( room_id: (character.room_id - 1), transition_tile: 1).id %>
       <%= f.submit "North" %>
   <% else %>
     <% end %>
@@ -14,18 +14,21 @@
 
 
 
-
-  <%= form_for character, remote: true,  html: { id:"east"} do |f| %>
-      <% if character.tile.transition_tile === 2 %>
-      <%= f.hidden_field :room_id, :value => character.room_id + 1 %>
-      <%= f.hidden_field :tile_id, :value => Tile.find_by( room_id: (character.room_id + 1), transition_tile: 3).id %>
-      <%= f.submit "DEast" %>
-      <% elsif character.tile.get_moves[2].is_solid === false %>
+<% if character.tile.transition_tile === 2 %>
+  <%= form_for character,  html: { id:"east"} do |f| %>
+    <%= f.hidden_field :room_id, :value => character.room_id + 1 %>
+    <%= f.hidden_field :tile_id, :value => Tile.find_by( room_id: (character.room_id + 1), transition_tile: 3).id %>
+    <%= f.submit "DEast" %>
+  <% end %>
+    <% else %>
+    <%= form_for character, remote: true,  html: { id:"east"} do |f| %>
+      <% if character.tile.get_moves[2].is_solid === false %>
         <%= f.hidden_field :tile_id, :value => character.tile_id + 1 %>
         <%= f.submit "East" %>
       <% else %>
     <% end %>
   <% end %>
+<% end %>
 
   <%= form_for character, remote: true,  html: { id:"west"} do |f| %>
     <% if character.tile.transition_tile === 3 %>

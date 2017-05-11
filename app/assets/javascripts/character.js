@@ -1,9 +1,7 @@
-  jQuery.fn.moveByKeys = function () {
-    $(this).parent('form').submit();
-  };
 
   $(function(){
-    var gameTarget = document.getElementById("keyboard");
+    var gameTarget = document.getElementById("d_pad");
+    gameTarget.focus();
       gameTarget.addEventListener("keydown", function (event) {
     if (event.defaultPrevented) {
       return; // Do nothing if the event was already processed
