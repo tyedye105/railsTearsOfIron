@@ -2,10 +2,5 @@ console.log(" <%= @character.tile_id %>");
 console.log(" char room <%= @character.room_id %>");
 console.log(" current room <%= @current_room.id %>");
 $("#d_pad").empty().append("  <%= j render '/characters/edit', character:@character, row_max:@character.tile.row_max%>").after().focus();
-if ("<%= @current_room.id %>" != "<%= @character.room_id %>") {
-  alert("boom");
-  $("#active_room").empty().append(" <%= j render '/layouts/map_display'%> ");
-} else if ("<%= @current_room.id %>" === "<%= @character.room_id %>")  {
 $("#tile<%= @previous_tile_id %>").empty();
 $("#tile<%= @character.tile_id %>").append(" <%= j image_tag 'robo64', class: 'robo'  %>");
-};
