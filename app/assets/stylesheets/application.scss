@@ -4,7 +4,7 @@
  *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
  * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
+ *:
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
@@ -15,18 +15,71 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "gamegrid";
 
- .container {
+ #keyboard:focus{
+   outline: none;
+   box-shadow: none;
+}
+
+ .room1 {
    display: grid;
-   grid-template-columns: 64px 64px;
-
+   grid-template-columns: 64px 64px 64px 64px  64px 64px;
+   grid-gap: 0 0px;
+   background-color: rgba(0, 0, 255, 0);
  }
 
- .item {
-   border-radius: 5px;
-
-
+ .room2 {
+   display: grid;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px;
+   grid-gap: 0 0px;
+   background-color: rgba(0, 0, 255, 0);;
+   color: #444;
  }
+ .room3 {
+   position:relative;
+   display: grid;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px;
+   grid-gap: 0 0px;
+   background-color: rgba(0, 0, 255, 0);;
+   color: #444;
+   z-index: 0;
+ }
+ .room4 {
+   display: grid;
+   grid-template-columns: 64px 64px 64px 64px;
+   grid-gap: 0 0px;
+   background-color: rgba(0, 0, 255, 0);;
+   color: #444;
+ }
+
+
+
+ .tmp_floor {
+   width: 64px;
+   height: 64px;
+   background-image: url("tmp_floor");
+ }
+ .tmp_corner {
+   width: 64px;
+   height: 64px;
+   background-image: url("tmp_corner");
+ }
+ .tmp_door {
+   width: 64px;
+   height: 64px;
+   background-image: url("tmp_door");
+ }
+ .tmp_wall {
+   width: 64px;
+   height: 64px;
+   background-image: url("tmp_wall");
+ }
+ .empty {
+   width: 64px;
+   height: 64px;
+ }
+
 
  #world {
    position: absolute;
@@ -52,14 +105,6 @@
     background: blue;
     height: 150px;
     width: 150px;
-
-
- }
- .robo {
-  position: absolute;
-  right: 775px;
-  top: 300px  ;
-  z-index: 1;
  }
 
  textarea {
@@ -100,4 +145,20 @@ body {
   z-index: 2
 
 
+}
+
+.center {
+  text-align: center;
+}
+
+.black {
+  background-color: black;
+}
+
+.btn-invis, .btn-invis:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0px;
+  padding: 0px;
+  background: rgba(0,0,0,0);
 }

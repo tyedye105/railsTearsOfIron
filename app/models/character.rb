@@ -1,6 +1,9 @@
 class Character < ActiveRecord::Base
   belongs_to :player
   has_many :items
+  belongs_to :tile, optional: true
+  belongs_to :room
+
 
   def four_way_move
     self.update({:battery_level => self.battery_level - 0})

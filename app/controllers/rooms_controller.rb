@@ -12,19 +12,8 @@ class RoomsController < ApplicationController
   def show
     @player = current_player
     @character = @player.characters.last
-    @room = Room.find(params[:id ])
-    @items = @room.items.all
+    @room = Room.find(@character.room_id)
     @tiles = @room.tiles.all
-    @east = nil
-    @enemy_robo_alive = true
-    @sentries= Sentry.all
-    if@room.doors.any?
-      @room.doors.each do |door|
-        if @room.directions_blocked.include?("e")
-          @east = door
-        end
-      end
-    end
   end
 
   def new

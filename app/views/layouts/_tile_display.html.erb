@@ -1,12 +1,5 @@
-<% if @tiles.any? %>
-<div class="container">
-  <% @tiles.each do |tile| %>
-    <%= image_tag "tile_#{tile.tile_no}", :class => "item" %>
-      <% if @character.tile_id === tile.id %>
-      <%= image_tag "robo64" %>
-      <% end %>
-      <% end %>
-    <% else %>
-    <h1>BOOM CRANE</h1>
+<div class="<%=tile.tile_name %>", id="tile<%= tile.id %>">
+  <% if tile.character != nil %>
+  <%= image_tag "robo64", class: "robo"  %>
   <% end %>
 </div>

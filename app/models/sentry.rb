@@ -1,5 +1,5 @@
 class Sentry < ActiveRecord::Base
-belongs_to :room
+belongs_to :tile
 
   def toggle_patrol
     if self.active_patrol === true

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170403035455) do
+ActiveRecord::Schema.define(version: 20170507232641) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,16 +28,15 @@ ActiveRecord::Schema.define(version: 20170403035455) do
 
   create_table "doors", force: :cascade do |t|
     t.string  "name"
-    t.string  "door_location"
-    t.boolean "is_locked",     default: true
-    t.boolean "active",        default: true
+    t.boolean "is_locked",   default: true
+    t.boolean "active",      default: true
     t.integer "room_id"
     t.string  "description"
     t.string  "req_item"
+    t.integer "tile_id"
   end
 
   create_table "items", force: :cascade do |t|
-    t.string  "title"
     t.string  "description"
     t.boolean "obtainable",   default: true
     t.boolean "active",       default: false
@@ -47,6 +46,7 @@ ActiveRecord::Schema.define(version: 20170403035455) do
     t.integer "character_id"
     t.integer "origin_id"
     t.integer "tile_id"
+    t.string  "name"
   end
 
   create_table "players", force: :cascade do |t|
@@ -75,7 +75,7 @@ ActiveRecord::Schema.define(version: 20170403035455) do
     t.boolean "first_time",         default: true
     t.string  "first_description"
     t.string  "normal_description"
-    t.integer "tile_id"
+    t.integer "row_max"
   end
 
   create_table "sentries", force: :cascade do |t|
@@ -90,11 +90,11 @@ ActiveRecord::Schema.define(version: 20170403035455) do
   end
 
   create_table "tiles", force: :cascade do |t|
-    t.integer "tile_no"
+    t.string  "tile_name"
     t.integer "room_id"
-    t.integer "character_id"
-    t.integer "item_id"
-    t.integer "sentry_id"
+    t.integer "row_max"
+    t.boolean "is_solid"
+    t.integer "transition_tile"
   end
 
 end

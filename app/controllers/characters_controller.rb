@@ -22,11 +22,25 @@ class CharactersController < ApplicationController
   def update
     @player = current_player
     @character = @player.characters.last
-    @current_room = Room.find(@character.room_id)
+    @current_room = @character.room
+    @previous_tile_id = @character.tile_id
+    @tiles = @current_room.tiles
       if @character.update(character_params)
-        redirect_to room_path(@current_room)
+        if @current_room.id != @character.room_id
+          respond_to do |format|
+            format.html {redirect_to room_path(Room.find(@character.room_id))}
+            format.js
+          end
+          else
+        respond_to do |format|
+            format.html {redirect_to room_path(@current_room)}
+            format.js
+            end
+          end
+        end
       end
-  end
+
+
   def destroy
     @character = current_player.characters.last
       @character.destroy
@@ -35,6 +49,7 @@ class CharactersController < ApplicationController
   private
 
   def character_params
-    params.require(:character).permit(:name, :tile_id, :room_id)
+    params.require(:character).permit(:tile_id,:room_id)
   end
+
 end

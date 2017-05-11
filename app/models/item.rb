@@ -1,6 +1,7 @@
 class Item < ActiveRecord::Base
   belongs_to :room, :optional => true
   belongs_to :characters, :optional => true
+  belongs_to :tile, :optional => true
 
     def consume_item
       self.destroy

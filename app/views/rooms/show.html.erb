@@ -1,51 +1,10 @@
-<%= button_to "BIG RED BUTTON", character_path(@character), method: :delete, data: {confirm: "Are You Sure?"}, class: "btn btn-danger" %>
-<h1>You are currently in room no. <%= @room.id %>.</h1>
-<h2> THE ROOM OF <%= @room.name %> </h2>
-<% if @character.is_alive === true %>
-<div class="row">
-  <div class="col-md-1">
-    <%= render "/layouts/game_controller" %>
-  </div>
-  <div class="col-md-5">
-    <%= render "layouts/text_display" %>
-  </div>
-  <div class="col-md-5">
-    <%= render "/layouts/character_display" %>
-  </div>
+<div class="game-controller" id="game_controller">
+<%= render "/layouts/controls"%>
 </div>
-<% end %>
-<div class="well">
-</div>
-<%= render "/characters/edit" %>
-<%= render "/layouts/tile_display" %>
-<%= render "/layouts/game_over"  %>
-<div id="world">
-  <div><%= image_tag "#{@room.id}.png", :class =>"world" %><%= image_tag "robo128.png", :class =>"robo" %>
-    <% if @room.doors.any? %>
-      <% @room.doors.each do |door| %>
-        <% if door.active === true %>
-          <% if @character.do_you_have?("A key") === true %>
-            <%= link_to edit_door_path( door) do %>
-              <%= image_tag "dooor.png", class: "east-door"  %>
-            <% end %>
-          <% elsif %>
-            <%= link_to door_path( door) do %>
-              <%= image_tag "dooor.png", class: "east-door"  %>
-            <% end %>
-          <% end %>
-        <% end %>
-      <% end %>
-    <% end %>
+
+<div class="well center black">
+  <h1>Game world</h1>
+  <div class="room<%=@room.id %>" id="active_room" >
+  <%= render "/layouts/map_display" %>
   </div>
-  <% if @items.any? %>
-      <% @items.each do |item| %>
-           <% item.spawn_item %>
-        <% if item.active === true && item.obtainable === true %>
-              <%= link_to character_item_path(@player, item) do %>
-                <%= image_tag "#{item.title}.png"  %>
-              <% end %>
-            <% end %>
-        <% end %>
-    <% end %>
-    <%= render "/sentries/index" %>
 </div>
