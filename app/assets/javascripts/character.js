@@ -1,7 +1,9 @@
+  jQuery.fn.moveByKeys = function () {
+    $(this).parent('form').submit();
+  };
+
   $(function(){
     var gameTarget = document.getElementById("keyboard");
-    console.log(gameTarget)
-
       gameTarget.addEventListener("keydown", function (event) {
     if (event.defaultPrevented) {
       return; // Do nothing if the event was already processed
@@ -9,16 +11,17 @@
 
     switch (event.key) {
       case "w":
-    alert("something")
+        $("#north.edit_character").submit();
         break;
       case "s":
-      alert("something")
+      $("#south.edit_character").submit();
         break;
       case "a":
-    alert("something")
+    $("#west.edit_character").submit();
         break;
       case "d":
-      alert("something")
+    $("#east.edit_character").submit();
+
         break;
       default:
         return; // Quit when this doesn't handle the key event.

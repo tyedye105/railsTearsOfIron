@@ -25,14 +25,13 @@ class CharactersController < ApplicationController
     @current_room = Room.find(@character.room_id)
     @tiles = @current_room.tiles
       if @character.update(character_params)
-        if @character.room_id != @current_room
-          redirect_to room_path(Room.find(@character.room_id))
-          else
           respond_to do |format|
-          end
+            format.html { redirect_to room_path(@character.room_id)}
+            format.js
         end
       end
     end
+
 
   def destroy
     @character = current_player.characters.last
@@ -44,7 +43,9 @@ class CharactersController < ApplicationController
   def character_params
     params.require(:character).permit(:tile_id,:room_id)
   end
-
+  def tile_params
+    params.require(:character).permit(:tile_id)
+  end
 
 
 end
