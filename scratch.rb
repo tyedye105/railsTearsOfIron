@@ -21,6 +21,7 @@ Character.first.update({room_id:2})
 Character.first.update({tile_id:304})
 Tile.find().update({ is_solid: true})
 Tile.find(300).update({ exit_to: 2})
+Item.create({name:"Blue Keycard", room_id:3, key_item: true, rarity:"low", img:"blue_key", tile_id:523})
 
 
 

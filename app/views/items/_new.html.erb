@@ -1,6 +1,6 @@
-  
+
 <%= form_for [@character, @item_to_pick_up] do |f| %>
-<%= f.hidden_field :title, :value => @item.title %>
+<%= f.hidden_field :name, :value => @item.name %>
 <%= f.hidden_field :description, :value => @item.description %>
 <%= f.hidden_field :obtainable, :value => false %>
 <%= f.hidden_field :active, :value => true %>

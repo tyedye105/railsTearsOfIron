@@ -2,7 +2,7 @@ class Character < ActiveRecord::Base
   belongs_to :player
   has_many :items
   belongs_to :tile, optional: true
-  belongs_to :room
+  belongs_to :room, optional: true
 
 
   def four_way_move
@@ -34,7 +34,7 @@ class Character < ActiveRecord::Base
 
       character_inventory.each do |comparison_item|
         until has_item === true do
-        if item === comparison_item.title
+        if item === comparison_item.name
           has_item = true
         end
       end
@@ -48,7 +48,7 @@ class Character < ActiveRecord::Base
     has_x = 0
     character_inventory = self.items.all
       character_inventory.each do |comparison_item|
-        if item === comparison_item.title
+        if item === comparison_item.name
           has_x = has_x + 1
         else
           has_x = has_x + 0

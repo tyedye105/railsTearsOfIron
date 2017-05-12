@@ -49,7 +49,7 @@ class CharactersController < ApplicationController
   private
 
   def character_params
-    params.require(:character).permit(:tile_id,:room_id)
+    params.require(:character).permit(:name,:tile_id,:room_id,:player_id)
   end
 
 end

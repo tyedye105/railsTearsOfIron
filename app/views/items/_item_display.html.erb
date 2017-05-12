@@ -13,6 +13,6 @@
   <h2> <%= @item.description %>
     <hr>
     <%= image_tag("#{@item.img}.png") %>
-  <%= button_to "You must get closer to pick it up.", room_path(@item.room_id), method:"get"%>
+  <%= button_to "You must get closer to pick it up.", room_path(@item.room_id), method:"get", remote: true%>
   <% end %>
 </div>
