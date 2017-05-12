@@ -22,9 +22,8 @@ class CharactersController < ApplicationController
   def update
     @player = current_player
     @character = @player.characters.last
-    @current_room = @character.room
+    @current_room = Room.find(@character.room_id)
     @previous_tile_id = @character.tile_id
-    @tiles = @current_room.tiles
       if @character.update(character_params)
         if @current_room.id != @character.room_id
           respond_to do |format|
