@@ -1,6 +1,6 @@
 <% if @tiles.any? %>
   <% @tiles.each do |tile| %>
-  <%= render "/layouts/tile_render", tile: tile %>
+  <%= render "/layouts/tile_display", tile: tile %>
       <% end %>
     <% else %>
     <h1>BOOM CRANE</h1>

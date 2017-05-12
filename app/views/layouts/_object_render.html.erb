@@ -2,11 +2,11 @@
   <% if tile.character.tile_id === tile.id  %>
   <%= image_tag "robo64" %>
   <% end %>
-<% elsif tile.item != nil %>
-  <% if tile.item.obtainable == true && tile.item.active == true %>
+<% end %>
+<% if tile.item != nil %>
+  <% if tile.item.obtainable === true %>
     <%= link_to character_item_path(@character, tile.item), remote:true do %>
     <%= image_tag "#{tile.item.img}" %>
     <% end %>
-  <% end  %>
-<% else %>
+  <% end %>
 <% end %>
