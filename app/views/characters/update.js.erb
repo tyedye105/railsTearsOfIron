@@ -1,6 +1,7 @@
 console.log(" <%= @character.tile_id %>");
+console.log(" <%= @character.previous_tile %>")
 console.log(" char room <%= @character.room_id %>");
 console.log(" current room <%= @current_room.id %>");
 $("#d_pad").empty().append("  <%= j render '/characters/edit', character:@character, row_max:@character.tile.row_max%>").after().focus();
-$("#tile<%= @previous_tile_id %>").empty().append(" <%=  j render '/layouts/tile_render' %>");
+$("#tile<%= @previous_tile_id %>").empty();
 $("#tile<%= @character.tile_id %>").append(" <%= j image_tag 'robo64', class: 'robo'  %>");
