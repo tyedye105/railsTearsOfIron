@@ -40,7 +40,7 @@
    color: #444;
  }
  .room3 {
-   position:relative;
+   position:relative;;
    display: grid;
    grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px;
    grid-gap: 0 0px;
@@ -103,6 +103,12 @@
  .blank_wall{
    width: 64px;
    height: 64px;
+ }
+
+
+ .actor {
+   position: inherit;
+   z-index: 2;
  }
 
 

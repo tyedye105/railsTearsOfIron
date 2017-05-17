@@ -23,7 +23,7 @@ class CharactersController < ApplicationController
     @player = current_player
     @character = @player.characters.last
     @current_room = Room.find(@character.room_id)
-    @previous_tile_id = @character.tile_id
+    @previous_tile = Tile.find(@character.tile_id)
       if @character.update(character_params)
         if @current_room.id != @character.room_id
           respond_to do |format|
