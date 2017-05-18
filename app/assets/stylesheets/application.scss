@@ -34,15 +34,15 @@
 
  .room2 {
    display: grid;
-   grid-template-columns: 64px 64px 64px 64px 64px 64px;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px;
    grid-gap: 0 0px;
-   background-color: rgba(0, 0, 255, 0);;
+   background-color: rgba(0, 0, 255, 0);
    color: #444;
  }
  .room3 {
    position:relative;;
    display: grid;
-   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px;
    grid-gap: 0 0px;
    background-color: rgba(0, 0, 255, 0);;
    color: #444;
@@ -50,7 +50,7 @@
  }
  .room4 {
    display: grid;
-   grid-template-columns: 64px 64px 64px 64px;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px;
    grid-gap: 0 0px;
    background-color: rgba(0, 0, 255, 0);;
    color: #444;
@@ -58,7 +58,7 @@
 
  .room5 {
    display: grid;
-   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px;
    grid-gap: 0 0px;
    background-color: rgba(0, 0, 255, 0);;
    color: #444;
@@ -84,6 +84,25 @@
    height: 64px;
    background-image: url("facility_wall");
  }
+
+ .facility_insidewall {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_insidewall");
+ }
+
+ .facility_outsidewall {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_insidewall");
+ }
+
+ .facility_insideground {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_insideground");
+ }
+
  .tmp_corner {
    width: 64px;
    height: 64px;
@@ -163,7 +182,7 @@
  .facility_wall_gap {
    width: 64px;
    height: 64px;
-   background-image: url("facility_wall_top");
+   background-image: url("facility_wall_gap");
  }
  .cargo1_topl {
    width: 64px;
@@ -203,6 +222,11 @@
    height: 64px;
    background-image: url("cargo1_botl");
  }
+ .cargo2_botl {
+   width: 64px;
+   height: 64px;
+   background-image: url("cargo2_botl");
+ }
  .cargo1_botc {
    width: 64px;
    height: 64px;
@@ -213,6 +237,195 @@
    height: 64px;
    background-image: url("cargo1_botr");
  }
+ .cargo2_botr {
+   width: 64px;
+   height: 64px;
+   background-image: url("cargo2_botr");
+ }
+ .laser_l {
+   width: 64px;
+   height: 64px;
+   background-image: url("laser_l");
+ }
+ .laser_c {
+   width: 64px;
+   height: 64px;
+   background-image: url("laser_c");
+ }
+ .laser_r {
+   width: 64px;
+   height: 64px;
+   background-image: url("laser_r");
+ }
+ .building_roof_midl {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_roof_midl");
+ }
+ .building_roof_midc {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_roof_midc");
+ }
+ .building_roof_midr {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_roof_midr");
+ }
+ .building_topl {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_topl");
+ }
+ .building_topc {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_topc");
+ }
+ .building_topr {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_topr");
+ }
+ .building_midl {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_midl");
+ }
+ .building_midc {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_midc");
+ }
+ .building_midr {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_midr");
+ }
+ .building_botl {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_botl");
+ }
+ .building_botc {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_botc");
+ }
+ .building_botr {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_botr");
+ }
+ .collapsed_botl {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsed_botl");
+ }
+
+ .collapsed_botr {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsed_botr");
+ }
+ .collapsed_midl {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsed_midl");;
+ }
+ .collapsed_midr {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsed_midr");
+ }
+
+ .collapsed_topl {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsed_topl");;
+ }
+ .collapsed_topr {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsed_topr");
+ }
+
+
+ .collapsedroof_topr {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsedroof_topr");
+ }
+
+ .collapsedroof_topl {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsedroof_topl");
+ }
+
+ .collapsedroof_midl {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsedroof_midl");
+ }
+ .collapsedroof_midc {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsedroof_midc");
+ }
+
+ .collapsedroof_midr {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsedroof_midr");
+ }
+
+ .collapsedroof_botr {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsedroof_botr");
+ }
+
+ .collapsedroof_botl {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsedroof_botl");
+ }
+
+ .l_sidew1 {
+   width: 64px;
+   height: 64px;
+   background-image: url("l_sidew1");
+ }
+
+ .r_sidew1 {
+   width: 64px;
+   height: 64px;
+   background-image: url("r_sidew1");
+ }
+
+ .street_center_we {
+   width: 64px;
+   height: 64px;
+   background-image: url("street_center_we");
+ }
+ .street_center_ns {
+   width: 64px;
+   height: 64px;
+   background-image: url("street_center_ns");
+ }
+ .street_clean {
+   width: 64px;
+   height: 64px;
+   background-image: url("street_clean");
+ }
+ .street_crater {
+   width: 64px;
+   height: 64px;
+   background-image: url("street_crater");
+ }
+
+
 
 
  #world {

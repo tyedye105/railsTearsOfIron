@@ -10,7 +10,31 @@
 <%= form_for @character do |f| %>
 <%= f.hidden_field :room_id, :value => 1 %>
 <%= f.hidden_field :tile_id, :value => Room.find(1).tiles[47].id %>
-<%= f.submit "Tile navaigation" %>
+<%= f.submit "Room 1" %>
+<% end %>
+
+<%= form_for @character do |f| %>
+<%= f.hidden_field :room_id, :value => 2 %>
+<%= f.hidden_field :tile_id, :value => Room.find(2).tiles[19].id %>
+<%= f.submit "Room 2" %>
+<% end %>
+
+<%= form_for @character do |f| %>
+<%= f.hidden_field :room_id, :value => 3 %>
+<%= f.hidden_field :tile_id, :value => Room.find(3).tiles[39].id %>
+<%= f.submit "Room 3" %>
+<% end %>
+
+<%= form_for @character do |f| %>
+<%= f.hidden_field :room_id, :value => 4 %>
+<%= f.hidden_field :tile_id, :value => Room.find(4).tiles[38].id %>
+<%= f.submit "Room 4" %>
+<% end %>
+
+<%= form_for @character do |f| %>
+<%= f.hidden_field :room_id, :value => 5 %>
+<%= f.hidden_field :tile_id, :value => Room.find(5).tiles[47].id %>
+<%= f.submit "Room 5" %>
 <% end %>
 
 <% if @character.is_new === true %>

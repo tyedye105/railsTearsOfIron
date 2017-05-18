@@ -144,6 +144,16 @@ tile_list2 = [
 ["facility_outsidewall", 2, 8, true, nil],
 ["facility_outsidewall", 2, 8, true, nil],
 ["facility_outsidewall", 2, 8, true, nil],
+
+["blank", 2, 8, true, nil],
+["blank", 2, 8, true, nil],
+["blank", 2, 8, true, nil],
+["blank", 2, 8, true, nil],
+["blank", 2, 8, true, nil],
+["blank", 2, 8, true, nil],
+["blank", 2, 8, true, nil],
+["blank", 2, 8, true, nil]
+
   ]
 tile_list2.each do | tile_name, room_id, row_max, is_solid, transition_tile|
   Tile.create( tile_name: tile_name, room_id: room_id, row_max: row_max, is_solid: is_solid, transition_tile: transition_tile)
@@ -218,6 +228,16 @@ tile_list3 = [
 ["facility_outsidewall", 3, 9, true, nil],
 ["facility_outsidewall", 3, 9, true, nil],
 ["facility_outsidewall", 3, 9, true, nil],
+
+["blank", 3, 9, true, nil],
+["blank", 3, 9, true, nil],
+["blank", 3, 9, true, nil],
+["blank", 3, 9, true, nil],
+["blank", 3, 9, true, nil],
+["blank", 3, 9, true, nil],
+["blank", 3, 9, true, nil],
+["blank", 3, 9, true, nil],
+["blank", 3, 9, true, nil]
   ]
 tile_list3.each do | tile_name, room_id, row_max, is_solid, transition_tile|
   Tile.create( tile_name: tile_name, room_id: room_id, row_max: row_max, is_solid: is_solid, transition_tile: transition_tile)
@@ -305,17 +325,123 @@ tile_list4 = [
 ["facility_ground3", 4, 9, false, nil],
 ["cargo1_botl", 4, 9, true, nil],
 
-["blank", 1, 9, true, nil],
-["blank", 1, 9, true, nil],
-["blank", 1, 9, true, nil],
-["blank", 1, 9, true, nil],
-["blank", 1, 9, true, nil],
-["blank", 1, 9, true, nil],
-["blank", 1, 9, true, nil],
-["blank", 1, 9, true, nil],
-["blank", 1, 9, true, nil]
+["blank", 4, 9, true, nil],
+["blank", 4, 9, true, nil],
+["blank", 4, 9, true, nil],
+["blank", 4, 9, true, nil],
+["blank", 4, 9, true, nil],
+["blank", 4, 9, true, nil],
+["blank", 4, 9, true, nil],
+["blank", 4, 9, true, nil],
+["blank", 4, 9, true, nil]
 
   ]
 tile_list4.each do | tile_name, room_id, row_max, is_solid, transition_tile|
+  Tile.create( tile_name: tile_name, room_id: room_id, row_max: row_max, is_solid: is_solid, transition_tile: transition_tile)
+end
+tile_list5 = [
+
+["building_roof_topr", 5, 9, true, nil],
+["facility_wall_gap", 5, 9, true, nil],
+["facility_wall_top", 5, 9, true, nil],
+["street_clean", 5, 9, false, nil],
+["street_center_ns", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["facility_wall_top", 5, 9, true, nil],
+["facility_wall_gap", 5, 9, true, nil],
+["building_roof_topl", 5, 9, true, nil],
+
+["building_roof_midr", 5, 9, true, nil],
+["facility_wall", 5, 9, false, nil],
+["facility_wall", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_center_ns", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["facility_wall", 5, 9, false, nil],
+["facility_wall", 5, 9, false, nil],
+["building_roof_midl", 5, 9, true, nil],
+
+["building_roof_botr", 5, 9, true, nil],
+["l_sidew1", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_center_ns", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["r_sidew1", 5, 9, false, nil],
+["building_roof_botl", 5, 9, true, nil],
+
+["building_topr", 5, 9, true, nil],
+["l_sidew1", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_center_ns", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["r_sidew1", 5, 9, false, nil],
+["building_topl", 5, 9, true, nil],
+
+["building_midr", 5, 9, true, nil],
+["l_sidew1", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_center_ns", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["r_sidew1", 5, 9, false, nil],
+["building_midl", 5, 9, true, nil],
+
+["building_roof_topr", 5, 9, true, nil],
+["l_sidew1", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_center_ns", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["r_sidew1", 5, 9, false, nil],
+["building_roof_topl", 5, 9, true, nil],
+
+["building_roof_botr", 5, 9, true, nil],
+["l_sidew1", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_center_ns", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["r_sidew1", 5, 9, false, nil],
+["building_roof_botl", 5, 9, true, nil],
+
+["building_topr", 5, 9, true, nil],
+["l_sidew1", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_center_ns", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["r_sidew1", 5, 9, false, nil],
+["building_topl", 5, 9, true, nil],
+
+["building_midr", 5, 9, true, nil],
+["l_sidew1", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_center_ns", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["street_clean", 5, 9, false, nil],
+["r_sidew1", 5, 9, false, nil],
+["building_midl", 5, 9, true, nil],
+
+["blank", 5, 9, true, nil],
+["blank", 5, 9, true, nil],
+["blank", 5, 9, true, nil],
+["blank", 5, 9, true, nil],
+["blank", 5, 9, true, nil],
+["blank", 5, 9, true, nil],
+["blank", 5, 9, true, nil],
+["blank", 5, 9, true, nil],
+["blank", 5, 9, true, nil]
+
+  ]
+tile_list5.each do | tile_name, room_id, row_max, is_solid, transition_tile|
   Tile.create( tile_name: tile_name, room_id: room_id, row_max: row_max, is_solid: is_solid, transition_tile: transition_tile)
 end
