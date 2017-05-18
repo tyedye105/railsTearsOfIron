@@ -935,3 +935,11 @@ se_ruins = [
 se_ruins.each do | tile_name, room_id, row_max, is_solid, transition_tile|
   Tile.create( tile_name: tile_name, room_id: room_id, row_max: row_max, is_solid: is_solid, transition_tile: transition_tile)
 end
+
+door_list = [
+
+]
+
+door_list.each do |thing|
+
+end
