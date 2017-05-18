@@ -23,7 +23,7 @@
 }
 
 
- .room1 {
+ .room7 {
    display: grid;
    grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px;
    grid-gap: 0 0px;
@@ -32,14 +32,14 @@
 
 
 
- .room2 {
+ .room4 {
    display: grid;
    grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px;
    grid-gap: 0 0px;
    background-color: rgba(0, 0, 255, 0);
    color: #444;
  }
- .room3 {
+ .room1 {
    position:relative;;
    display: grid;
    grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px;
@@ -48,7 +48,7 @@
    color: #444;
    z-index: 0;
  }
- .room4 {
+ .room10 {
    display: grid;
    grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px;
    grid-gap: 0 0px;
@@ -56,7 +56,7 @@
    color: #444;
  }
 
- .room5 {
+ .room11 {
    display: grid;
    grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px;
    grid-gap: 0 0px;
@@ -64,7 +64,7 @@
    color: #444;
  }
 
- .room6 {
+ .room12 {
    position:relative;
    display: grid;
    grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px;
@@ -72,7 +72,7 @@
    background-color: rgba(0, 0, 255, 0);;
    color: #444;
  }
- .room7 {
+ .room13 {
    position:relative;
    display: grid;
    grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px;
@@ -80,7 +80,7 @@
    background-color: rgba(0, 0, 255, 0);;
    color: #444;
  }
- .room8 {
+ .room14 {
    position:relative;
    display: grid;
    grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px ;
@@ -89,7 +89,7 @@
    color: #444;
  }
 
- .room9 {
+ .room15 {
    position:relative;
    display: grid;
    grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px;
@@ -113,6 +113,11 @@
    width: 64px;
    height: 64px;
    background-image: url("facility_insidewall");
+ }
+ .facility_exploded_wall {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_exploded_wall");
  }
 
  .facility_outsidewall {
