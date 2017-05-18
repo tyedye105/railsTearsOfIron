@@ -5,9 +5,9 @@ room_list = [
   ["Cargo Yard", true, "There is a sentry detected. Exercise caution.", "The sentry might have a gun, but they don’t have sensors on the back of their heads… yet.", 10],
   ["Facility Entrace", true, "Just the place I need to get to! With a convenient laser fence in the way...", " Things I can do about the laser fence: 0",9 ],
   ["Rundown Shack Inside", true, " Hopefully I can find something useful in this rundown shack.", "This whole town is in ruin… but where are the people?",8 ],
-  [" South West Ruins", true, 'When I left this place, there was people and androids everywhere, what happened?", "That switch might activate the doors in the southeast ruins.' ,14 ],
+  [" South West Ruins", true, 'When I left this place, there was people and androids everywhere, what happened?", "That switch might activate the doors in the southeast ruins.' ,11 ],
   ["Streets", true, "What a disaster, I hope Hector is holed up in his workshop.", 'I have only been gone for three years… What the hell happened?', 9 ],
-  ["South Eat Ruins", true, "Hmm that shack looks like it has not been opened in years, maybe something useful is in there.", "Perhaps there is a console elsewhere that will open that door..",11 ],
+  ["South East Ruins", true, "Hmm that shack looks like it has not been opened in years, maybe something useful is in there.", "Perhaps there is a console elsewhere that will open that door..",11 ],
 ]
 
 room_list.each do | name, first_time, first_description, normal_description, row_max|
@@ -443,5 +443,305 @@ tile_list5 = [
 
   ]
 tile_list5.each do | tile_name, room_id, row_max, is_solid, transition_tile|
+  Tile.create( tile_name: tile_name, room_id: room_id, row_max: row_max, is_solid: is_solid, transition_tile: transition_tile)
+end
+
+tile_list6 = [
+["blank", 6, 8, true, nil],
+["abdn_insidewall", 6, 8, true, nil],
+["abdn_insidewall", 6, 8, true, nil],
+["abdn_insidewall", 6, 8, true, nil],
+["abdn_insidewall", 6, 8, true, nil],
+["abdn_insidewall", 6, 8, true, nil],
+["abdn_insidewall", 6, 8, true, nil],
+["blank", 6, 8, true, nil],
+
+["blank", 6, 8, true, nil],
+["abdn_insideground", 6, 8, false, nil],
+["abdn_insideground", 6, 8, false, nil],
+["abdn_insideground", 6, 8, false, nil],
+["abdn_insideground", 6, 8, false, nil],
+["abdn_insideground", 6, 8, false, nil],
+["abdn_insideground", 6, 8, false, nil],
+["blank", 6, 8, true, nil],
+
+["blank", 6, 8, true, nil],
+["abdn_insideground", 6, 8, false, nil],
+["abdn_insideground", 6, 8, false, nil],
+["abdn_insideground", 6, 8, false, nil],
+["abdn_insideground", 6, 8, false, nil],
+["abdn_insideground", 6, 8, false, nil],
+["abdn_insideground", 6, 8, false, nil],
+["blank", 6, 8, true, nil],
+
+["blank", 6, 8, true, nil],
+["abdn_insideground", 6, 8, false, nil],
+["abdn_insideground", 6, 8, false, nil],
+["abdn_insideground", 6, 8, false, nil],
+["abdn_insideground", 6, 8, false, nil],
+["abdn_insideground", 6, 8, false, nil],
+["abdn_insideground", 6, 8, false, nil],
+["blank", 6, 8, true, nil],
+
+["abdn_outsidewall", 6, 8, true, nil],
+["abdn_outsidewall", 6, 8, true, nil],
+["abdn_insideground", 6, 8, false, nil],
+["abdn_insideground", 6, 8, false, nil],
+["abdn_outsidewall", 6, 8, true, nil],
+["abdn_outsidewall", 6, 8, true, nil],
+["abdn_outsidewall", 6, 8, true, nil],
+["abdn_outsidewall", 6, 8, true, nil],
+
+["blank", 6, 8, true, nil],
+["blank", 6, 8, true, nil],
+["blank", 6, 8, true, nil],
+["blank", 6, 8, true, nil],
+["blank", 6, 8, true, nil],
+["blank", 6, 8, true, nil],
+["blank", 6, 8, true, nil],
+["blank", 6, 8, true, nil]
+
+  ]
+tile_list6.each do | tile_name, room_id, row_max, is_solid, transition_tile|
+  Tile.create( tile_name: tile_name, room_id: room_id, row_max: row_max, is_solid: is_solid, transition_tile: transition_tile)
+end
+
+tile_list7 = [
+
+["building_roof_topr", 7 ,11, true, nil],
+["facility_ground2", 7 ,11, true, nil],
+["collapsedroof_botl", 7 ,11, true, nil],
+["building_roof_botc", 7 ,11, true, nil],
+["collapsedroof_botr", 7 ,11, true, nil],
+["collapsedroof_botl", 7 ,11, true, nil],
+["building_roof_botc", 7 ,11, true, nil],
+["building_roof_botc", 7 ,11, true, nil],
+["collapsedroof_botr", 7 ,11, true, nil],
+["building_botl", 7 ,11, true, nil],
+["building_botr", 7 ,11, true, nil],
+
+
+
+["building_roof_midr", 7 ,11, true, nil],
+["facility_ground1", 7 ,11, false, nil],
+["collapsed_topl", 7 ,11, true, nil],
+["building_topc", 7 ,11, true, nil],
+["collapsed_topr", 7 ,11, true, nil],
+["collapsed_topl", 7 ,11, true, nil],
+["building_topc", 7 ,11, true, nil],
+["building_topc", 7 ,11, true, nil],
+["collapsed_topr", 7 ,11, true, nil],
+["street_clean", 7 ,11, true, nil],
+["street_center_we", 7 ,11, true, nil],
+
+
+["building_roof_botr", 7 ,11, true, nil],
+["facility_ground2", 7 ,11, false, nil],
+["collapsed_midl", 7 ,11, true, nil],
+["building_midc", 7 ,11, true, nil],
+["collapsed_midr", 7 ,11, true, nil],
+["collapsed_midl", 7 ,11, true, nil],
+["building_midc", 7 ,11, true, nil],
+["building_midc", 7 ,11, true, nil],
+["collapsed_midr", 7 ,11, true, nil],
+["street_center_ns", 7, 11, false, nil],
+["building_roof_topl", 7 ,11, true, nil],
+
+["building_topr", 7 ,11, true, nil],
+["facility_ground2", 7 ,11, false, nil],
+["collapsed_botl", 7 ,11, true, nil],
+["building_botc", 7 ,11, true, nil],
+["collapsed_botr", 7 ,11, true, nil],
+["collapsed_botl", 7 ,11, true, nil],
+["building_botc", 7 ,11, true, nil],
+["building_botc", 7 ,11, true, nil],
+["collapsed_botr", 7 ,11, true, nil],
+["street_center_ns", 7, 11, false, nil],
+["building_roof_midl", 7 ,11, true, nil],
+
+
+["building_midr", 7 ,11, true, nil],
+["facility_ground2", 7 ,11, false, nil],
+["facility_ground1", 7 ,11, false, nil],
+["facility_ground2", 7 ,11, false, nil],
+["facility_ground1", 7, 11, false, nil],
+["facility_ground3", 7, 11, false, nil],
+["facility_ground2", 7, 11, false, nil],
+["facility_ground1", 7, 11, false, nil],
+["facility_ground4", 7, 11, false, nil],
+["street_center_ns", 7, 11, false, nil],
+["building_roof_botl", 7 ,11, true, nil],
+
+["blank", 7 ,11, true, nil],
+["abdn_insidewall", 7 ,11, true, nil],
+["abdn_insidewall", 7 ,11, true, nil],
+["blank", 7 ,11, true, nil],
+["facility_ground1", 7, 11, false, nil],
+["facility_ground3", 7, 11, false, nil],
+["facility_ground2", 7, 11, false, nil],
+["facility_ground1", 7, 11, false, nil],
+["facility_ground4", 7, 11, false, nil],
+["street_center_ns", 7, 11, false, nil],
+["building_topl", 7 ,11, true, nil],
+
+["blank", 7 ,11, true, nil],
+["abdn_insideground", 7 ,11, false, nil],
+["abdn_insideground", 7 ,11, false, nil],
+["blank", 7 ,11, true, nil],
+["facility_ground1", 7, 11, false, nil],
+["facility_ground3", 7, 11, false, nil],
+["facility_ground2", 7, 11, false, nil],
+["facility_ground1", 7, 11, false, nil],
+["facility_ground4", 7, 11, false, nil],
+["street_crater", 7, 11, false, nil],
+["building_midl", 7 ,11, true, nil],
+
+
+["blank", 7 ,11, true, nil],
+["abdn_insideground", 7 ,11, false, nil],
+["abdn_insideground", 7 ,11, false, nil],
+["abdn_outsidewall", 7 ,11, true, nil],
+["facility_ground3", 7, 11, false, nil],
+["facility_ground1", 7, 11, false, nil],
+["facility_ground3", 7, 11, false, nil],
+["facility_ground2", 7, 11, false, nil],
+["facility_ground1", 7, 11, false, nil],
+["facility_ground4", 7, 11, false, nil],
+["building_midl", 7 ,11, true, nil],
+
+["abdn_outsidewall", 7 ,11, true, nil],
+["abdn_insideground", 7 ,11, true, nil],
+["abdn_insideground", 7 ,11, true, nil],
+["abdn_insideground", 7 ,11, true, nil],
+["facility_ground3", 7, 11, false, nil],
+["facility_ground2", 7, 11, false, nil],
+["facility_ground3", 7, 11, false, nil],
+["facility_ground4", 7, 11, false, nil],
+["facility_ground1", 7, 11, false, nil],
+["facility_ground4", 7, 11, false, nil],
+["building_midl", 7 ,11, true, nil],
+
+["building_roof_topl", 7 ,11, true, nil],
+["building_roof_topc", 7 ,11, true, nil],
+["building_roof_topr", 7 ,11, true, nil],
+["building_roof_topl", 7 ,11, true, nil],
+["building_roof_topc", 7 ,11, true, nil],
+["building_roof_topr", 7 ,11, true, nil],
+["building_roof_topl", 7 ,11, true, nil],
+["building_roof_topc", 7 ,11, true, nil],
+["building_roof_topc", 7 ,11, true, nil],
+["building_roof_topr", 7 ,11, true, nil],
+["building_midl", 7 ,11, true, nil]
+
+
+  ]
+tile_list7.each do | tile_name, room_id, row_max, is_solid, transition_tile|
+  Tile.create( tile_name: tile_name, room_id: room_id, row_max: row_max, is_solid: is_solid, transition_tile: transition_tile)
+end
+
+tile_list8 = [
+
+["building_roof_topr", 8, 9, true, nil],
+["facility_wall_gap", 8, 9, true, nil],
+["facility_wall_top", 8, 9, true, nil],
+["street_clean", 8, 9, false, nil],
+["street_center_ns", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["facility_wall_top", 8, 9, true, nil],
+["facility_wall_gap", 8, 9, true, nil],
+["building_roof_topl", 8, 9, true, nil],
+
+["building_roof_midr", 8, 9, true, nil],
+["facility_wall", 8, 9, false, nil],
+["facility_wall", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_center_ns", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["facility_wall", 8, 9, false, nil],
+["facility_wall", 8, 9, false, nil],
+["building_roof_midl", 8, 9, true, nil],
+
+["building_roof_botr", 8, 9, true, nil],
+["l_sidew1", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_center_ns", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["r_sidew1", 8, 9, false, nil],
+["building_roof_botl", 8, 9, true, nil],
+
+["building_topr", 8, 9, true, nil],
+["l_sidew1", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_center_ns", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["r_sidew1", 8, 9, false, nil],
+["building_topl", 8, 9, true, nil],
+
+["building_midr", 8, 9, true, nil],
+["l_sidew1", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_center_ns", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["r_sidew1", 8, 9, false, nil],
+["building_midl", 8, 9, true, nil],
+
+["building_roof_topr", 8, 9, true, nil],
+["l_sidew1", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_center_ns", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["r_sidew1", 8, 9, false, nil],
+["building_roof_topl", 8, 9, true, nil],
+
+["building_roof_botr", 8, 9, true, nil],
+["l_sidew1", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_center_ns", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["r_sidew1", 8, 9, false, nil],
+["building_roof_botl", 8, 9, true, nil],
+
+["building_topr", 8, 9, true, nil],
+["l_sidew1", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_center_ns", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["r_sidew1", 8, 9, false, nil],
+["building_topl", 8, 9, true, nil],
+
+["building_midr", 8, 9, true, nil],
+["l_sidew1", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_center_ns", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["street_clean", 8, 9, false, nil],
+["r_sidew1", 8, 9, false, nil],
+["building_midl", 8, 9, true, nil],
+
+["blank", 8, 9, true, nil],
+["blank", 8, 9, true, nil],
+["blank", 8, 9, true, nil],
+["blank", 8, 9, true, nil],
+["blank", 8, 9, true, nil],
+["blank", 8, 9, true, nil],
+["blank", 8, 9, true, nil],
+["blank", 8, 9, true, nil],
+["blank", 8, 9, true, nil]
+
+  ]
+tile_list8.each do | tile_name, room_id, row_max, is_solid, transition_tile|
   Tile.create( tile_name: tile_name, room_id: room_id, row_max: row_max, is_solid: is_solid, transition_tile: transition_tile)
 end

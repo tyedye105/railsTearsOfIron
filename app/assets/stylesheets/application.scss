@@ -71,7 +71,14 @@
    grid-gap: 0 0px;
    background-color: rgba(0, 0, 255, 0);;
    color: #444;
-   z-index: 0;
+ }
+ .room7 {
+   position:relative;
+   display: grid;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px;
+   grid-gap: 0 0px;
+   background-color: rgba(0, 0, 255, 0);;
+   color: #444;
  }
 
  .blank {
@@ -101,6 +108,24 @@
    width: 64px;
    height: 64px;
    background-image: url("facility_insideground");
+ }
+
+ .abdn_insidewall {
+   width: 64px;
+   height: 64px;
+   background-image: url("abdn_insidewall");
+ }
+
+ .abdn_outsidewall {
+   width: 64px;
+   height: 64px;
+   background-image: url("abdn_insidewall");
+ }
+
+ .abdn_insideground {
+   width: 64px;
+   height: 64px;
+   background-image: url("abdn_insideground");
  }
 
  .tmp_corner {

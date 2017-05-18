@@ -37,6 +37,18 @@
 <%= f.submit "Room 5" %>
 <% end %>
 
+<%= form_for @character do |f| %>
+<%= f.hidden_field :room_id, :value => 6 %>
+<%= f.hidden_field :tile_id, :value => Room.find(6).tiles[12].id %>
+<%= f.submit "Room 6" %>
+<% end %>
+
+<%= form_for @character do |f| %>
+<%= f.hidden_field :room_id, :value => 7 %>
+<%= f.hidden_field :tile_id, :value => Room.find(7).tiles[12].id %>
+<%= f.submit "Room 7" %>
+<% end %>
+
 <% if @character.is_new === true %>
   <%  Room.reset %>
     <%  @doors.each do |door| %>
