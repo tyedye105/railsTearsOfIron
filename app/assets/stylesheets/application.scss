@@ -25,7 +25,7 @@
 
  .room1 {
    display: grid;
-   grid-template-columns: 64px 64px 64px 64px  64px 64px;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px;
    grid-gap: 0 0px;
    background-color: rgba(0, 0, 255, 0);
  }
@@ -74,42 +74,87 @@
    z-index: 0;
  }
 
-
-
- .tmp_floor {
+ .blank {
    width: 64px;
    height: 64px;
-   background-image: url("tmp_floor");
+ }
+
+ .facility_wall {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_wall");
  }
  .tmp_corner {
    width: 64px;
    height: 64px;
    background-image: url("tmp_corner");
  }
- .tmp_door {
+ .facility_wall_single {
    width: 64px;
    height: 64px;
-   background-image: url("tmp_door");
+   background-image: url("facility_wall_single");
  }
- .tmp_wall {
+ .building_roof_topl {
    width: 64px;
    height: 64px;
-   background-image: url("tmp_wall");
+   background-image: url("building_roof_topl");
  }
- .empty {
+ .building_roof_topc {
    width: 64px;
    height: 64px;
+   background-image: url("building_roof_topc");
  }
- .blank_wall{
+ .building_roof_topr {
    width: 64px;
    height: 64px;
+   background-image: url("building_roof_topr");
+ }
+ .building_roof_botl {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_roof_botl");
+ }
+ .building_roof_botc {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_roof_botc");
+ }
+ .building_roof_botr {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_roof_botr");
+ }
+ .facility_ground1 {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_ground1");
+ }
+ .facility_ground2 {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_ground2");
+ }
+ .facility_ground3 {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_ground3");
+ }
+ .facility_ground4 {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_ground4");
+ }
+ .facility_doorl_single {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_doorl_single");
+ }
+ .facility_doorr_single {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_doorr_single");
  }
 
-
- .actor {
-   position: inherit;
-   z-index: 2;
- }
 
 
  #world {

@@ -1,46 +1,200 @@
 room_list = [
-  ["Room 1", "e,s", true, "This is the first time I have been to room 1", "Room 1, again..." ],
-  ["Room 2", "w,e,s", true, "This is the first time I have been to room 2", "Room 2, again..." ],
-  ["Room 3", "w,s", true, "This is the first time I have been to room 3", "Room 3, again..." ],
-  ["Room 4", "e,n,s", true, "This is the first time I have been to room 4", "Room 4, again..." ],
-  ["Room 5", "w,e,n,s", true, "This is the first time I have been to room 5", "Room 5, again..." ],
-  ["Room 6", "w,n,s", true, "This is the first time I have been to room 6", "Room 6, again..." ],
-  ["Room 7", "n,e", true, "This is the first time I have been to room 7", "Room 7, again..." ],
-  ["Room 8", "w,e,n", true, "This is the first time I have been to room 8", "Room 8, again..." ],
-  ["Room 9", "w,n", true, "This is the first time I have been to room 9", "Room 9, again..." ],
-  ["Item dummy 10", "w,n", true, "This is the first time I have been to room 9", "Room 9, again..." ],##dummy's used in intial creation to make the navigation sustem work.
-  ["Item Test 11 ", "s", true, "Look at all the piles of junk, maybe there will be something useful here,", "How many times must I search this room?" ], ###Item test
-  ["Item dummy 12", "w,n", true, "This is the first time I have been to room 9", "Room 9, again..." ],##dummy's used in intial creation to make the navigation sustem work.
-  ["Item Test 13", "e", true, "Great, Another empty room. At least there is a way foward", "why did I come back here." ],
-  ["Item Test 14", "w,e,n,s", true, "Okay three potential exits, yet the one to the east locked... maybe I can find a key somwhere", "....." ],
-  ["Item Test 15", "w,e", true, "Hooray I did it!!! Wait.... THERE ARE NO EXITS!", "I hate this room." ],
-  ["Item dummy 16", "w,n", true, "This is the first time I have been to room 9", "Room 9, again..." ],##dummy's used in intial creation to make the navigation sustem work.
-  ["Item test 17", "n", true, "nothing but garbage, but perhaps there is something useful.", "maybe..." ],
-  ["Character Test 18", "", true, "LOOOK AT ALL OF THESE ITEMS!!!", "How the hell did I phase through the walls?" ],
-
+  ["Back way",  true, "At least there is not a laser field fence of death blocking my way...", 'I am going to need to find a sentry component to unlock this door', 9],
+  ['Backway entrance', true, "This can’t be, the workshop is empty? Damn.  Hmm that chunk of wall looks suspect.”,  'If I had some explosives I could blow up the wall...", 7 ],
+  ["Endpoint", true, "Shit", "Shit.", 9 ],
+  ["Cargo Yard", true, "There is a sentry detected. Exercise caution.", "The sentry might have a gun, but they don’t have sensors on the back of their heads… yet.", 9],
+  ["Facility Entrace", true, "Just the place I need to get to! With a convenient laser fence in the way...", " Things I can do about the laser fence: 0",9 ],
+  ["Rundown Shack Inside", true, " Hopefully I can find something useful in this rundown shack.", "This whole town is in ruin… but where are the people?",8 ],
+  [" South West Ruins", true, 'When I left this place, there was people and androids everywhere, what happened?", "That switch might activate the doors in the southeast ruins.' ,14 ],
+  ["Streets", true, "What a disaster, I hope Hector is holed up in his workshop.", 'I have only been gone for three years… What the hell happened?', 9 ],
+  ["South Eat Ruins", true, "Hmm that shack looks like it has not been opened in years, maybe something useful is in there.", "Perhaps there is a console elsewhere that will open that door..",11 ],
 ]
 
-room_list.each do | name, doors, first_time, first_description, normal_description|
-  Room.create( name: name, door_ways: doors, first_time: first_time, first_description: first_description, normal_description: normal_description)
+room_list.each do | name, first_time, first_description, normal_description, row_max|
+  Room.create( name: name, first_time: first_time, first_description: first_description, normal_description: normal_description, row_max: row_max)
 end
 
-item_list = [
-  ["Sword","A mighty sword, for a mighty robo.", true, false, false, "high", 17],
-  ["Sword","A sword, for a mighty robo.", true, false, false, "medium", 11],
-  ["Sword","A crappy sword, for a mighty robo.", true, false, false, "low", 11],
-  ["A key","Using its powers you can tumble the locks to open a door!",true,false,true, "low", 11],
-  ["Sword","A mighty sword, for a mighty robo.", true, false, false, "high", 18],
-  ["Sword","A sword, for a mighty robo.", true, false, false, "medium", 18],
-  ["Sword","A crappy sword, for a mighty robo.", true, false, false, "low", 18],
-  ["A key","Using its powers you can tumble the locks to open a door!",true,false,true, "low", 18]
+tile_list1 = [
+["facility_wall", 1, 9, true, nil],
+["facility_wall_single", 1, 9, true, nil],
+["facility_wall_single", 1, 9, true, nil],
+["building_roof_topl", 1, 9, true, nil],
+["building_roof_topc", 1, 9, true, nil],
+["building_roof_topc", 1, 9, true, nil],
+["building_roof_topc", 1, 9, true, nil],
+["building_roof_topr", 1, 9, true, nil],
+["facility_wall", 1, 9, true, nil],
+
+["facility_wall", 1, 9, true, nil],
+["facility_ground2", 1, 9, false, nil],
+["facility_ground2", 1, 9, false, nil],
+["building_roof_botl", 1, 9, true, nil],
+["building_roof_botc", 1, 9, true, nil],
+["building_roof_botc", 1, 9, true, nil],
+["building_roof_botc", 1, 9, true, nil],
+["building_roof_botr", 1, 9, true, nil],
+["facility_wall", 1, 9, true, nil],
+
+["facility_wall", 1, 9, true, nil],
+["facility_ground2", 1, 9, false, nil],
+["facility_ground1", 1, 9, false, nil],
+["facility_wall_single", 1, 9, true, nil],
+["facility_doorl_single", 1, 9, true, nil],
+["facility_doorr_single", 1, 9, true, nil],
+["facility_wall_single", 1, 9, true, nil],
+["facility_wall_single", 1, 9, true, nil],
+["facility_wall", 1, 9, true, nil],
+
+["facility_wall", 1, 9, true, nil],
+["facility_ground3", 1, 9, false, nil],
+["facility_ground4", 1, 9, false, nil],
+["facility_ground1", 1, 9, false, nil],
+["facility_ground2", 1, 9, false, nil],
+["facility_ground3", 1, 9, false, nil],
+["facility_ground4", 1, 9, false, nil],
+["facility_ground1", 1, 9, false, nil],
+["facility_wall", 1, 9, true, nil],
+
+["facility_wall", 1, 9, true, nil],
+["facility_ground3", 1, 9, false, nil],
+["facility_ground4", 1, 9, false, nil],
+["facility_ground1", 1, 9, false, nil],
+["facility_ground2", 1, 9, false, nil],
+["facility_ground3", 1, 9, false, nil],
+["facility_ground4", 1, 9, false, nil],
+["facility_ground1", 1, 9, false, nil],
+["facility_wall", 1, 9, true, nil],
+
+["facility_wall", 1, 9, true, nil],
+["facility_ground3", 1, 9, false, nil],
+["facility_ground4", 1, 9, false, nil],
+["facility_ground1", 1, 9, false, nil],
+["facility_ground2", 1, 9, false, nil],
+["facility_ground3", 1, 9, false, nil],
+["facility_ground4", 1, 9, false, nil],
+["facility_ground1", 1, 9, false, nil],
+["facility_wall", 1, 9, true, nil],
+
+["facility_wall", 1, 9, true, nil],
+["facility_ground3", 1, 9, false, nil],
+["facility_ground4", 1, 9, false, nil],
+["facility_ground1", 1, 9, false, 1],
+["facility_ground2", 1, 9, false, 1],
+["facility_ground3", 1, 9, false, nil],
+["facility_ground4", 1, 9, false, nil],
+["facility_ground1", 1, 9, false, nil],
+["facility_wall", 1, 9, true, nil],
+
+["blank", 1, 9, true, nil],
+["blank", 1, 9, true, nil],
+["blank", 1, 9, true, nil],
+["blank", 1, 9, true, nil],
+["blank", 1, 9, true, nil],
+["blank", 1, 9, true, nil],
+["blank", 1, 9, true, nil],
+["blank", 1, 9, true, nil],
+["blank", 1, 9, true, nil]
 ]
-item_list.each do | title, description, obtainable, active, key_item, rarity, room_id|
-  Item.create( title: title, description: description, obtainable: obtainable, active: active, key_item: key_item, rarity: rarity , room_id: room_id)
+tile_list1.each do | tile_name, room_id, row_max, is_solid, transition_tile|
+  Tile.create( tile_name: tile_name, room_id: room_id, row_max: row_max, is_solid: is_solid, transition_tile: transition_tile)
 end
 
-doors_list = [
-  ["Door East",'e', "It's a door... Going to need a key for that.", "A key" ,14]
+tile_list2 = [
+["blank", 2, 8, true, nil],
+["facility_insidewall", 2, 8, true, nil],
+["facility_insidewall", 2, 8, true, nil],
+["facility_insidewall", 2, 8, true, nil],
+["facility_insidewall", 2, 8, true, nil],
+["facility_insidewall", 2, 8, true, nil],
+["facility_insidewall", 2, 8, true, nil],
+["blank", 2, 8, true, nil],
+
+["blank", 2, 8, true, nil],
+["facility_insideground", 2, 8, false, nil],
+["facility_insideground", 2, 8, false, nil],
+["facility_insideground", 2, 8, false, nil],
+["facility_insideground", 2, 8, false, nil],
+["facility_insideground", 2, 8, false, nil],
+["facility_insideground", 2, 8, false, nil],
+["blank", 2, 8, true, nil],
+
+["blank", 2, 8, true, nil],
+["facility_insideground", 2, 8, false, nil],
+["facility_insideground", 2, 8, false, nil],
+["facility_insideground", 2, 8, false, nil],
+["facility_insideground", 2, 8, false, nil],
+["facility_insideground", 2, 8, false, nil],
+["facility_insideground", 2, 8, false, nil],
+["blank", 2, 8, true, nil],
+
+["blank", 2, 8, true, nil],
+["facility_insideground", 2, 8, false, nil],
+["facility_insideground", 2, 8, false, nil],
+["facility_insideground", 2, 8, false, nil],
+["facility_insideground", 2, 8, false, nil],
+["facility_insideground", 2, 8, false, nil],
+["facility_insideground", 2, 8, false, nil],
+["blank", 2, 8, true, nil],
+
+["facility_outsidewall", 2, 8, true, nil],
+["facility_outsidewall", 2, 8, true, nil],
+["facility_insideground", 2, 8, false, nil],
+["facility_insideground", 2, 8, false, nil],
+["facility_outsidewall", 2, 8, true, nil],
+["facility_outsidewall", 2, 8, true, nil],
+["facility_outsidewall", 2, 8, true, nil],
+["facility_outsidewall", 2, 8, true, nil],
   ]
-  doors_list.each do | name, door_location, description, req_item, room_id |
-    Door.create( name: name, door_location: door_location, description: description, req_item: req_item, room_id: room_id)
-  end
+tile_list2.each do | tile_name, room_id, row_max, is_solid, transition_tile|
+  Tile.create( tile_name: tile_name, room_id: room_id, row_max: row_max, is_solid: is_solid, transition_tile: transition_tile)
+end
+
+tile_list3 = [
+["blank", 3, 8, true, nil],
+["facility_insidewall", 3, 8, true, nil],
+["facility_insidewall", 3, 8, true, nil],
+["facility_insidewall", 3, 8, true, nil],
+["facility_insidewall", 3, 8, true, nil],
+["facility_insidewall", 3, 8, true, nil],
+["facility_insidewall", 3, 8, true, nil],
+["blank", 3, 8, true, nil],
+
+["blank", 3, 8, true, nil],
+["facility_insideground", 3, 8, false, nil],
+["facility_insideground", 3, 8, false, nil],
+["facility_insideground", 3, 8, false, nil],
+["facility_insideground", 3, 8, false, nil],
+["facility_insideground", 3, 8, false, nil],
+["facility_insideground", 3, 8, false, nil],
+["blank", 3, 8, true, nil],
+
+["blank", 3, 8, true, nil],
+["facility_insideground", 3, 8, false, nil],
+["facility_insideground", 3, 8, false, nil],
+["facility_insideground", 3, 8, false, nil],
+["facility_insideground", 3, 8, false, nil],
+["facility_insideground", 3, 8, false, nil],
+["facility_insideground", 3, 8, false, nil],
+["blank", 3, 8, true, nil],
+
+["blank", 3, 8, true, nil],
+["facility_insideground", 3, 8, false, nil],
+["facility_insideground", 3, 8, false, nil],
+["facility_insideground", 3, 8, false, nil],
+["facility_insideground", 3, 8, false, nil],
+["facility_insideground", 3, 8, false, nil],
+["facility_insideground", 3, 8, false, nil],
+["blank", 3, 8, true, nil],
+
+["facility_outsidewall", 3, 8, true, nil],
+["facility_outsidewall", 3, 8, true, nil],
+["facility_insideground", 3, 8, false, nil],
+["facility_insideground", 3, 8, false, nil],
+["facility_outsidewall", 3, 8, true, nil],
+["facility_outsidewall", 3, 8, true, nil],
+["facility_outsidewall", 3, 8, true, nil],
+["facility_outsidewall", 3, 8, true, nil],
+  ]
+tile_list3.each do | tile_name, room_id, row_max, is_solid, transition_tile|
+  Tile.create( tile_name: tile_name, room_id: room_id, row_max: row_max, is_solid: is_solid, transition_tile: transition_tile)
+end

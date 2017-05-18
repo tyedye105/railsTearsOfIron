@@ -9,31 +9,9 @@
 
 <%= form_for @character do |f| %>
 <%= f.hidden_field :room_id, :value => 1 %>
-<%= f.hidden_field :tile_id, :value => Room.find(1).tiles[14].id %>
+<%= f.hidden_field :tile_id, :value => Room.find(1).tiles[47].id %>
 <%= f.submit "Tile navaigation" %>
 <% end %>
-
-<%= form_for @character do |f| %>
-<%= f.hidden_field :room_id, :value => 5 %>
-<%= f.hidden_field :tile_id, :value => Room.find(5).tiles[40].id %>
-<%= f.submit "Tile STREESS" %>
-<% end %>
-
-<%= form_for @character do |f| %>
-<%= f.hidden_field :room_id, :value => 3 %>
-<%= f.hidden_field :tile_id, :value => Room.find(3).tiles[51].id %>
-<%= f.submit "MVP Room" %>
-<% end %>
-
-<%= form_for @character do |f| %>
-<%= f.hidden_field :room_id, :value => 6 %>
-<%= f.hidden_field :tile_id, :value => Room.find(6).tiles[40].id %>
-<%= f.submit "Experiment Room" %>
-<% end %>
-
-<h1><%= link_to "Combined Prototype" %></h1>
-<h1> <%= link_to "Sentry_Patrol prototype"%> </h1>
-<h1> <%= link_to "Tile prototype"%> </h1>
 
 <% if @character.is_new === true %>
   <%  Room.reset %>

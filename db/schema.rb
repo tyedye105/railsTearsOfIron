@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170511212640) do
+ActiveRecord::Schema.define(version: 20170518024135) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,10 +22,10 @@ ActiveRecord::Schema.define(version: 20170511212640) do
     t.integer "player_id"
     t.boolean "is_alive",         default: true
     t.boolean "is_new",           default: true
-    t.integer "tile_id"
-    t.integer "room_id"
-    t.integer "previous_tile"
-    t.integer "facing_direction"
+    t.integer "tile_id",          default: 47
+    t.integer "room_id",          default: 1
+    t.integer "previous_tile",    default: 47
+    t.integer "facing_direction", default: 1
   end
 
   create_table "doors", force: :cascade do |t|
