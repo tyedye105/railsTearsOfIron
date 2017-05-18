@@ -10,7 +10,7 @@ class DoorController < ApplicationController
   def update
     @character = current_player.characters.last
     @door = Door.find(params[:id])
-    @consumable = @character.items.find_by(:title => @door.req_item)
+    @consumable = @character.items.find_by(:name => @door.req_item)
       if @door.update(door_params)
           @consumable.consume_item
     redirect_to room_path(@door.room_id)

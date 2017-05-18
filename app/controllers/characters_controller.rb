@@ -22,9 +22,8 @@ class CharactersController < ApplicationController
   def update
     @player = current_player
     @character = @player.characters.last
-    @current_room = @character.room
-    @previous_tile_id = @character.tile_id
-    @tiles = @current_room.tiles
+    @current_room = Room.find(@character.room_id)
+    @previous_tile = Tile.find(@character.tile_id)
       if @character.update(character_params)
         if @current_room.id != @character.room_id
           respond_to do |format|
@@ -49,7 +48,7 @@ class CharactersController < ApplicationController
   private
 
   def character_params
-    params.require(:character).permit(:tile_id,:room_id)
+    params.require(:character).permit(:name,:tile_id,:room_id,:player_id, :previous_tile, :facing_direction)
   end
 
 end

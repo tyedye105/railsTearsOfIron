@@ -1,11 +1,18 @@
 <div class="well">
-  <h1>You found a <%= @item.title %></h1>
+  <%  if @item.tile.is_nearby?(@character.tile_id) == true %>
+  <h1>You found an a <%= @item.name %></h1>
 
   <h2> <%= @item.description %>
     <hr>
-    <%= image_tag("#{@item.title}.png") %>
+    <%= image_tag("#{@item.img}.png") %>
 
   <%= render('new')%>
+  <% else %>
+  <h1> Your scanners have found a <%= @item.name %> in the area!</h1>
 
+  <h2> <%= @item.description %>
+    <hr>
+    <%= image_tag("#{@item.img}.png") %>
+  <%= button_to "You must get closer to pick it up.", room_path(@item.room_id), method:"get"%>
+  <% end %>
 </div>
-<% @character.scan %>

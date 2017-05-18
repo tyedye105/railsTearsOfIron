@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
       if @character.save
         room = Room.find(@item.room_id)
         room.locate(@item.origin_id).pick_it_up
-        flash[:notice] = "You have picked up #{@item.title}"
+        flash[:notice] = "You have picked up #{@item.name}"
         redirect_to room_path(@item.room_id)
         @item.update({:room_id => nil})
       end
@@ -36,6 +36,6 @@ class ItemsController < ApplicationController
   end
   private
   def item_params
-    params.require(:item).permit(:title, :description, :obtainable, :active, :room_id, :key_item, :rarity, :character_id, :origin_id)
+    params.require(:item).permit(:name, :description, :obtainable, :active, :room_id, :key_item, :rarity, :character_id, :origin_id, :img)
 end
 end

@@ -17,4 +17,16 @@ class Tile < ActiveRecord::Base
       end
     moves
   end
+
+  def is_nearby?(tile_id)
+    start = self.id
+    row_max = self.row_max
+    directions = [-row_max, row_max, 1, -1]
+    neighbors = []
+    directions.each do |direction|
+      neighbor = Tile.find(start + direction)
+        neighbors.push(neighbor.id)
+      end
+     neighbors.include?(tile_id)
+  end
 end

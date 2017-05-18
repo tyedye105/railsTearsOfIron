@@ -1,5 +1,3 @@
 <div class="<%=tile.tile_name %>", id="tile<%= tile.id %>">
-  <% if tile.character != nil %>
-  <%= image_tag "robo64", class: "robo"  %>
-  <% end %>
+<%= render"/layouts/object_render", tile: tile %>
 </div>

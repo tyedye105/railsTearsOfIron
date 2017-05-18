@@ -22,24 +22,27 @@
    box-shadow: none;
 }
 
+
  .room1 {
    display: grid;
-   grid-template-columns: 64px 64px 64px 64px  64px 64px;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px;
    grid-gap: 0 0px;
    background-color: rgba(0, 0, 255, 0);
  }
 
+
+
  .room2 {
    display: grid;
-   grid-template-columns: 64px 64px 64px 64px 64px 64px;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px;
    grid-gap: 0 0px;
-   background-color: rgba(0, 0, 255, 0);;
+   background-color: rgba(0, 0, 255, 0);
    color: #444;
  }
  .room3 {
-   position:relative;
+   position:relative;;
    display: grid;
-   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px;
    grid-gap: 0 0px;
    background-color: rgba(0, 0, 255, 0);;
    color: #444;
@@ -47,38 +50,459 @@
  }
  .room4 {
    display: grid;
-   grid-template-columns: 64px 64px 64px 64px;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px;
    grid-gap: 0 0px;
    background-color: rgba(0, 0, 255, 0);;
    color: #444;
  }
 
+ .room5 {
+   display: grid;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px;
+   grid-gap: 0 0px;
+   background-color: rgba(0, 0, 255, 0);;
+   color: #444;
+ }
 
+ .room6 {
+   position:relative;
+   display: grid;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px;
+   grid-gap: 0 0px;
+   background-color: rgba(0, 0, 255, 0);;
+   color: #444;
+ }
+ .room7 {
+   position:relative;
+   display: grid;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px;
+   grid-gap: 0 0px;
+   background-color: rgba(0, 0, 255, 0);;
+   color: #444;
+ }
+ .room8 {
+   position:relative;
+   display: grid;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px ;
+   grid-gap: 0 0px;
+   background-color: rgba(0, 0, 255, 0);;
+   color: #444;
+ }
 
- .tmp_floor {
+ .room9 {
+   position:relative;
+   display: grid;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px;
+   grid-gap: 0 0px;
+   background-color: rgba(0, 0, 255, 0);;
+   color: #444;
+ }
+
+ .blank {
    width: 64px;
    height: 64px;
-   background-image: url("tmp_floor");
  }
+
+ .facility_wall {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_wall");
+ }
+
+ .facility_insidewall {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_insidewall");
+ }
+
+ .facility_outsidewall {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_insidewall");
+ }
+
+ .facility_insideground {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_insideground");
+ }
+
+ .abdn_insidewall {
+   width: 64px;
+   height: 64px;
+   background-image: url("abdn_insidewall");
+ }
+
+ .abdn_outsidewall {
+   width: 64px;
+   height: 64px;
+   background-image: url("abdn_insidewall");
+ }
+
+ .abdn_insideground {
+   width: 64px;
+   height: 64px;
+   background-image: url("abdn_insideground");
+ }
+
  .tmp_corner {
    width: 64px;
    height: 64px;
    background-image: url("tmp_corner");
  }
- .tmp_door {
+ .facility_wall_single {
    width: 64px;
    height: 64px;
-   background-image: url("tmp_door");
+   background-image: url("facility_wall_single");
  }
- .tmp_wall {
+ .building_roof_topl {
    width: 64px;
    height: 64px;
-   background-image: url("tmp_wall");
+   background-image: url("building_roof_topl");
  }
- .empty {
+ .building_roof_topc {
    width: 64px;
    height: 64px;
+   background-image: url("building_roof_topc");
  }
+ .building_roof_topr {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_roof_topr");
+ }
+ .building_roof_botl {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_roof_botl");
+ }
+ .building_roof_botc {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_roof_botc");
+ }
+ .building_roof_botr {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_roof_botr");
+ }
+ .facility_ground1 {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_ground1");
+ }
+ .facility_ground2 {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_ground2");
+ }
+ .facility_ground3 {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_ground3");
+ }
+ .facility_ground4 {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_ground4");
+ }
+ .facility_doorl_single {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_doorl_single");
+ }
+ .facility_doorr_single {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_doorr_single");
+ }
+ .facility_wall_top {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_wall_top");
+ }
+
+ .facility_wall_gap {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_wall_gap");
+ }
+ .cargo1_topl {
+   width: 64px;
+   height: 64px;
+   background-image: url("cargo1_topl");
+ }
+
+ .cargo_topc {
+   width: 64px;
+   height: 64px;
+   background-image: url("cargo_topc");
+ }
+
+ .cargo1_topr {
+   width: 64px;
+   height: 64px;
+   background-image: url("cargo1_topr");
+ }
+
+ .cargo_roof_topl {
+   width: 64px;
+   height: 64px;
+   background-image: url("cargo_roof_topl");
+ }
+ .cargo_roof_topc {
+   width: 64px;
+   height: 64px;
+   background-image: url("cargo_roof_topc");
+ }
+ .cargo_roof_topr {
+   width: 64px;
+   height: 64px;
+   background-image: url("cargo_roof_topr");
+ }
+ .cargo1_botl {
+   width: 64px;
+   height: 64px;
+   background-image: url("cargo1_botl");
+ }
+ .cargo2_botl {
+   width: 64px;
+   height: 64px;
+   background-image: url("cargo2_botl");
+ }
+ .cargo1_botc {
+   width: 64px;
+   height: 64px;
+   background-image: url("cargo1_botc");
+ }
+ .cargo1_botr {
+   width: 64px;
+   height: 64px;
+   background-image: url("cargo1_botr");
+ }
+ .cargo2_botr {
+   width: 64px;
+   height: 64px;
+   background-image: url("cargo2_botr");
+ }
+ .laser_l {
+   width: 64px;
+   height: 64px;
+   background-image: url("laser_l");
+ }
+ .laser_c {
+   width: 64px;
+   height: 64px;
+   background-image: url("laser_c");
+ }
+ .laser_r {
+   width: 64px;
+   height: 64px;
+   background-image: url("laser_r");
+ }
+ .building_roof_midl {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_roof_midl");
+ }
+ .building_roof_midc {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_roof_midc");
+ }
+ .building_roof_midr {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_roof_midr");
+ }
+ .building_topl {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_topl");
+ }
+ .building_topc {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_topc");
+ }
+ .building_topr {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_topr");
+ }
+ .building_midl {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_midl");
+ }
+ .building_midc {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_midc");
+ }
+ .building_midr {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_midr");
+ }
+ .building_botl {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_botl");
+ }
+ .building_botc {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_botc");
+ }
+ .building_botr {
+   width: 64px;
+   height: 64px;
+   background-image: url("building_botr");
+ }
+ .collapsed_botl {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsed_botl");
+ }
+
+ .collapsed_botr {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsed_botr");
+ }
+ .collapsed_midl {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsed_midl");;
+ }
+ .collapsed_midr {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsed_midr");
+ }
+
+ .collapsed_topl {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsed_topl");;
+ }
+ .collapsed_topr {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsed_topr");
+ }
+
+
+ .collapsedroof_topr {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsedroof_topr");
+ }
+
+ .collapsedroof_topl {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsedroof_topl");
+ }
+
+ .collapsedroof_midl {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsedroof_midl");
+ }
+ .collapsedroof_midc {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsedroof_midc");
+ }
+
+ .collapsedroof_midr {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsedroof_midr");
+ }
+
+ .collapsedroof_botr {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsedroof_botr");
+ }
+
+ .collapsedroof_botl {
+   width: 64px;
+   height: 64px;
+   background-image: url("collapsedroof_botl");
+ }
+
+ .l_sidew1 {
+   width: 64px;
+   height: 64px;
+   background-image: url("l_sidew1");
+ }
+
+ .r_sidew1 {
+   width: 64px;
+   height: 64px;
+   background-image: url("r_sidew1");
+ }
+
+ .street_center_we {
+   width: 64px;
+   height: 64px;
+   background-image: url("street_center_we");
+ }
+ .street_center_ns {
+   width: 64px;
+   height: 64px;
+   background-image: url("street_center_ns");
+ }
+ .street_clean {
+   width: 64px;
+   height: 64px;
+   background-image: url("street_clean");
+ }
+ .street_crater {
+   width: 64px;
+   height: 64px;
+   background-image: url("street_crater");
+ }
+
+ .rundown_botl {
+   width: 64px;
+   height: 64px;
+   background-image: url("rundown_botl");
+ }
+
+ .rundown_botr {
+   width: 64px;
+   height: 64px;
+   background-image: url("rundown_botr");
+ }
+
+ .rundown_doorl {
+   width: 64px;
+   height: 64px;
+   background-image: url("rundown_doorl");
+ }
+
+ .rundown_doorr {
+   width: 64px;
+   height: 64px;
+   background-image: url("rundown_doorr");
+ }
+ .rundown_openl {
+   width: 64px;
+   height: 64px;
+   background-image: url("rundown_openl");
+ }
+
+ .rundown_openr {
+   width: 64px;
+   height: 64px;
+   background-image: url("rundown_openr");
+ }
+
+
 
 
  #world {
