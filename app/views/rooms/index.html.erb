@@ -6,47 +6,50 @@
 <h3>Combine the previous two prototypes, in a functional prototype will literiall open doors for more features!</h3>
 <hr>
 <%= render "/layouts/character_display" %>
-
-<%= form_for @character do |f| %>
-<%= f.hidden_field :room_id, :value => 1 %>
-<%= f.hidden_field :tile_id, :value => Room.find(1).tiles[47].id %>
-<%= f.submit "Room 1" %>
-<% end %>
-
+  <%= form_for @character do |f| %>
+  <%= f.hidden_field :room_id, :value => 1 %>
+  <%= f.hidden_field :tile_id, :value => Room.find(1).tiles[47].id %>
+  <%= f.submit "Room 1" %>
+  <% end %>
 <%= form_for @character do |f| %>
 <%= f.hidden_field :room_id, :value => 2 %>
 <%= f.hidden_field :tile_id, :value => Room.find(2).tiles[19].id %>
 <%= f.submit "Room 2" %>
 <% end %>
-
 <%= form_for @character do |f| %>
 <%= f.hidden_field :room_id, :value => 3 %>
 <%= f.hidden_field :tile_id, :value => Room.find(3).tiles[39].id %>
 <%= f.submit "Room 3" %>
 <% end %>
-
 <%= form_for @character do |f| %>
 <%= f.hidden_field :room_id, :value => 4 %>
 <%= f.hidden_field :tile_id, :value => Room.find(4).tiles[38].id %>
 <%= f.submit "Room 4" %>
 <% end %>
-
 <%= form_for @character do |f| %>
 <%= f.hidden_field :room_id, :value => 5 %>
 <%= f.hidden_field :tile_id, :value => Room.find(5).tiles[47].id %>
 <%= f.submit "Room 5" %>
 <% end %>
-
 <%= form_for @character do |f| %>
 <%= f.hidden_field :room_id, :value => 6 %>
 <%= f.hidden_field :tile_id, :value => Room.find(6).tiles[12].id %>
 <%= f.submit "Room 6" %>
 <% end %>
-
 <%= form_for @character do |f| %>
 <%= f.hidden_field :room_id, :value => 7 %>
-<%= f.hidden_field :tile_id, :value => Room.find(7).tiles[12].id %>
+<%= f.hidden_field :tile_id, :value => Room.find(7).tiles[13].id %>
 <%= f.submit "Room 7" %>
+<% end %>
+<%= form_for @character do |f| %>
+<%= f.hidden_field :room_id, :value => 8 %>
+<%= f.hidden_field :tile_id, :value => Room.find(8).tiles[16].id %>
+<%= f.submit "Room 8" %>
+<% end %>
+<%= form_for @character do |f| %>
+<%= f.hidden_field :room_id, :value => 9 %>
+<%= f.hidden_field :tile_id, :value => Room.find(9).tiles[36].id %>
+<%= f.submit "Room 9" %>
 <% end %>
 
 <% if @character.is_new === true %>

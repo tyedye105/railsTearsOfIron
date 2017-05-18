@@ -67,7 +67,7 @@
  .room6 {
    position:relative;
    display: grid;
-   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px;
    grid-gap: 0 0px;
    background-color: rgba(0, 0, 255, 0);;
    color: #444;
@@ -75,7 +75,24 @@
  .room7 {
    position:relative;
    display: grid;
-   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px;
+   grid-gap: 0 0px;
+   background-color: rgba(0, 0, 255, 0);;
+   color: #444;
+ }
+ .room8 {
+   position:relative;
+   display: grid;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px ;
+   grid-gap: 0 0px;
+   background-color: rgba(0, 0, 255, 0);;
+   color: #444;
+ }
+
+ .room9 {
+   position:relative;
+   display: grid;
+   grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px;
    grid-gap: 0 0px;
    background-color: rgba(0, 0, 255, 0);;
    color: #444;
@@ -448,6 +465,41 @@
    width: 64px;
    height: 64px;
    background-image: url("street_crater");
+ }
+
+ .rundown_botl {
+   width: 64px;
+   height: 64px;
+   background-image: url("rundown_botl");
+ }
+
+ .rundown_botr {
+   width: 64px;
+   height: 64px;
+   background-image: url("rundown_botr");
+ }
+
+ .rundown_doorl {
+   width: 64px;
+   height: 64px;
+   background-image: url("rundown_doorl");
+ }
+
+ .rundown_doorr {
+   width: 64px;
+   height: 64px;
+   background-image: url("rundown_doorr");
+ }
+ .rundown_openl {
+   width: 64px;
+   height: 64px;
+   background-image: url("rundown_openl");
+ }
+
+ .rundown_openr {
+   width: 64px;
+   height: 64px;
+   background-image: url("rundown_openr");
  }
 
 
