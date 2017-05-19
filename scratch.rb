@@ -22,7 +22,9 @@ Character.first.update({room_id:2})
 Character.first.update({tile_id:304})
 Tile.find().update({ is_solid: true})
 Tile.find(300).update({ exit_to: 2})
+
 Item.create({name:"Sentry component", room_id:nil, key_item: true, rarity:"low", img:"component", tile_id:nil})
+Item.create({name:"explosive", room_id:nil, key_item: true, rarity:"low", img:"explosive", tile_id:nil})
 
 
 

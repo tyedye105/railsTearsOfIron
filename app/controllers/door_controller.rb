@@ -17,7 +17,7 @@ class DoorController < ApplicationController
         @double_door.update(door_params)
         end
         respond_to do |format|
-          format.html { redirect_to room_path(@door.room_id)}
+          format.html { redirect_to room_path(@character.room_id)}
           format.js
         end
       end

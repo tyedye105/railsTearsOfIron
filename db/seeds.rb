@@ -590,7 +590,7 @@ se_ruins = [
 
 ["blank", 13 ,12, true, nil],
 ["abdn_insidewall", 13 ,12, true, nil],
-["abdn_insidewall", 13 ,12, true, nil],
+["abdn_switch_on", 13 ,12, true, nil],
 ["blank", 13 ,12, true, nil],
 ["facility_ground1", 13, 12, false, nil],
 ["facility_ground3", 13, 12, false, nil],
@@ -936,13 +936,20 @@ se_ruins.each do | tile_name, room_id, row_max, is_solid, transition_tile|
 end
 
 door_list = [
-  ["Facility Industrial Door",7,"A sturdy and secure door that garden variety explosives couldn't even dent. If can't blow it up, might as well hack it... Now to find a sentry. ", "Sentry component",23, 1,"facility_doorl" ],
-  ["Facility Industrial Door",7,"A sturdy and secure door that garden variety explosives couldn't even dent. If can't blow it up, might as well hack it... Now to find a sentry. ", "Sentry component",24,1, "facility_doorr" ],
-  ["Laser Gate",8,"A gate made of lasers. Now was it Bumper Blue, Destructive Green, or Blue Meanie, and Saftey Green?", nil, 348,2, "laser_l" ],
-  ["Laser Gate",8,"A gate made of lasers. Now was it Bumper Blue, Destructive Green, or Blue Meanie, and Saftey Green?", nil, 349,2, "laser_c" ],
-  ["Laser Gate",8,"A gate made of lasers. Now was it Bumper Blue, Destructive Green, or Blue Meanie, and Saftey Green?", nil, 350,2, "laser_r" ],
-  ["Suspicous Wall",4,"Hmm, that wall has seen better days. It looks like it is weak enough to blow a hole in it", "explosive", 78,3 "facility_cracked_wall" ],
+  ["Facility Industrial Door",7,"A sturdy and secure door that garden variety explosives couldn't even dent. If can't blow it up, might as well hack it...", "Sentry component",23, 1,"facility_doorl" ],
+  ["Facility Industrial Door",7,"A sturdy and secure door that garden variety explosives couldn't even dent. If can't blow it up, might as well hack it...", "Sentry component",24,1, "facility_doorr" ],
+  ["Laser Gate",8,"A gate made of lasers. Now was it Bumper Blue, Destructive Green, or Blue Meanie, and Saftey Green?", nil, 285,2, "laser_l" ],
+  ["Laser Gate",8,"A gate made of lasers. Now was it Bumper Blue, Destructive Green, or Blue Meanie, and Saftey Green?", nil, 286,2, "laser_c" ],
+  ["Laser Gate",8,"A gate made of lasers. Now was it Bumper Blue, Destructive Green, or Blue Meanie, and Saftey Green?", nil, 287,2, "laser_r" ],
+  ["Suspicous Wall",4,"Hmm, that wall has seen better days. It looks like it is weak enough to blow a hole in it", "explosive", 78, 3, "facility_cracked_wall" ],
 
+  ["Rundown Switch", 13, "That rusted switch looks like it might function. But what does it open?",
+  nil, 473, 4, "abdn_switch_off"],
+
+  ["Rundown Doors", 13, " That door looks like it might be able to move, but where is the switch?",
+  nil, 697, 4, "rundown_doorl"],
+  ["Rundown Doors", 13, " That door looks like it might be able to move, but where is the switch?",
+  nil, 698, 4, "rundown_doorr"]
 ]
 
 door_list.each do |name, room_id, description, req_item, tile_id, group_no, img|

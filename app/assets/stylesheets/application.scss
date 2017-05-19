@@ -143,6 +143,17 @@
    height: 64px;
    background-image: url("abdn_insidewall");
  }
+ .abdn_switch_off {
+   width: 64px;
+   height: 64px;
+   background-image: url("abdn_switch_off");
+ }
+
+ .abdn_switch_on {
+   width: 64px;
+   height: 64px;
+   background-image: url("abdn_switch_on");
+ }
 
  .abdn_outsidewall {
    width: 64px;
@@ -524,7 +535,7 @@
    height: 64px;
    background-image: url("rundown_openr");
  }
- 
+
 
 
  #world {
