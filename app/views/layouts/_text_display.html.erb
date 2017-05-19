@@ -1,26 +1,7 @@
 <div id="text-display" class="well">
-  <% if @room.first_time === true %>
-    <h1> <%= @room.first_description %> </h1>
-              <% @character.four_way_move %>
-                    <% @room.been_there? %>
+  <% if room.first_time === true %>
+    <h1> <%= room.first_description %> </h1>
+                    <% room.been_there? %>
         <% else %>
-        <h1> <%= @room.normal_description %></h1>
-        <% @character.four_way_move %>
+        <h1> <%= room.normal_description %></h1>
     <% end %>
-    <% if @room.id === 17 %>
-      <%= render'/layouts/robo_fight' %>
-      <% @room.been_there? %>
-      <% else %>
-        <%= render'/layouts/robo_fight' %>
-      <% end %>
-
-
-  <% if current_page?("/search/#{params[:id]}") %>
-  <% @character.scan %>
-    <% if @room.empty? === false %>
-  <h1> Your scanners have detect useful items in the vicinity!</h1>
-    <% else %>
-    <h1>Your scanners do not detect anything useful in this room.</h1>
-    <% end %>
-  <% end %>
-</div>

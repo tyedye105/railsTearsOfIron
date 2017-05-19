@@ -10,10 +10,12 @@ class DoorController < ApplicationController
   def update
     @character = current_player.characters.last
     @door = Door.find(params[:id])
-    @double_door = Door.find(@door.id-1)
+    @double_door = Door.find(@door.id+1)
     @consumable = @character.items.find_by(:name => @door.req_item)
       if @door.update(door_params)
-        @consumable.consume_item
+        if @consumable != nil
+          @consumable.consume_item
+        end
         if @double_door != nil
         @double_door.update(door_params)
         end

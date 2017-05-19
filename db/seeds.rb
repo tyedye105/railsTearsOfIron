@@ -5,15 +5,15 @@ room_list = [
   ['workshop', true, "This can’t be, the workshop is empty? Damn.  Hmm that chunk of wall looks suspect.”,  'If I had some explosives I could blow up the wall...", 7 ],
   ["Dummy", nil, nil, nil, nil],
   ["Dummy", nil, nil, nil, nil],
-  ["Back way",  true, "At least there is not a laser field fence of death blocking my way...", 'I am going to need to find a sentry component to unlock this door', 9],
+  ["Back way",  true, "At least there is not a laser field fence of death blocking my way...", "That pile of scrapped sentries might be useful.", 9],
   ["Dummy", nil, nil, nil, nil],
   ["Dummy", nil, nil, nil, nil],
   ["Cargo Yard", true, "There is a sentry detected. Exercise caution.", "The sentry might have a gun, but they don’t have sensors on the back of their heads… yet.", 10],
   ["Facility Entrace", true, "Just the place I need to get to! With a convenient laser fence in the way...", " Things I can do about the laser fence: 0",9 ],
   ["Rundown Shack Inside", true, " Hopefully I can find something useful in this rundown shack.", "This whole town is in ruin… but where are the people?",8 ],
-  [" South West Ruins", true, 'When I left this place, there was people and androids everywhere, what happened?", "That switch might activate the doors in the southeast ruins.' ,12 ],
+  [" South West Ruins", true, "When I left this place, there was people and androids everywhere! what happened?",'That rundown shack in corner looks familar to the one in the South East block.', 12 ],
   ["Streets", true, "What a disaster, I hope Hector is holed up in his workshop.", 'I have only been gone for three years… What the hell happened?', 9 ],
-  ["South East Ruins", true, "Hmm that shack looks like it has not been opened in years, maybe something useful is in there.", "Perhaps there is a console elsewhere that will open that door..",8 ],
+  ["South East Ruins", true, "Hmm that shack looks like it has not been opened in years, maybe something useful is in there.", "Perhaps there is a console elsewhere that will open that door..", 8 ],
 ]
 
 room_list.each do | name, first_time, first_description, normal_description, row_max|
@@ -33,7 +33,7 @@ back_way = [
 
 ["facility_wall", 7, 9, true, nil],
 ["facility_ground2", 7, 9, false, nil],
-["facility_ground2", 7, 9, false, nil],
+["facility_scrap", 7, 9, true, nil],
 ["building_roof_botl", 7, 9, true, nil],
 ["building_roof_botc", 7, 9, true, nil],
 ["building_roof_botc", 7, 9, true, nil],
@@ -43,7 +43,7 @@ back_way = [
 
 ["facility_wall", 7, 9, true, nil],
 ["facility_ground2", 7, 9, false, nil],
-["facility_ground1", 7, 9, false, nil],
+["facility_scrap", 7, 9, true, nil],
 ["facility_wall_single", 7, 9, true, nil],
 ["facility_door_openl", 7, 9, false, 0],
 ["facility_door_openr", 7, 9, false, 0],
@@ -370,20 +370,20 @@ blockade = [
 ["building_roof_botr", 11, 9, true, nil],
 ["l_sidew1", 11, 9, false, nil],
 ["street_clean", 11, 9, false, nil],
-["street_clean", 11, 9, false, nil],
+["street_sentryjunk", 11, 9, true, nil],
 ["street_center_ns", 11, 9, false, nil],
-["street_clean", 11, 9, false, nil],
+["street_sentryjunk", 11, 9, true, nil],
 ["street_clean", 11, 9, false, nil],
 ["r_sidew1", 11, 9, false, nil],
 ["building_roof_botl", 11, 9, true, nil],
 
 ["building_topr", 11, 9, true, nil],
 ["l_sidew1", 11, 9, false, nil],
-["street_clean", 11, 9, false, nil],
+["street_sentryjunk", 11, 9, true, nil],
 ["street_clean", 11, 9, false, nil],
 ["street_center_ns", 11, 9, false, nil],
 ["street_clean", 11, 9, false, nil],
-["street_clean", 11, 9, false, nil],
+["street_junk", 11, 9, true, nil],
 ["r_sidew1", 11, 9, false, nil],
 ["building_topl", 11, 9, true, nil],
 
@@ -907,14 +907,14 @@ se_ruins = [
 ["facility_ground4", 15, 8, false, nil],
 ["facility_ground3", 15, 8, false, nil],
 ["facility_ground2", 15, 8, false, nil],
-["facility_ground2", 15, 8, false, nil],
-["facility_ground1", 15, 8, false, nil],
+["facility_scrap", 15, 8, true, nil],
+["facility_scrap", 15, 8, true, nil],
 ["building_roof_topl", 15, 8, true, nil],
 
 ["blank", 15, 8, true, nil],
 ["building_roof_botr", 15, 8, true, nil],
 ["facility_ground2", 15, 8, false, nil],
-["facility_ground1", 15, 8, false, nil],
+["facility_scrap", 15, 8, true, nil],
 ["facility_ground2", 15, 8, false, nil],
 ["facility_ground3", 15, 8, false, nil],
 ["facility_ground4", 15, 8, false, nil],
@@ -943,6 +943,8 @@ door_list = [
   ["Laser Gate",8,"A gate made of lasers. Now was it Bumper Blue, Destructive Green, or Blue Meanie, and Saftey Green?", nil, 287,2, "laser_r" ],
   ["Suspicous Wall",4,"Hmm, that wall has seen better days. It looks like it is weak enough to blow a hole in it", "Explosive", 78, 3, "facility_cracked_wall" ],
 
+  ["Dummy",2,"Hmm, that wall has seen better days. It looks like it is weak enough to blow a hole in it", "Explosive", 78, 3, "facility_cracked_wall" ],
+
   ["Rundown Switch", 13, "That rusted switch looks like it might function. But what does it open?",
   nil, 473, 4, "abdn_switch_off"],
 
@@ -957,10 +959,18 @@ Door.create( name: name, room_id: room_id, description: description, req_item: r
 end
 
 item_list = [
-  ["Explosive", "The old plastique, not as fancy, or high tech as the energy stuff, but still enough to blow a hole in a wall.", 4, 95, 'explosive'],
-  ["Explosive", "The old plastique is not as fancy, or high tech as the energy stuff. Still it's enough to blow a hole in a wall.", 12, 377, 'explosive']
+  ["Sentry component", "A part from a broken down sentry.  Can open level 1 Facility Doors", 7,7, 11, 'component'],
+  ["Explosive", "The old plastique is not as fancy, or high tech as the energy stuff. Still it's enough to blow a hole in a wall.", 12,12, 377, 'explosive'],
+  ["Battery", "A charged battery! Too bad it wont last long...", 10,10, 217, 'battery'],
+  ["Battery", "A charged battery! Too bad it wont last long...", 13,13, 484, 'battery'],
+  ["Battery", "A charged battery! Too bad it wont last long...", 11,11, 292, 'battery'],
+  ["Battery", "A charged battery! Too bad it wont last long...", 11,11, 298 , 'battery'],
+  ["Battery", "A charged battery! Too bad it wont last long...", 15,15, 747 , 'battery'],
+  ["Battery", "A charged battery! Too bad it wont last long...", 12,12, 372 , 'battery'],
+
+
 ]
 
-item_list.each do |name, description, room_id, tile_id, img|
-  Item.create( name: name, description: description, room_id: room_id, tile_id: tile_id, img: img)
+item_list.each do |name, description, room_id, origin_id, tile_id, img|
+  Item.create( name: name, description: description, room_id: room_id, origin_id: origin_id, tile_id: tile_id, img: img)
 end

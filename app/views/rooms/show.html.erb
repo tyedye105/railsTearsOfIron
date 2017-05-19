@@ -1,5 +1,6 @@
 
 <div class="well center black">
+  <%=render "/layouts/game_over" %>
   <h1>Game world</h1>
   <div class="interaction well" id="interaction_display">
   </div>
@@ -9,7 +10,12 @@
 </div>
 <div class="game-controller" id="game_controller">
 <%= render "/layouts/controls"%>
-<%= render "/layouts/character_display"%>
-<%= render "/layouts/text_display"%>
+<div id="cinfo">
+  <%= render "/layouts/character_display"%>
+</div>
+<div id="tinfo">
+  <%= render "/layouts/text_display", room: @room %>
+
+</div>
 
 </div>

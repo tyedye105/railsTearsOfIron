@@ -48,7 +48,7 @@ class CharactersController < ApplicationController
   private
 
   def character_params
-    params.require(:character).permit(:name,:tile_id,:room_id,:player_id, :previous_tile, :facing_direction)
+    params.require(:character).permit(:name,:tile_id,:room_id,:player_id, :previous_tile, :facing_direction, :battery_level)
   end
 
 end

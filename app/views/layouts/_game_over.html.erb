@@ -1,5 +1,16 @@
-<div id ="end_game" class=" jumbotron">
+
   <% if @character.battery_level <= 0 %>
+  <div id ="end_game" class=" jumbotron">
   <h1>You were un-able to get the powercells you needed, and quickly shutdown after the last bit of power has been spent.</h1>
   <%=button_to "Start Over", character_path(@character), method: :delete, data: {confirm: "Are You Sure?"}%>
 </div>
+<% end %>
+
+  <% if @character.room_id === 1 && @character.battery_level > 0 %>
+  <div id ="end_game" class=" jumbotron">
+  <h1>No expecting to blow your way into the middle of the a horde of sentries, you prepare for battle.</h1>
+
+  <h1>You beat the demo, thanks for playing!</h1>
+  <%=button_to "Start Over", character_path(@character), method: :delete, data: {confirm: "Are You Sure?"}%>
+</div>
+<% end %>

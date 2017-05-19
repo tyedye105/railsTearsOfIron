@@ -1,18 +1,34 @@
 <div class="well">
-  <%  if @item.tile.is_nearby?(@character.tile_id) == true %>
-  <h1>You found an a <%= @item.name %></h1>
+  <% if @item.tile != nil %>
+    <% if @item.tile.is_nearby?(@character.tile_id) == true %>
+    <h1>You found an a <%= @item.name %></h1>
 
-  <h2> <%= @item.description %>
-    <hr>
-    <%= image_tag("#{@item.img}.png") %>
+    <h2> <%= @item.description %>
+      <hr>
+      <%= image_tag("#{@item.img}.png") %>
 
-  <%= render('new')%>
-  <% else %>
-  <h1> Your scanners have found a <%= @item.name %> in the area!</h1>
+    <%= render('new')%>
+    <% else %>
+    <h1> Your scanners have found a <%= @item.name %> in the area!</h1>
 
-  <h2> <%= @item.description %>
-    <hr>
-    <%= image_tag("#{@item.img}.png") %>
-  <%= button_to "You must get closer to pick it up.", room_path(@item.room_id), method:"get", remote: true%>
-  <% end %>
+    <h2> <%= @item.description %>
+      <hr>
+      <%= image_tag("#{@item.img}.png") %>
+    <%= button_to "You must get closer to pick it up.", room_path(@item.room_id), method:"get", remote:true %>
+    <% end %>
+    <% else %>
+        <% if @item.name === "Battery" %>
+    <h1> <%= @item.name %></h1>
+
+    <h2> <%= @item.description %></h2>
+
+
+      <%= form_for @character, html: { id:"consumable_item"} do |f| %>
+        <%= f.hidden_field :battery_level, value: @character.battery_level + 100 %>
+        <%= f.submit "Use Battery!" %>
+        <% end %>
+        <% @item.consume_item %>ss
+        <% end %>
+      <% end %>
+
 </div>
