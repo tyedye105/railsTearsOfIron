@@ -1,5 +1,5 @@
-<% if @door.req_item != nil %>
-  <% if @character.do_you_have?("#{@door.req_item}") %>
+
+  <% if @character.do_you_have?("#{@door.req_item}") === true %>
   <%= form_for @door, remote: true do |f| %>
   <%= f.hidden_field :is_locked, :value => false %>
   <%= f.hidden_field :active, :value => false %>
@@ -7,12 +7,3 @@
   <% end %>
   <%= button_to "Later..", room_path(@door.room_id),method: :get %>
   <% end %>
-  <% else %>
-  <% @door = Door.close_group(4)[1] %>
-  <%= form_for @door, remote: true do |f| %>
-  <%= f.hidden_field :is_locked, :value => false %>
-  <%= f.hidden_field :active, :value => false %>
-  <%= f.submit "Open the door!" %>
-  <% end %>
-  <%= button_to "Later..", room_path(@door.room_id),method: :get %>
-<% end %>
