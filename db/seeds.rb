@@ -930,18 +930,21 @@ se_ruins = [
 ["building_roof_topr", 15, 8, true, nil],
 ["building_topl", 15, 8, true, nil],
 
-
   ]
 se_ruins.each do | tile_name, room_id, row_max, is_solid, transition_tile|
   Tile.create( tile_name: tile_name, room_id: room_id, row_max: row_max, is_solid: is_solid, transition_tile: transition_tile)
 end
 
 door_list = [
-  ["Facility Industrial Door",7,"A sturdy and secure door that garden variety explosives couldn't even dent. If can't blow it up, might as well hack it... Now to find a sentry. ", "component",23, "facility_doorl" ],
-  ["Facility Industrial Door",7,"A sturdy and secure door that garden variety explosives couldn't even dent. If can't blow it up, might as well hack it... Now to find a sentry. ", "component",24, "facility_doorr" ]
+  ["Facility Industrial Door",7,"A sturdy and secure door that garden variety explosives couldn't even dent. If can't blow it up, might as well hack it... Now to find a sentry. ", "Sentry component",23, 1,"facility_doorl" ],
+  ["Facility Industrial Door",7,"A sturdy and secure door that garden variety explosives couldn't even dent. If can't blow it up, might as well hack it... Now to find a sentry. ", "Sentry component",24,1, "facility_doorr" ],
+  ["Laser Gate",8,"A gate made of lasers. Now was it Bumper Blue, Destructive Green, or Blue Meanie, and Saftey Green?", nil, 348,2, "laser_l" ],
+  ["Laser Gate",8,"A gate made of lasers. Now was it Bumper Blue, Destructive Green, or Blue Meanie, and Saftey Green?", nil, 349,2, "laser_c" ],
+  ["Laser Gate",8,"A gate made of lasers. Now was it Bumper Blue, Destructive Green, or Blue Meanie, and Saftey Green?", nil, 350,2, "laser_r" ],
+  ["Suspicous Wall",4,"Hmm, that wall has seen better days. It looks like it is weak enough to blow a hole in it", "explosive", 78,3 "facility_cracked_wall" ],
 
 ]
 
-door_list.each do |name, room_id, description, req_item, tile_id, img|
-Door.create( name: name, room_id: room_id, description: description, req_item: req_item, tile_id: tile_id, img: img)
+door_list.each do |name, room_id, description, req_item, tile_id, group_no, img|
+Door.create( name: name, room_id: room_id, description: description, req_item: req_item, tile_id: tile_id, group_no: group_no, img: img)
 end

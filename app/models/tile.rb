@@ -2,7 +2,7 @@ class Tile < ActiveRecord::Base
   belongs_to :room
   has_one :character
   has_one :door
-  has_one :item
+  has_many :items
   has_one :sentry
 
 

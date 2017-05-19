@@ -109,6 +109,11 @@
    height: 64px;
    background-image: url("facility_wall");
  }
+ .facility_cracked_wall {
+   width: 64px;
+   height: 64px;
+   background-image: url("facility_cracked_wall");
+ }
 
  .facility_insidewall {
    width: 64px;
@@ -519,8 +524,7 @@
    height: 64px;
    background-image: url("rundown_openr");
  }
-
-
+ 
 
 
  #world {
