@@ -11,7 +11,7 @@ room_list = [
   ["Cargo Yard", true, "There is a sentry detected. Exercise caution.", "The sentry might have a gun, but they don’t have sensors on the back of their heads… yet.", 10],
   ["Facility Entrace", true, "Just the place I need to get to! With a convenient laser fence in the way...", " Things I can do about the laser fence: 0",9 ],
   ["Rundown Shack Inside", true, " Hopefully I can find something useful in this rundown shack.", "This whole town is in ruin… but where are the people?",8 ],
-  [" South West Ruins", true, 'When I left this place, there was people and androids everywhere, what happened?", "That switch might activate the doors in the southeast ruins.' ,12 ],
+  [" South West Ruins", true, "When I left this place, there was people and androids everywhere! what happened?",'That rundown shack in corner looks familar to the one in the South East block.', 12 ],
   ["Streets", true, "What a disaster, I hope Hector is holed up in his workshop.", 'I have only been gone for three years… What the hell happened?', 9 ],
   ["South East Ruins", true, "Hmm that shack looks like it has not been opened in years, maybe something useful is in there.", "Perhaps there is a console elsewhere that will open that door..", 8 ],
 ]
@@ -907,14 +907,14 @@ se_ruins = [
 ["facility_ground4", 15, 8, false, nil],
 ["facility_ground3", 15, 8, false, nil],
 ["facility_ground2", 15, 8, false, nil],
-["facility_scrap", 15, 8, false, nil],
-["facility_scrap", 15, 8, false, nil],
+["facility_scrap", 15, 8, true, nil],
+["facility_scrap", 15, 8, true, nil],
 ["building_roof_topl", 15, 8, true, nil],
 
 ["blank", 15, 8, true, nil],
 ["building_roof_botr", 15, 8, true, nil],
 ["facility_ground2", 15, 8, false, nil],
-["facility_scrap", 15, 8, false, nil],
+["facility_scrap", 15, 8, true, nil],
 ["facility_ground2", 15, 8, false, nil],
 ["facility_ground3", 15, 8, false, nil],
 ["facility_ground4", 15, 8, false, nil],
@@ -942,6 +942,8 @@ door_list = [
   ["Laser Gate",8,"A gate made of lasers. Now was it Bumper Blue, Destructive Green, or Blue Meanie, and Saftey Green?", nil, 286,2, "laser_c" ],
   ["Laser Gate",8,"A gate made of lasers. Now was it Bumper Blue, Destructive Green, or Blue Meanie, and Saftey Green?", nil, 287,2, "laser_r" ],
   ["Suspicous Wall",4,"Hmm, that wall has seen better days. It looks like it is weak enough to blow a hole in it", "Explosive", 78, 3, "facility_cracked_wall" ],
+
+  ["Dummy",2,"Hmm, that wall has seen better days. It looks like it is weak enough to blow a hole in it", "Explosive", 78, 3, "facility_cracked_wall" ],
 
   ["Rundown Switch", 13, "That rusted switch looks like it might function. But what does it open?",
   nil, 473, 4, "abdn_switch_off"],
