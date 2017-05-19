@@ -1,0 +1,35 @@
+<div class="jumbotron">
+  <% if @door.name != "Rundown Switch" %>
+  <h1><%= @door.name %>!</h1>
+</div>
+<hr>
+<div class="well">
+  <%= image_tag "#{@door.img}" %>
+</div>
+<hr>
+<div class="well">
+  <p> <%= @door.description %></p>
+  <p> <%= @character.do_you_have?("#{@door.req_item}") %></p>
+    <%= render "/door/edit" %>
+  <%  if @door.tile.is_nearby?(@character.tile_id) == true %>
+  <%= link_to "I better go find that #{@door.req_item}...", room_path(@door.room_id), remote: true%>
+  <% else %>
+  <%= link_to "A door, might need something special for that...", room_path(@door.room_id), remote: true%>
+  <% end %>
+<% else %>
+<h1><%= @door.name %>!</h1>
+</div>
+<hr>
+<div class="well">
+<%= image_tag "#{@door.img}" %>
+</div>
+<hr>
+<div class="well">
+<p> <%= @door.description %></p>
+  <%= render "/door/edit" %>
+<%  if @door.tile.is_nearby?(@character.tile_id) == true %>
+<%= link_to "Later....", room_path(@door.room_id), remote: true%>
+<% end %>
+
+<% end %>
+</div>

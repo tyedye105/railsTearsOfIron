@@ -1,0 +1,8 @@
+console.log("OPPEN DOOR");
+$("#interaction_display").hide().empty();
+$("#tile<%= @door.tile_id%>").empty()
+<% if @double_door != nil %>
+$("#tile<%= @double_door.tile_id%>").empty()
+ <% end %>
+$("#active_room").show();
+$("#d_pad").show().empty().append("  <%= j render '/characters/edit', character:@character, row_max:@character.tile.row_max%>").focus();

@@ -19,7 +19,9 @@
         break;
       case "d":
     $("#east.edit_character").submit();
-
+        break;
+        case "f":
+        $("#inspecdoor").submit();
         break;
       default:
         return; // Quit when this doesn't handle the key event.

@@ -33,12 +33,10 @@ class Character < ActiveRecord::Base
     character_inventory = self.items.all
 
       character_inventory.each do |comparison_item|
-        until has_item === true do
         if item === comparison_item.name
           has_item = true
         end
       end
-    end
     has_item
   end
 

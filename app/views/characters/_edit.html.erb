@@ -3,17 +3,28 @@
       <%= f.hidden_field :room_id, value: character.room_id - 3 %>
       <%= f.hidden_field :facing_direction, value: 0 %>
       <%= f.hidden_field :tile_id, value: Tile.find_by( room_id: (character.room_id - 3), transition_tile: 1).id %>
-      <%= f.submit "North" %>
-    <% end %>
+      <%= f.submit "North!" %>
+      <% end %>
     <% else %>
+    <% if character.tile.get_moves[0].door != nil%>
+      <% if character.tile.get_moves[0].door.is_locked == true %>
+      <%= button_to "Inspect the #{character.tile.get_moves[0].door.name}", door_path(character.tile.get_moves[0].door), method: "get", id: "inspecdoor", remote: true%>
+        <% else %>
+        <%= form_for character, remote: true,  html: { id:"north"} do |f| %>
+            <%= f.hidden_field :tile_id, value: character.tile_id - row_max %>
+            <%= f.hidden_field :previous_tile, value: character.tile_id %>
+            <%= f.hidden_field :facing_direction, value: 0 %>
+            <%= f.submit "North" %>
+           <% end %>
+      <% end %>
+    <% elsif character.tile.get_moves[0].is_solid === false  %>
     <%= form_for character, remote: true,  html: { id:"north"} do |f| %>
-      <% if character.tile.get_moves[0].is_solid === false %>
         <%= f.hidden_field :tile_id, value: character.tile_id - row_max %>
         <%= f.hidden_field :previous_tile, value: character.tile_id %>
         <%= f.hidden_field :facing_direction, value: 0 %>
         <%= f.submit "North" %>
+       <% end %>
       <% else %>
-    <% end %>
   <% end %>
   <% end %>
 
