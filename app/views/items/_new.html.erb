@@ -12,4 +12,4 @@
 <%= f.hidden_field :img, :value => @item.img %>
 <%= f.submit "Pick it up." %>
 <% end %>
-<%= button_to "Leave it", room_path(@item.room_id ),method: :get%>
+<%= button_to "Leave it", room_path(@item.room_id ),method: :get, remote: true %>

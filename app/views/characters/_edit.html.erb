@@ -9,7 +9,7 @@
     <% if character.tile.get_moves[0].door != nil%>
       <% if character.tile.get_moves[0].door.is_locked == true %>
       <%= button_to "Inspect the #{character.tile.get_moves[0].door.name}", door_path(character.tile.get_moves[0].door), method: "get", id: "inspecdoor", remote: true%>
-        <% else %>
+      <% elsif character.tile.get_moves[0].is_solid === false  %>
         <%= form_for character, remote: true,  html: { id:"north"} do |f| %>
             <%= f.hidden_field :tile_id, value: character.tile_id - row_max %>
             <%= f.hidden_field :previous_tile, value: character.tile_id %>
