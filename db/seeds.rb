@@ -937,9 +937,11 @@ se_ruins.each do | tile_name, room_id, row_max, is_solid, transition_tile|
 end
 
 door_list = [
+  ["Facility Industrial Door",7,"A sturdy and secure door that garden variety explosives couldn't even dent. If can't blow it up, might as well hack it... Now to find a sentry. ", "component",23, "facility_doorl" ],
+  ["Facility Industrial Door",7,"A sturdy and secure door that garden variety explosives couldn't even dent. If can't blow it up, might as well hack it... Now to find a sentry. ", "component",24, "facility_doorr" ]
 
 ]
 
-door_list.each do |thing|
-
+door_list.each do |name, room_id, description, req_item, tile_id, img|
+Door.create( name: name, room_id: room_id, description: description, req_item: req_item, tile_id: tile_id, img: img)
 end

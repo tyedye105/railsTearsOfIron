@@ -3,9 +3,6 @@ class RoomsController < ApplicationController
   def index
     @player = current_player
     @character = @player.characters.last
-    @start = Room.find_by(:name =>"Room 5")
-    @item_start = Room.find_by(:name=>"Item Test 13")
-    @character_test = Room.find_by(:name=>"Character Test 18")
     @rooms = Room.all
     @doors = Door.all
   end

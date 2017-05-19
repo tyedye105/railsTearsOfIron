@@ -21,8 +21,9 @@
    outline: none;
    box-shadow: none;
 }
-
-
+  .interaction {
+    display: none;
+  }
  .room7 {
    display: grid;
    grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px;
@@ -210,15 +211,15 @@
    height: 64px;
    background-image: url("facility_ground4");
  }
- .facility_doorl_single {
+ .facility_doorl {
    width: 64px;
    height: 64px;
-   background-image: url("facility_doorl_single");
+   background-image: url("facility_doorl");
  }
- .facility_doorr_single {
+ .facility_doorr {
    width: 64px;
    height: 64px;
-   background-image: url("facility_doorr_single");
+   background-image: url("facility_doorr");
  }
  .facility_door_openl {
    width: 64px;
