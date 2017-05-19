@@ -1,5 +1,20 @@
 <div class="jumbotron">
-  <% if @door.name != "Rundown Switch" %>
+  <% if @door.name === "Rundown Doors" %>
+  <h1><%= @door.name %>!</h1>
+</div>
+<hr>
+<div class="well">
+  <%= image_tag "#{@door.img}" %>
+</div>
+<hr>
+<div class="well">
+  <p> <%= @door.description %></p>
+  <%  if @door.tile.is_nearby?(@character.tile_id) == true %>
+  <%= link_to "I better go find that #{@door.req_item}...", room_path(@door.room_id), remote: true%>
+  <% else %>
+  <%= button_to "A door, might need something special for that...", room_path(@door.room_id),method: "get", remote: true%>
+  <% end %>
+  <% elsif @door.name != "Rundown Switch" %>
   <h1><%= @door.name %>!</h1>
 </div>
 <hr>

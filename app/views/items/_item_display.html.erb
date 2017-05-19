@@ -24,7 +24,7 @@
 
 
       <%= form_for @character, html: { id:"consumable_item"} do |f| %>
-        <%= f.hidden_field :battery_level, value: @character.battery_level + 100 %>
+        <%= f.hidden_field :battery_level, value: @character.battery_level + 150 %>
         <%= f.submit "Use Battery!" %>
         <% end %>
         <% @item.consume_item %>ss

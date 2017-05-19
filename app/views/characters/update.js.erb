@@ -8,3 +8,4 @@ $("#tile<%= @previous_tile.id %>").empty().append(" <%= j render '/layouts/objec
 $("#tile<%= @character.tile_id %>").append(' <%= j image_tag "robo#{@character.facing_direction}" %>');
 $("#cinfo").empty().append( "<%= j render '/layouts/character_display'%>");
 $("#tinfo").empty().append( "<%= j render '/layouts/text_display', room: @character.room%>");
+$("#state_of_game").empty().append(  " <%= j render '/layouts/game_over' %> ");

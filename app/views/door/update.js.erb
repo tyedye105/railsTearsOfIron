@@ -6,3 +6,5 @@ $("#tile<%= @double_door.tile_id%>").empty()
  <% end %>
 $("#active_room").show();
 $("#d_pad").show().empty().append("  <%= j render '/characters/edit', character:@character, row_max:@character.tile.row_max%>").focus();
+$("#cinfo").empty().append( "<%= j render '/layouts/character_display'%>");
+$("#tinfo").empty().append( "<%= j render '/layouts/text_display', room: @character.room%>");

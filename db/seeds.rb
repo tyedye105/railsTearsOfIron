@@ -974,3 +974,15 @@ item_list = [
 item_list.each do |name, description, room_id, origin_id, tile_id, img|
   Item.create( name: name, description: description, room_id: room_id, origin_id: origin_id, tile_id: tile_id, img: img)
 end
+
+sentry_list = [
+  [ "sentry1", 141],
+  [ "sentry1", 145],
+  [ "sentry1", 152],
+  [ "sentry1", 159],
+  [ "sentry1", 163],
+
+]
+sentry_list.each do | name, tile_id|
+  Sentry.create( name: name, tile_id: tile_id)
+end

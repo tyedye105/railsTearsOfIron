@@ -2,6 +2,7 @@
     <%= form_for character,  html: { id:"north"} do |f| %>
       <%= f.hidden_field :room_id, value: character.room_id - 3 %>
       <%= f.hidden_field :facing_direction, value: 0 %>
+      <%= f.hidden_field :battery_level, value: character.battery_level - 3 %>
       <%= f.hidden_field :tile_id, value: Tile.find_by( room_id: (character.room_id - 3), transition_tile: 1).id %>
       <%= f.submit "North!" %>
       <% end %>
@@ -13,6 +14,7 @@
         <%= form_for character, remote: true,  html: { id:"north"} do |f| %>
             <%= f.hidden_field :tile_id, value: character.tile_id - row_max %>
             <%= f.hidden_field :previous_tile, value: character.tile_id %>
+            <%= f.hidden_field :battery_level, value: character.battery_level - 3 %>
             <%= f.hidden_field :facing_direction, value: 0 %>
             <%= f.submit "North" %>
            <% end %>
@@ -22,6 +24,8 @@
         <%= f.hidden_field :tile_id, value: character.tile_id - row_max %>
         <%= f.hidden_field :previous_tile, value: character.tile_id %>
         <%= f.hidden_field :facing_direction, value: 0 %>
+        <%= f.hidden_field :battery_level, value: character.battery_level - 3 %>
+
         <%= f.submit "North" %>
        <% end %>
       <% else %>
@@ -33,6 +37,7 @@
       <%= f.hidden_field :room_id, value: character.room_id + 1 %>
       <%= f.hidden_field :facing_direction, value: 2 %>
       <%= f.hidden_field :tile_id, value: Tile.find_by( room_id: (character.room_id + 1), transition_tile: 3).id %>
+      <%= f.hidden_field :battery_level, value: character.battery_level - 3 %>
       <%= f.submit "East" %>
     <% end %>
     <% else %>
@@ -41,6 +46,7 @@
         <%= f.hidden_field :tile_id, value: character.tile_id + 1 %>
         <%= f.hidden_field :facing_direction, value: 2 %>
         <%= f.hidden_field :previous_tile, value: character.tile_id %>
+        <%= f.hidden_field :battery_level, value: character.battery_level - 3 %>
         <%= f.submit "East" %>
       <% else %>
     <% end %>
@@ -52,6 +58,7 @@
       <%= f.hidden_field :room_id, value: character.room_id - 1 %>
       <%= f.hidden_field :facing_direction, value: 3 %>
       <%= f.hidden_field :tile_id, value: Tile.find_by( room_id: (character.room_id - 1), transition_tile: 2).id %>
+      <%= f.hidden_field :battery_level, value: character.battery_level - 3 %>
       <%= f.submit "West" %>
     <% end %>
     <% else %>
@@ -60,6 +67,7 @@
         <%= f.hidden_field :tile_id, value: character.tile_id - 1 %>
         <%= f.hidden_field :facing_direction, value: 3 %>
         <%= f.hidden_field :previous_tile, value: character.tile_id %>
+        <%= f.hidden_field :battery_level, value: character.battery_level - 3 %>
         <%= f.submit "West" %>
       <% else %>
     <% end %>
@@ -72,6 +80,7 @@
       <%= f.hidden_field :room_id, value: character.room_id + 3 %>
       <%= f.hidden_field :facing_direction, value: 1 %>
       <%= f.hidden_field :tile_id, value: Tile.find_by( room_id: (character.room_id + 3), transition_tile: 0).id %>
+      <%= f.hidden_field :battery_level, value: character.battery_level - 3 %>
       <%= f.submit "South" %>
     <% end %>
     <% else %>
@@ -81,6 +90,7 @@
         <%= f.hidden_field :facing_direction, value: 1 %>
         <%= f.hidden_field :tile_id, value: character.tile_id + row_max %>
         <%= f.hidden_field :previous_tile, value: character.tile_id %>
+        <%= f.hidden_field :battery_level, value: character.battery_level - 3 %>
         <%= f.submit "South" %>
       <% else %>
     <% end %>
