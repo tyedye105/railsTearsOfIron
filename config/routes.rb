@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :rooms
   root "characters#index"
   resources :characters
+  resources :tiles
   resources :characters do
     resources :items
     end

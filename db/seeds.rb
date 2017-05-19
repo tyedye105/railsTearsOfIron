@@ -941,7 +941,7 @@ door_list = [
   ["Laser Gate",8,"A gate made of lasers. Now was it Bumper Blue, Destructive Green, or Blue Meanie, and Saftey Green?", nil, 285,2, "laser_l" ],
   ["Laser Gate",8,"A gate made of lasers. Now was it Bumper Blue, Destructive Green, or Blue Meanie, and Saftey Green?", nil, 286,2, "laser_c" ],
   ["Laser Gate",8,"A gate made of lasers. Now was it Bumper Blue, Destructive Green, or Blue Meanie, and Saftey Green?", nil, 287,2, "laser_r" ],
-  ["Suspicous Wall",4,"Hmm, that wall has seen better days. It looks like it is weak enough to blow a hole in it", "explosive", 78, 3, "facility_cracked_wall" ],
+  ["Suspicous Wall",4,"Hmm, that wall has seen better days. It looks like it is weak enough to blow a hole in it", "Explosive", 78, 3, "facility_cracked_wall" ],
 
   ["Rundown Switch", 13, "That rusted switch looks like it might function. But what does it open?",
   nil, 473, 4, "abdn_switch_off"],
@@ -954,4 +954,13 @@ door_list = [
 
 door_list.each do |name, room_id, description, req_item, tile_id, group_no, img|
 Door.create( name: name, room_id: room_id, description: description, req_item: req_item, tile_id: tile_id, group_no: group_no, img: img)
+end
+
+item_list = [
+  ["Explosive", "The old plastique, not as fancy, or high tech as the energy stuff, but still enough to blow a hole in a wall.", 4, 95, 'explosive'],
+  ["Explosive", "The old plastique is not as fancy, or high tech as the energy stuff. Still it's enough to blow a hole in a wall.", 12, 377, 'explosive']
+]
+
+item_list.each do |name, description, room_id, tile_id, img|
+  Item.create( name: name, description: description, room_id: room_id, tile_id: tile_id, img: img)
 end

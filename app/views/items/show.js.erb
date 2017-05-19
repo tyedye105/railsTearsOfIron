@@ -1,3 +1,3 @@
 $("#active_room").hide();
-$("#interaction_display").append(" <%= j render 'item_display' %>");
-$("#d_pad").empty().append("  <%= j render '/characters/edit', character:@character, row_max:@character.tile.row_max%>").after().focus();
+$("#interaction_display").empty().show().append(" <%= j render 'item_display' %>");
+$("#d_pad").hide();
