@@ -11,7 +11,7 @@
   <% end %>
 <% end %>
 <% if tile.door != nil %>
-  <% if tile.door.is_locked === true && tile.door.active === true %>
+  <% if tile.door.is_locked === true %>
   <%=link_to door_path(tile.door), remote:true do %>
     <%= image_tag "#{tile.door.img}", class: "door" %>
     <% end %>
