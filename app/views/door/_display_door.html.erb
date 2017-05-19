@@ -1,4 +1,5 @@
 <div class="jumbotron">
+
   <h1>ITS A DOOOOR!</h1>
 </div>
 <hr>
@@ -7,6 +8,11 @@
 </div>
 <hr>
 <div class="well">
+  <%= render "/door/edit" %>
   <p> <%= @door.description %></p>
+  <%  if @door.tile.is_nearby?(@character.tile_id) == true %>
   <%= link_to "I better go find that #{@door.req_item}...", room_path(@door.room_id), remote: true%>
+  <% else %>
+  <%= link_to "A door, might need something special for that...", room_path(@door.room_id), remote: true%>
+  <% end %>
 </div>

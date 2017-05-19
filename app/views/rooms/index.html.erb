@@ -54,9 +54,7 @@
 
 <% if @character.is_new === true %>
   <%  Room.reset %>
-    <%  @doors.each do |door| %>
-      <%  door.shut_the %>
-    <%  end %>
+  <% Door.shut_the %>
   <%  end %>
 
   <% if @player.is_admin === true %>
