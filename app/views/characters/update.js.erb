@@ -6,4 +6,4 @@ console.log(" current room <%= @current_room.id %>");
 $("#d_pad").empty().append("  <%= j render '/characters/edit', character:@character, row_max:@character.tile.row_max%>").after().focus();
 $("#tile<%= @previous_tile.id %>").empty().append(" <%= j render '/layouts/object_render', tile:@previous_tile %>")
 $("#tile<%= @character.tile_id %>").append(' <%= j image_tag "robo#{@character.facing_direction}" %>');
-%("#character_display").empty().append( "<%= j render '/layouts/character_display'"%>);
+$("#character_display").empty().append( "<%= j render '/layouts/character_display'%>");

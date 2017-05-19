@@ -27,8 +27,8 @@
         <%= f.hidden_field :battery_level, value: @character.battery_level + 100 %>
         <%= f.submit "Use Battery!" %>
         <% end %>
+        <% @item.consume_item %>ss
         <% end %>
       <% end %>
-      <% @item.consume_item %>
 
 </div>

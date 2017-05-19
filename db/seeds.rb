@@ -957,18 +957,18 @@ Door.create( name: name, room_id: room_id, description: description, req_item: r
 end
 
 item_list = [
-  ["Sentry component", "A part from a broken down sentry.  Can open level 1 Facility Doors", 7, 11, 'component'],
-  ["Explosive", "The old plastique is not as fancy, or high tech as the energy stuff. Still it's enough to blow a hole in a wall.", 12, 377, 'explosive'],
-  ["Battery", "A charged battery! Too bad it wont last long...", 10, 217, 'battery'],
-  ["Battery", "A charged battery! Too bad it wont last long...", 13, 484, 'battery'],
-  ["Battery", "A charged battery! Too bad it wont last long...", 11, 292, 'battery'],
-  ["Battery", "A charged battery! Too bad it wont last long...", 11, 298 , 'battery'],
-  ["Battery", "A charged battery! Too bad it wont last long...", 15, 747 , 'battery'],
-  ["Battery", "A charged battery! Too bad it wont last long...", 12, 372 , 'battery'],
+  ["Sentry component", "A part from a broken down sentry.  Can open level 1 Facility Doors", 7,7, 11, 'component'],
+  ["Explosive", "The old plastique is not as fancy, or high tech as the energy stuff. Still it's enough to blow a hole in a wall.", 12,12, 377, 'explosive'],
+  ["Battery", "A charged battery! Too bad it wont last long...", 10,10, 217, 'battery'],
+  ["Battery", "A charged battery! Too bad it wont last long...", 13,13, 484, 'battery'],
+  ["Battery", "A charged battery! Too bad it wont last long...", 11,11, 292, 'battery'],
+  ["Battery", "A charged battery! Too bad it wont last long...", 11,11, 298 , 'battery'],
+  ["Battery", "A charged battery! Too bad it wont last long...", 15,15, 747 , 'battery'],
+  ["Battery", "A charged battery! Too bad it wont last long...", 12,12, 372 , 'battery'],
 
 
 ]
 
-item_list.each do |name, description, room_id, tile_id, img|
-  Item.create( name: name, description: description, room_id: room_id, tile_id: tile_id, img: img)
+item_list.each do |name, description, room_id, origin_id, tile_id, img|
+  Item.create( name: name, description: description, room_id: room_id, origin_id: origin_id, tile_id: tile_id, img: img)
 end
