@@ -13,7 +13,7 @@
 ## Doors/Switch/Items
  Can be inspected by using the mouse to click on them. _b note to use a battery click on it in your inventory._
 
-## ame Over
+## Game Over
  When R-088's Battery Level is 0 it's game over.
 
 
