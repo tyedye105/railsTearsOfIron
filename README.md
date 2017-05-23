@@ -10,10 +10,10 @@
 ## Controls
   Movement: The buttons in the blue box below the game world can be used to move R-088. The buttons will only appear when it is a valid move. Additionally movement can be done using WSAD as long as the blue box has the focus (i.e has been clicked on).
 
-##Doors/Switch/Items
+## Doors/Switch/Items
  Can be inspected by using the mouse to click on them. _b note to use a battery click on it in your inventory._
 
-##Game Over
+## ame Over
  When R-088's Battery Level is 0 it's game over.
 
 
