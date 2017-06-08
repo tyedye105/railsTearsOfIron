@@ -26,6 +26,7 @@ class CharactersController < ApplicationController
     @previous_tile = Tile.find(@character.tile_id)
       if @character.update(character_params)
         if @current_room.id != @character.room_id
+            @current_room.been_there?
           respond_to do |format|
             format.html {redirect_to room_path(Room.find(@character.room_id))}
             format.js

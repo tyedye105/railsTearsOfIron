@@ -1,12 +1,13 @@
-# _Tears Of Iron prototype mk.02_
+# _Turning Rails Into A Game Engine mk.02_
 
 #### By *Marty Kovach* 05/23/2017
 
 
 ## Description
- There are a lot of libraries, and frameworks that lend themselves much better to the task of creating games than Rails. However because of this reason, and the limitation originally set on this project, I set out to make a sort of game/engine that did not require anything outside of Ruby, Javascript, and off course Rails.
+ There are a lot of libraries, and frameworks that lend themselves much better to the task of creating games than Rails. However because of this reason, and the limitation originally set on this project, I set out to make a sort of game engine that did not require anything outside of Ruby, Javascript, and off course Rails.
+
 ## The Game
- Tears of Iron is a resource management, adventure/puzzle game.  You play as R-088 who has a damaged power capacitor causing extra drain on his powersource.  In order to get it repaired he has returned to his place of origin to find Hector, his creator, for repairs.  However, R-088 arrives back home to find everything in ruins, and it's populace missing. The only thing left standing is a new looking robotics facility heavily guarded by other robots. Will R-088 be able to find Hector before his power runs out?
+ Tears of Iron is a resource management, adventure/puzzle game.  You play as R-088 who has a damaged power capacitor causing extra drain on his power source.  In order to get it repaired he has returned to his place of origin to find Hector, his creator, for repairs.  However, R-088 arrives back home to find everything in ruins, and it's populace missing. The only thing left standing is a new looking robotics facility heavily guarded by other robots. Will R-088 be able to find Hector before his power runs out?
 ## Controls
   Movement: The buttons in the blue box below the game world can be used to move R-088. The buttons will only appear when it is a valid move. Additionally movement can be done using WSAD as long as the blue box has the focus (i.e has been clicked on).
 

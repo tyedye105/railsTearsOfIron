@@ -1,28 +1,36 @@
-
+<div id ="state_of_game">
+  <%=render "/layouts/game_over" %>
+</div>
+<% if @character.battery_level >= 0 %>
 <div class="well center black">
-
-
   <div class="interaction well" id="interaction_display">
   </div>
-  <div class="room<%=@room.id %>" id="active_room" >
-  <%= render "/layouts/map_display" %>
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="room<%=@room.id %>" id="active_room" >
+      <%= render "/layouts/map_display" %>
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <div class="row">
+        <div class="game-controller" id="game_controller">
+        <%= render "/layouts/controls"%>
+        </div>
+      </div>
+      <div class="row">
+        <div id="cinfo">
+          <%= render "/layouts/character_display"%>
+        </div>
+      </div>
+      <div class="row">
+        <div id="tinfo">
+          <%= render "/layouts/text_display", room: @room %>
+        </div>
+        </div>
+      </div>
+
+    </div>
   </div>
-</div>
-<div id ="state_of_game">
-  <%=render "/layouts/game_over" %>
-</div>
-<div id="cinfo">
-  <%= render "/layouts/character_display"%>
-</div>
-<div id ="state_of_game">
-  <%=render "/layouts/game_over" %>
-</div>
-<% if @character.battery_level <= 0 %>
 <% else %>
-<div class="game-controller" id="game_controller">
-<%= render "/layouts/controls"%>
-<div id="tinfo">
-  <%= render "/layouts/text_display", room: @room %>
-</div>
+
 <% end %>
-</div>

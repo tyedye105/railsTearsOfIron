@@ -1,7 +1,6 @@
 <div id="text-display" class="well">
   <% if room.first_time === true %>
     <h1> <%= room.first_description %> </h1>
-                    <% room.been_there? %>
         <% else %>
         <h1> <%= room.normal_description %></h1>
     <% end %>

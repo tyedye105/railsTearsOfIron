@@ -1,20 +1,18 @@
 <div class="well">
 
-<h1>Welcome</h1>
+<h1>Rails as a Game Engine: A prototype By Marty Kovach</h1>
 
-<p> The world of Haven is full of dangerous creatures, sentient or otherwise, hostile enviroments, and down right bad folks.  Those bad folks won't hesitate to swoop into to a town promising a better tomorrow, only to force them into obedience through manipulation and fear. For months, or even years this can continue, until a unlikely hero arrives. <p>
+<p> There are tons of resources out there to make games, engines such as Unity or Unreal, or libraries for different languages such as Phaser(Javascript), and Gosu(Ruby).  Why go about the ardous process of making a game engine in Rails? Beucase of restrictions. This project came into being as my capstone project or the Ruby tack at Epicodus. Since this was a project to highlight my knowledge with Rails, the bulk of it had be done in Ruby, and sadly the Gosu Library does not work as a client side resource. With that I set out to create this prototype.</p><br>
 
-  <p> R-0B, a peculair android wanders across the centeral waste drifting from one edge of civilization to the next.  Through thier history of odd Job R-0B has become known become know for taking on jobs outmatched, and out gunned. Yet the eccentric construct gets the job done everytime, and resumes thier journey</p>
-
- <p> Be it human, beast, or andriod, everyine has had a place they called home.<p>
+<h2>Robo Adventure</h2>
+<p> This is the game prototype to show of the engine.  You are a robot whose constantly lossing power, searching for his creator to fix him up.  Long before he returned to his 'home', it had been layed to waste, wandering through the ruins, R-088(Robb) searchs for his creator.</p>
 <br>
+<h2>The Game</h2>
 
-   <h1 class"well" >DRAMATiC IMAGE HERE</h1>
-<br>
+  Use W,A,S, and D keys to move Robb, North, West, South, and East. Robb will move one sqaure for each input.  Becuase of his constant losing of power, he loses 3 energy from his battery level everymove.  If he runs out of energy it is game over.  In the game world there will be doors, and items for you to interact with/pick up. To interact with an item you will need to be standing next to it (above, below, or either side, no diagnols.). To use batteries you pick up, click thier icon in your inventory.  As you move from area to area there is a brief description of the area that might have clues to what you need to do.
 
-<p> Once...</p>
 <% if player_signed_in? %>
-<%= link_to "The journey continues on.", new_character_path() %>
+<%= link_to "Star New Game", new_character_path() %>
 <% else %>
 <h1>Log in to begin!</h1>
 <% end %>
