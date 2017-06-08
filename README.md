@@ -12,7 +12,7 @@
   Movement: The buttons in the blue box below the game world can be used to move R-088. The buttons will only appear when it is a valid move. Additionally movement can be done using WSAD as long as the blue box has the focus (i.e has been clicked on).
 
 ## Doors/Switch/Items
- Can be inspected by using the mouse to click on them. _b note to use a battery click on it in your inventory._
+ Can be inspected by using the mouse to click on them. _note to use a battery click on it in your inventory._
 
 ## Game Over
  When R-088's Battery Level is 0 it's game over.
@@ -30,7 +30,8 @@
 * Go to localhost:3000, and check out the app!
 
 ###Known bugs
-  The ajax response for doors does not always work. If stuck on a door view, just refresh the page.
+  * The ajax response for doors does not always work. If stuck on a door view, just refresh the page.
+  * Too many input actions near the transition points of different rooms might trick the browser that you never left the room, but your character did.
 
 ## Technologies Used
 
